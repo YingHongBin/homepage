@@ -7294,7 +7294,7 @@ td.remove {
   margin: 0;
   position: absolute;
   bottom: 0;
-  padding: 20px 40px 20px 30px;
+  padding: 5px 40px 5px 30px;
   background-color: #fff;
   width: calc(100% - 40px);
 }
