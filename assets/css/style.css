@@ -4545,6 +4545,8 @@ table img {
 .sigma_post .sigma_post-thumb img{
   width: 100%;
   transition: .3s;
+  height: 200px;
+  object-fit: contain;
 }
 .gallery-thumb img{
   border-radius: 25px;
@@ -4659,6 +4661,10 @@ table img {
     margin-bottom: 0;
 }
 .sigma_post .sigma_post-body h5 + p{
+  margin: 20px 0 0;
+}
+
+.sigma_post .sigma_post-body h5 + p + p{
   margin: 20px 0 0;
 }
 
