@@ -4525,6 +4525,7 @@ table img {
 .gallery-thumb {
     position: relative;
     display: block;
+    padding: 0 10px 10px;
 }
 .gallery-thumb{
   overflow: hidden;
