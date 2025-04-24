@@ -4549,6 +4549,14 @@ table img {
   height: 200px;
   object-fit: contain;
 }
+
+.sigma_post .sigma_post-thumb2 img{
+  width: 100%;
+  transition: .3s;
+  height: 140px;
+  object-fit: contain;
+}
+
 .gallery-thumb img{
   border-radius: 25px;
 }
@@ -4598,6 +4606,14 @@ table img {
     background-color: #fff;
     z-index: 1;
     flex: 1;
+}
+
+.sigma_post .sigma_post-body2 {
+  padding: 10px;
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+  flex: 1;
 }
 
 .sigma_post-meta{
