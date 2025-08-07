@@ -120,20 +120,28 @@
   <script>
     // 动态加载组件
     function loadComponent(id, url) {
-      fetch(url)
+      return fetch(url)
         .then(response => response.text())
         .then(html => {
           document.getElementById(id).innerHTML = html;
+          // 组件加载完成后，重新应用语言设置
+          const savedLanguage = localStorage.getItem('language') || 'zh';
+          setLanguage(savedLanguage);
         })
         .catch(error => {
           console.error('Error loading component:', error);
         });
     }
 
-    // 加载头部组件
-    loadComponent('header-placeholder', '/component/header.html');
-    // 加载页脚组件
-    loadComponent('footer-placeholder', '/component/footer.html');
+    // 加载头部和页脚组件
+    Promise.all([
+      loadComponent('header-placeholder', '/component/header.html'),
+      loadComponent('footer-placeholder', '/component/footer.html')
+    ]).then(() => {
+      // 所有组件加载完成后，确保语言设置正确应用
+      const savedLanguage = localStorage.getItem('language') || 'zh';
+      setLanguage(savedLanguage);
+    });
   </script>
 
   <script>
