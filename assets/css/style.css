@@ -6656,6 +6656,23 @@ td.remove {
   color: #fff;
 }
 
+/* Style 5 */
+.sigma_icon-block.icon-block-5{
+  border-radius: 25px;
+  padding: 40px 30px;
+}
+.sigma_icon-block.icon-block-5 .number{
+  font-size: 100px;
+  line-height: 1;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: .3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* 6.7. Call to Actions */
 .sigma_cta{
   padding: 30px;
