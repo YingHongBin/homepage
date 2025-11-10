@@ -24,6 +24,8 @@
   <!-- Template Style sheet -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- Custom Mobile Styles -->
+  <link rel="stylesheet" href="assets/css/custom-mobile.css">
   <!-- partial -->
 
 </head>
@@ -105,6 +107,18 @@
         });
     }
 
+    // 重新绑定侧边栏事件
+    function initAsideMenu() {
+      // 移除旧的事件监听（如果存在）
+      $(".aside-trigger").off('click');
+      
+      // 绑定新的事件监听
+      $(".aside-trigger").on('click', function(e) {
+        e.preventDefault();
+        $("body").toggleClass('aside-open');
+      });
+    }
+
     // 加载头部和页脚组件
     Promise.all([
       loadComponent('header-placeholder', '/component/header.html'),
@@ -113,6 +127,11 @@
       // 所有组件加载完成后，确保语言设置正确应用
       const savedLanguage = localStorage.getItem('language') || 'zh';
       setLanguage(savedLanguage);
+      
+      // 重新绑定侧边栏菜单事件
+      if (typeof $ !== 'undefined') {
+        initAsideMenu();
+      }
     });
   </script>
 
@@ -147,10 +166,16 @@
         el.style.display = 'block';
       });
   
-      // 更新按钮文本
+      // 更新桌面端按钮文本
       const languageButton = document.getElementById('languageButton');
       if (languageButton) {
         languageButton.textContent = lang === 'zh' ? 'EN' : '中文';
+      }
+      
+      // 更新移动端按钮文本
+      const mobileLanguageButton = document.getElementById('mobileLanguageButton');
+      if (mobileLanguageButton) {
+        mobileLanguageButton.textContent = lang === 'zh' ? 'EN' : '中文';
       }
     }
   </script>
