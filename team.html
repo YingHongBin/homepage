@@ -256,6 +256,14 @@
       </div>
 
       <div class="section-title text-left">
+        <h4 class="title lang lang-zh">助理老师</h4>
+        <h4 class="title lang lang-en">Assistant Staff</h4>
+      </div>
+
+      <div class="row" id="assistant">
+      </div>
+
+      <div class="section-title text-left">
         <h4 class="title lang lang-zh">学生</h4>
         <h4 class="title lang lang-en">Students</h4>
       </div>
@@ -452,14 +460,6 @@
           email: 'xiezl@zju.edu.cn',
           website: 'https://xiezl.github.io/',
           image: 'assets/img/people/xiezhongle.jpg'
-        }, {
-          name: '唐燕君',
-          name_en: 'Tang Yanjun',
-          position: '财务助理',
-          position_en: 'Finance Assistant',
-          description: '协助预算编制、报销审核、决算等流程工作，确保科研经费合规高效使用。',
-          description_en: 'Assist in budget preparation, reimbursement review, final accounts, and other processes to ensure compliant and efficient use of research funds.',
-          image: 'assets/img/people/tangyanjun.jpg'
         }
       ];
       const facultyContainer = document.getElementById('faculty');
@@ -487,6 +487,45 @@
             </div>
           </div>`;
         facultyContainer.appendChild(card);
+      });
+    </script>
+
+    <script>
+      const assistant = [{
+          name: '唐燕君',
+          name_en: 'Tang Yanjun',
+          position: '财务助理',
+          position_en: 'Finance Assistant',
+          description: '协助预算编制、报销审核、决算等流程工作，确保科研经费合规高效使用。',
+          description_en: 'Assist in budget preparation, reimbursement review, final accounts, and other processes to ensure compliant and efficient use of research funds.',
+          image: 'assets/img/people/tangyanjun.jpg'
+        }
+      ];
+      const assistantContainer = document.getElementById('assistant');
+      assistant.forEach(member => {
+        const card = document.createElement('div');
+        card.className = 'col-lg-6 col-md-12';
+        card.innerHTML = `
+          <div class="modern-team-card">
+            <div class="team-card-content">
+              <img src="${member.image}" alt="${member.name}" class="team-avatar">
+              <div class="team-info">
+                <div class="team-header">
+                  <h3 class="team-name lang lang-zh">${member.name}</h3>
+                  <h3 class="team-name lang lang-en">${member.name_en}</h3>
+                  <div class="team-actions">
+                    ${member.email ? `<a href="mailto:${member.email}" class="team-action-btn" title="Email"><i class="fas fa-envelope"></i></a>` : ''}
+                    ${member.website ? `<a href="${member.website}" class="team-action-btn" title="Website" target="_blank"><i class="fas fa-globe"></i></a>` : ''}
+                  </div>
+                </div>
+                <p class="team-position lang lang-zh">${member.position}</p>
+                <p class="team-position lang lang-en">${member.position_en}</p>
+                <p class="team-description lang lang-zh">${member.description}</p>
+                <p class="team-description lang lang-en">${member.description_en}</p>
+              </div>
+            </div>
+          </div>`;
+        assistantContainer.appendChild(card);
       });
     </script>
 
