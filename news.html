@@ -57,74 +57,8 @@
       <div class="row">
 
         <div class="col-lg-12">
-          <div class="row">
-
-            <!-- Article Start -->
-            <div class="col-md-4" style="display: flex;">
-              <article class="sigma_post">
-                <div class="sigma_post-thumb">
-                  <a href="./news/2025-04-08.html">
-                    <img src="https://www.comp.nus.edu.sg/~dbsystem/static/66ab893af6bdba9f8772223f2bcec9ef/9dc27/singa.jpg" alt="post">
-                  </a>
-                </div>
-                <div class="sigma_post-body lang lang-zh">
-                  <h5 style="display: block;"> <a href="./news/2025-04-08.html">APACHE SINGA 5.0.0 版本发布</a> </h5>
-                  <div style="border-bottom: 1px solid #efefef;margin-top: 10px;margin-bottom: 10px;"> <a>2025年4月8日</a></div>
-                  <p style="display: flex;">我们很高兴地宣布 Apache SINGA v5.0 正式发布！此次版本重点增强了医疗健康模型库，现已支持包括心血管疾病、糖尿病、血液病等在内的多类疾病模型。</p>
-                </div>
-                <div class="sigma_post-body lang lang-en">
-                  <h5 style="display: block;"> <a href="./news/2025-04-08.html">APACHE SINGA 5.0.0 released</a> </h5>
-                  <div style="border-bottom: 1px solid #efefef;margin-top: 10px;margin-bottom: 10px;"> <a>April 08, 2025</a></div>
-                  <p style="display: flex;">Apache SINGA v5.0 Released!The latest version enhances the healthcare model zoo with support for diseases like cardiovascular conditions, diabetes, and hematologic disorders.</p>
-                </div>
-              </article>
-            </div>
-            <!-- Article End -->
-
-            <!-- Article Start -->
-            <div class="col-md-4" style="display: flex;">
-              <article class="sigma_post">
-                <div class="sigma_post-thumb">
-                  <a href="./news/2024-10-09.html">
-                    <img src="https://www.comp.nus.edu.sg/~dbsystem/static/c1fc28c888e2cb53d021e13a605aa944/630fb/pic.png" alt="post">
-                  </a>
-                </div>
-                <div class="sigma_post-body lang lang-zh">
-                  <h5 style="display: block;"> <a href="./news/2024-10-09.html">黄铭钧教授当选CCF会士</a> </h5>
-                  <div style="border-bottom: 1px solid #efefef;margin-top: 10px;margin-bottom: 10px;"> <a>2024年10月9日</a></div>
-                  <p style="display: flex;">黄铭钧教授当选为中国计算机学会（CCF）会士，由中国计算机学会授予。</p>
-                </div>
-                <div class="sigma_post-body lang lang-en">
-                  <h5 style="display: block;"> <a href="./news/2024-10-09.html">Professor Ooi Beng Chin honoured Fellow of the China Computer Federation</a> </h5>
-                  <div style="border-bottom: 1px solid #efefef;margin-top: 10px;margin-bottom: 10px;"> <a>October 09, 2024</a></div>
-                  <p style="display: flex;">Professor Ooi Beng Chin has been elected as Fellow of the China Computer Federation (CCF) Awarded by CCF.</p>
-                </div>
-              </article>
-            </div>
-            <!-- Article End -->
-
-            <!-- Article Start -->
-            <div class="col-md-4" style="display: flex;">
-              <article class="sigma_post">
-                <div class="sigma_post-thumb">
-                  <a href="./news/2024-08-23.html">
-                    <img src="https://www.comp.nus.edu.sg/~dbsystem/static/66ab893af6bdba9f8772223f2bcec9ef/9dc27/singa.jpg" alt="post">
-                  </a>
-                </div>
-                <div class="sigma_post-body lang lang-zh">
-                  <h5 style="display: block;"> <a href="./news/2024-08-23.html">APACHE SINGA 5.0.0 版本发布</a> </h5>
-                  <div style="border-bottom: 1px solid #efefef;margin-top: 10px;margin-bottom: 10px;"> <a>2024年8月23日</a></div>
-                  <p style="display: flex;">我们很高兴地宣布 Apache SINGA v4.3.0 正式发布！该版本新增支持在 PostgreSQL 及其衍生版本上运行动态模型切分功能。</p>
-                </div>
-                <div class="sigma_post-body lang lang-en">
-                  <h5 style="display: block;"> <a href="./news/2024-08-23.html">APACHE SINGA 4.3.0 released</a> </h5>
-                  <div style="border-bottom: 1px solid #efefef;margin-top: 10px;margin-bottom: 10px;"> <a>August 23, 2024</a></div>
-                  <p style="display: flex;">We are happy to announce the release of Apache SINGA v4.3, which includes support for running dynamic model slicing on PostgreSQL and other PostgreSQL variants.</p>
-                </div>
-              </article>
-            </div>
-            <!-- Article End -->
-
+          <div class="row" id="news-container">
+            <!-- 新闻内容将通过JavaScript动态生成 -->
           </div>
 
         </div>
@@ -155,6 +89,102 @@
 
   <script src="assets/js/main.js"></script>
   <!-- partial -->
+
+  <script>
+    // 新闻数据数组
+    const newsData = [
+      {
+        id: '2025-11-09',
+        image: '/assets/img/news/2025-11-09.png',
+        title_zh: '世界互联网大会：黄铭钧谈数据与人工智能协同',
+        title_en: 'World Internet Conference: Ooi Beng Chin Talks about Data and AI Collaboration',
+        date_zh: '2025年11月9日',
+        date_en: 'November 09, 2025',
+        summary_zh: '在2025年11月8日举行的世界互联网大会乌镇峰会人工智能技术创新与治理论坛上，黄铭钧院士围绕数据与人工智能协同发展进行分享。',
+        summary_en: 'At the Artificial Intelligence Technology Innovation and Governance Forum held during the 2025 World Internet Conference Wuzhen Summit on November 8, Academician Ooi Beng Chin shared insights on the collaborative development of data and AI.'
+      },
+      {
+        id: '2025-04-08',
+        image: 'https://www.comp.nus.edu.sg/~dbsystem/static/66ab893af6bdba9f8772223f2bcec9ef/9dc27/singa.jpg',
+        title_zh: 'APACHE SINGA 5.0.0 版本发布',
+        title_en: 'APACHE SINGA 5.0.0 released',
+        date_zh: '2025年4月8日',
+        date_en: 'April 08, 2025',
+        summary_zh: '我们很高兴地宣布 Apache SINGA v5.0 正式发布！此次版本重点增强了医疗健康模型库，现已支持包括心血管疾病、糖尿病、血液病等在内的多类疾病模型。',
+        summary_en: 'Apache SINGA v5.0 Released!The latest version enhances the healthcare model zoo with support for diseases like cardiovascular conditions, diabetes, and hematologic disorders.'
+      },
+      {
+        id: '2025-03-14',
+        image: '/assets/img/news/2025-03-14-8.png',
+        title_zh: '黄铭钧院士全职加盟浙江大学软件学院',
+        title_en: 'Academician Ooi Beng Chin Joins Zhejiang University School of Software Full-time',
+        date_zh: '2025年3月14日',
+        date_en: 'March 14, 2025',
+        summary_zh: '3月13日下午，浙江大学软件学院、宁波国际科创中心在新园区举行黄铭钧院士全职聘任仪式。',
+        summary_en: 'On the afternoon of March 13, Zhejiang University School of Software and Ningbo International Science and Innovation Center held a full-time appointment ceremony for Academician Ooi Beng Chin at the new campus.'
+      },
+      {
+        id: '2024-10-09',
+        image: 'https://www.comp.nus.edu.sg/~dbsystem/static/c1fc28c888e2cb53d021e13a605aa944/630fb/pic.png',
+        title_zh: '黄铭钧教授当选CCF会士',
+        title_en: 'Professor Ooi Beng Chin honoured Fellow of the China Computer Federation',
+        date_zh: '2024年10月9日',
+        date_en: 'October 09, 2024',
+        summary_zh: '黄铭钧教授当选为中国计算机学会（CCF）会士，由中国计算机学会授予。',
+        summary_en: 'Professor Ooi Beng Chin has been elected as Fellow of the China Computer Federation (CCF) Awarded by CCF.'
+      },
+      {
+        id: '2024-08-23',
+        image: 'https://www.comp.nus.edu.sg/~dbsystem/static/66ab893af6bdba9f8772223f2bcec9ef/9dc27/singa.jpg',
+        title_zh: 'APACHE SINGA 4.3.0 版本发布',
+        title_en: 'APACHE SINGA 4.3.0 released',
+        date_zh: '2024年8月23日',
+        date_en: 'August 23, 2024',
+        summary_zh: '我们很高兴地宣布 Apache SINGA v4.3.0 正式发布！该版本新增支持在 PostgreSQL 及其衍生版本上运行动态模型切分功能。',
+        summary_en: 'We are happy to announce the release of Apache SINGA v4.3, which includes support for running dynamic model slicing on PostgreSQL and other PostgreSQL variants.'
+      }
+    ];
+
+    // 渲染新闻列表
+    function renderNews() {
+      const container = document.getElementById('news-container');
+      if (!container) return;
+
+      let html = '';
+      newsData.forEach(news => {
+        html += `
+          <!-- Article Start -->
+          <div class="col-md-4" style="display: flex;">
+            <article class="sigma_post">
+              <div class="sigma_post-thumb">
+                <a href="./news/${news.id}.html">
+                  <img src="${news.image}" alt="post">
+                </a>
+              </div>
+              <div class="sigma_post-body lang lang-zh">
+                <h5 style="display: block;"> <a href="./news/${news.id}.html">${news.title_zh}</a> </h5>
+                <div style="border-bottom: 1px solid #efefef;margin-top: 10px;margin-bottom: 10px;"> <a>${news.date_zh}</a></div>
+                <p style="display: flex;">${news.summary_zh}</p>
+              </div>
+              <div class="sigma_post-body lang lang-en">
+                <h5 style="display: block;"> <a href="./news/${news.id}.html">${news.title_en}</a> </h5>
+                <div style="border-bottom: 1px solid #efefef;margin-top: 10px;margin-bottom: 10px;"> <a>${news.date_en}</a></div>
+                <p style="display: flex;">${news.summary_en}</p>
+              </div>
+            </article>
+          </div>
+          <!-- Article End -->
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // 页面加载时渲染新闻
+    document.addEventListener('DOMContentLoaded', function() {
+      renderNews();
+    });
+  </script>
 
   <script>
     // 动态加载组件
