@@ -80,6 +80,8 @@ export default {
 
     onMounted(() => {
       initLanguage();
+      // 进入页面时直接跳转到顶部
+      window.scrollTo(0, 0);
     });
 
     return {
