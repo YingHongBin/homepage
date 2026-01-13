@@ -106,9 +106,9 @@ export const studentsData = [
     position: "博士研究生",
     position_en: "Ph.D. Student",
     description:
-      "研究方向包括多模态学习、多模态大模型推理加速。曾在华为实习，参与OceanStor存储系统故障检测与隔离需求的研发。获得过中国软件杯国家级一等奖。如果你对多模态大模型推理加速感兴趣，欢迎大家多多交流！",
+      "研究方向包括多模态学习、多模态大模型推理加速。曾在华为实习，参与OceanStore存储系统故障检测与隔离需求的研发。获得过中国软件杯国家级一等奖。如果你对多模态大模型推理加速感兴趣，欢迎大家多多交流！",
     description_en:
-      "My research interests include multimodal learning and inference acceleration for multimodal large models. I have interned at Huawei, contributing to the development of fault detection and isolation requirements for the OceanStor storage system. I have also received a national first-class award in the China Software Cup competition.",
+      "My research interests include multimodal learning and inference acceleration for multimodal large models. I have interned at Huawei, contributing to the development of fault detection and isolation requirements for the OceanStore storage system. I have also received a national first-class award in the China Software Cup competition.",
     email: "",
     website: "https://github.com/gdace829",
     image:
