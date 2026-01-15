@@ -5,7 +5,7 @@ export const healthcareProjects = [
     year: "2025 - ",
     image:
       "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/projects/heartcaregpt.png",
-    link: "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/projects/heartcaregpt.png",
+    link: "https://github.com/DCDmllm/Heartcare-Suite",
     descriptionZh:
       "HeartcareGPT是一个统一的医疗多模态大模型，能够完成原始信号与图像两种格式心电输入的理解与建模。HeartcareGPT使用专为这些格式设计的双通道编码器与投影器，并采用LoRA技术，实现了信号、图像与文本的跨模态语义对齐。该模型在特定领域的Heartcare-400K数据集上进行训练，在症状诊断、报告生成、信号预测等各类医学任务上具备优秀的表现。",
     descriptionEn:

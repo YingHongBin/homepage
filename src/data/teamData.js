@@ -6,7 +6,7 @@ export const piData = [
     position: "教授",
     position_en: "Professor",
     description:
-      "浙江大学求是讲席教授、浙江大学软件学院教授、北京大学客座讲席教授 、清华大学杰出访问教授，同时担任中国科学院外籍院士、新加坡科学院院士、新加坡工程院院士、欧洲人文和自然科学院外籍院士、ACM Fellow 、IEEE Fellow、CCF会士。",
+      "浙江大学求是讲席教授、浙江大学软件学院教授、北京大学客座讲席教授 、清华大学杰出访问教授，同时任中国科学院外籍院士、新加坡科学院院士、新加坡工程院院士、欧洲人文和自然科学院外籍院士、ACM Fellow 、IEEE Fellow、CCF会士。",
     description_en:
       "Qiushi Chair Professor at Zhejiang University and professor at the School of Software Technology, Zhejiang University. Visiting Chair Professor at Peking University, and Distinguished Visiting Professor at Tsinghua University. \nHe is a Foreign Member of the Chinese Academy of Sciences, Fellow of the Singapore Academy of Sciences, Fellow of the Singapore Academy of Engineering, Foreign Member of the European Academy of Sciences and Arts, ACM Fellow, IEEE Fellow, and CCF Fellow.",
     email: "",
@@ -25,7 +25,7 @@ export const facultyData = [
     position_en:
       "100 Talent Platform Researcher, College of Software Technology",
     description:
-      "浙江大学软件学院百人计划研究员，入选国家教育部海外引才计划、浙江大学启真优秀青年学者。主要研究方向包括多模态大模型、大模型优化与医疗人工智能等。近年来，在TPAMI，CVPR，ICCV，ACL，NeurIPS等CCF A类期刊与会议上发表论文共60余篇，在国际学术竞赛中获得多次冠军，主持多项/参与参与多项国家级、省部级课题。",
+      "浙江大学软件学院百人计划研究员，入选国家教育部海外引才计划、浙江大学启真优秀青年学者。主要研究方向包括多模态大模型、大模型优化与医疗人工智能等。近年来，在TPAMI，CVPR，ICCV，ACL，NeurIPS等CCF A类期刊与会议上发表论文共60余篇，在国际学术竞赛中获得多次冠军，主持/参与多项国家级、省部级课题。",
     description_en:
       "Research interest: multimodal large models, large model optimization, and medical artificial intelligence. In recent years, I have published more than 60 papers in top-tier CCF-A journals and conferences such as TPAMI, CVPR, ICCV, ACL, and NeurIPS, won multiple championships in international academic competitions, and have led or participated in several national and provincial-level research projects.",
     email: "wenqiaozhang@zju.edu.cn",
