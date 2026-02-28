@@ -2,11 +2,43 @@
   {
     year: 2026,
     title:
+      "NeurBench: A Benchmark Suite for Learned Database Components with Drift Modeling.",
+    authors:
+      "Z. Zhao, H. Gao, N. Xing, L. Zeng, M. Zhang, G. Chen, M. Rigger, B. C. Ooi. ACM SIGMOD 2026."
+  },
+  {
+    year: 2026,
+    title: "Modeling Concurrency Control as a Learnable Function",
+    authors: "H. Pan, S. Cai, A. Dinh, Y. Wu, Y.M. Chee, G. Chen, B. C. Ooi. ACM SIGMOD 2026."
+  },
+  {
+    year: 2026,
+    title: "On Self-Designing Learned Indexes",
+    authors: "B. Han, G. Hu, B. Li, X. Xiao, Z. Zhan, B. C. Ooi. ACM SIGMOD 2026."
+  },
+  {
+    year: 2026,
+    title: "CoShap: A Scalable Coalition Growth Approach to Shapley Value Approximation",
+    authors: "J. He, C. Liu, S. Cai, X. Han, Y. Shen, B. C. Ooi. ACM SIGMOD 2026."
+  },
+  {
+    year: 2026,
+    title: "FAVOR: Efficient Filter-Agnostic Vector ANNS Based on Selectivity-Aware Exclusion Distances",
+    authors: "J. Song, Y. Liu, G. Hu, Z. Xie, M. Yang, B. C. Ooi, K. Zhou. ACM SIGMOD 2026."
+  },
+  {
+    year: 2026,
+    title:
       "NeurStore: Efficient In-database Deep Learning Model Management System",
     authors:
       "S. Xiang, S. Wang, X. Xiao, C. Yue, Z. Zhao, B. C. Ooi. ACM SIGMOD 2026.",
     pdf_link: "", // 留空表示暂无PDF链接
     web_link: "", // 留空表示暂无Web链接
+  },
+  {
+    year: 2026,
+    title: "NL2SQLBench: A Modular Benchmarking Framework for LLM-Enabled NL2SQL Solutions",
+    authors: "S. Hou, W. Pei, N. Chen, Q.-T. Ta, P. Lu, B. C. Ooi. VLDB 2026."
   },
   {
     year: 2025,
