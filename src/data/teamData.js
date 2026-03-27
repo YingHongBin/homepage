@@ -129,6 +129,15 @@ export const studentsData = [
       "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/huangziwei.jpg",
   },
   {
+    name: "陈蔚竹",
+    name_en: "Chen Weizhu",
+    position: "博士研究生",
+    position_en: "Ph.D. Student",
+    description: "本科毕业于华东师范大学数据科学与工程学院，浙江大学软件学院博士研究生在读。",
+    description_en: "I completed my undergraduate studies at the School of Data Science and Engineering, East China Normal University, and I am currently a Ph.D. student at the School of Software Technology, Zhejiang University.",
+    image: "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/chenweizhu.jpg",
+  },
+  {
     name: "刘可涵",
     name_en: "Liu Kehan",
     position: "硕士研究生",
