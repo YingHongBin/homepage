@@ -214,7 +214,7 @@ export const internData = [
   {
     name: "王仁轩",
     name_en: "Wang Renxuan",
-    position: "科研实习",
+    position: "实习生",
     position_en: "Intern",
     description:
       "本科在读于西北工业大学计算机学院，本科阶段关注数据库以及系统内核，关注数据存储优化。在泡图书馆之外，有乒乓球，电影等爱好。",
@@ -228,7 +228,7 @@ export const internData = [
   {
     name: "嵇哲",
     name_en: "Ji Zhe",
-    position: "科研实习",
+    position: "实习生",
     position_en: "Intern",
     description:
       "中南大学软件工程专业大三在读。曾参与AI医疗大模型研发，专注算法优化、模型调优与智能调度落地；目前研究方向为医疗多模态大模型与垂直领域智能体。",

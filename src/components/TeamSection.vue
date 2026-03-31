@@ -254,7 +254,7 @@
       <!-- Intern Section -->
       <div class="team-category">
         <div class="category-title">
-          {{ currentLang === "zh" ? "科研实习" : "Intern" }}
+          {{ currentLang === "zh" ? "实习生" : "Intern" }}
         </div>
         <div class="team-grid">
           <div
