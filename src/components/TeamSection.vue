@@ -250,6 +250,68 @@
           </div>
         </div>
       </div>
+
+      <!-- Intern Section -->
+      <div class="team-category">
+        <div class="category-title">
+          {{ currentLang === "zh" ? "科研实习" : "Intern" }}
+        </div>
+        <div class="team-grid">
+          <div
+            v-for="member in internData"
+            :key="member.name"
+            class="team-member-row half-width"
+          >
+            <div class="member-avatar">
+              <img :src="member.image" :alt="member.name" />
+            </div>
+            <div class="member-info">
+              <div class="member-name">
+                <span>{{
+                  currentLang === "zh" ? member.name : member.name_en
+                }}</span>
+                <div class="member-icons">
+                  <a
+                    v-if="member.email"
+                    :href="`mailto:${member.email}`"
+                    class="member-icon"
+                    title="Email"
+                  >
+                    <img
+                      src="/assets/img/materials/team/email-icon.png"
+                      alt="Email"
+                    />
+                  </a>
+                  <a
+                    v-if="member.website"
+                    :href="member.website"
+                    target="_blank"
+                    class="member-icon"
+                    title="Website"
+                  >
+                    <img
+                      src="/assets/img/materials/team/home-web-icon.png"
+                      alt="Website"
+                    />
+                  </a>
+                </div>
+              </div>
+              <span class="member-position">
+                {{
+                  currentLang === "zh" ? member.position : member.position_en
+                }}
+              </span>
+              <span v-if="member.description" class="member-description">
+                {{
+                  currentLang === "zh"
+                    ? member.description
+                    : member.description_en
+                }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -261,6 +323,7 @@ import {
   facultyData,
   assistantData,
   studentsData,
+  internData,
 } from "../data/teamData";
 
 export default {
@@ -274,6 +337,7 @@ export default {
       facultyData,
       assistantData,
       studentData: studentsData,
+      internData,
     };
   },
 };

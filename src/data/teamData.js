@@ -208,3 +208,35 @@ export const studentsData = [
       "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/lingexi.jpg",
   },
 ];
+
+// Interns 实习生
+export const internData = [
+  {
+    name: "王仁轩",
+    name_en: "Wang Renxuan",
+    position: "科研实习",
+    position_en: "Intern",
+    description:
+      "本科在读于西北工业大学计算机学院，本科阶段关注数据库以及系统内核，关注数据存储优化。在泡图书馆之外，有乒乓球，电影等爱好。",
+    description_en:
+      "I am an undergraduate student at Northwestern Polytechnical University, majoring in Computer Science. My research interests include databases and system kernels, with a focus on data storage optimization. Outside of the library, I enjoy playing table tennis and watching movies.",
+    email: "",
+    website: "",
+    image:
+      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/wangrenxuan.jpg",
+  },
+  {
+    name: "嵇哲",
+    name_en: "Ji Zhe",
+    position: "科研实习",
+    position_en: "Intern",
+    description:
+      "中南大学软件工程专业大三在读。曾参与AI医疗大模型研发，专注算法优化、模型调优与智能调度落地；目前研究方向为医疗多模态大模型与垂直领域智能体。",
+    description_en:
+      "I am a junior student majoring in Software Engineering at Central South University. I have participated in the development of AI medical large models, focusing on algorithm optimization, model tuning, and intelligent scheduling implementation. Currently, my research interests include medical multimodal large models and vertical domain intelligent agents.",
+    email: "",
+    website: "",
+    image:
+      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/jizhe.jpg",
+  },
+];
