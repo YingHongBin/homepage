@@ -239,4 +239,30 @@ export const internData = [
     image:
       "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/jizhe.jpg",
   },
+  {
+    name: "许珂瑗",
+    name_en: "Xu Keyuan",
+    position: "实习生",
+    position_en: "Intern",
+    description: "本科就读于电子科技大学软件工程专业，基于过往在高性能内核监控与云原生微服务架构等方面的开发积累 ，我个人对AI Infra方向很感兴趣。",
+    description_en: "I am an undergraduate student majoring in Software Engineering at the University of Electronic Science and Technology of China. Based on my past development experience in high-performance kernel monitoring and cloud-native microservice architecture, I am personally very interested in the AI Infra direction.",
+    email: "",
+    website: "",
+    image:
+      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/xukeyuan.jpg",
+  },
+  {
+    name: "朱丹彤",
+    name_en: "Zhu Dantong",
+    position: "实习生",
+    position_en: "Intern",
+    description:
+      "中南大学信息安全专业本科（大三）在读。曾参与大模型多模态理解与推理优化，LLM强化学习后训练；目前研究方向为医疗保健领域的生成式AI。",
+    description_en:
+      "I am a junior student majoring in Information Security at Central South University. I have participated in research on multimodal understanding and reasoning optimization of large models, as well as post-training of LLM reinforcement learning. Currently, my research focuses on generative AI in the healthcare domain.",
+    email: "",
+    website: "",
+    image:
+      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/zhudantong.jpg",  
+  }
 ];
