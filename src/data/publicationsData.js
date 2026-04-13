@@ -1,8 +1,28 @@
 ﻿export const publicationsData = [
   {
     year: 2026,
+    title: "Entity-centric Data Management for the Ubiquitous Computing Era",
+    authors: "Y. Shen, X. S. Wang, X. Du, B. C. Ooi, H. Mei. Science China Information Sciences, Springer, 2026."
+  },
+  {
+    year: 2026,
+    title: "Generative AI for Healthcare: Fundamentals, Challenges, and Perspectives",
+    authors: "G. Chen, C. Liu, G. A. Ooi, M. Tan, Z. Xie, J. Yin, J. W. L. Yip, W. Zhang, J. Zhu and B. C. Ooi"
+  },
+  {
+    year: 2026,
+    title: "TumorChain: Interleaved Multimodal Chain- of-thought Reasoning for Traceable Clinical Tumor Analysis",
+    authors: "S. Li, et al. ICLR 2026."
+  },
+  {
+    year: 2026,
+    title: "OmniCT: Towards a Unified Slice-Volume LVLM for Comprehensive CT analysis",
+    authors: "T. Lin et al. ICLR 2026."
+  },
+  {
+    year: 2026,
     title:
-      "NeurBench: A Benchmark Suite for Learned Database Components with Drift Modeling.",
+      "NeurBench: A Benchmark Suite for Learned Database Components with Drift Modeling",
     authors:
       "Z. Zhao, H. Gao, N. Xing, L. Zeng, M. Zhang, G. Chen, M. Rigger, B. C. Ooi. ACM SIGMOD 2026."
   },
