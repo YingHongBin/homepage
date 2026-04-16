@@ -20,7 +20,7 @@
                     Data X AI 数据库实验室
                   </h2>
                   <h5 class="text-white data-lab-description">
-                    我们专注于人工智能与数据库系统的协同设计，构建面向科学与应用的智能数据平台，推动自优化、自学习的新一代数据系统发展
+                    我们聚焦于人工智能与数据库系统的融合，致力于研发高性能、自学习、自优化的数据系统与智能数据平台，以支撑医疗健康和金融领域的应用
                   </h5>
                 </template>
                 <template v-else>
@@ -29,11 +29,7 @@
                     Data X AI Research Group
                   </h3>
                   <h4 class="text-white data-lab-description">
-                    We focus on the collaborative design of artificial
-                    intelligence and database systems, build intelligent data
-                    platforms for science and applications, and promote the
-                    development of a new generation of self-optimizing and
-                    self-learning data systems.
+                    We focus on the fusion of artificial intelligence and database systems. We develop high-performance self-learning and self-optimizing data systems and intelligent data platforms to support healthcare and finance applications.
                   </h4>
                 </template>
                 <div
