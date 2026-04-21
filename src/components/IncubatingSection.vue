@@ -1,6 +1,6 @@
 <template>
   <!-- Incubating Projects -->
-  <div id="incubating" class="section incubating-section">
+  <div id="incubating" class="section core-section">
     <div class="project-container">
       <div class="text-center">
         <h4 class="module-title">

@@ -127,6 +127,25 @@ export const aiSystemProjects = [
   // },
 ];
 
+export const multimodalProjects = [
+  {
+    name: "PixelRefer",
+    year: "2025 - ",
+    image: "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/projects/pixelrefer.png",
+    link: "https://github.com/alibaba-damo-academy/PixelRefer",
+    descriptionZh: "PixelRefer是一个面向对象级理解的统一多模态框架，能够针对用户指定的任意区域，在图像与视频中进行细粒度的语义理解与推理。通过构建高质量的对象级表示，使语言模型在推理过程中能够以对象为核心进行信息聚合与决策，从而显著提升对复杂场景中局部语义的理解能力。进一步地，该工作还揭示了多模态大模型在推理过程中对对象token的依赖机制，并基于这一发现设计了更高效的轻量化版本，在保持性能的同时大幅降低计算开销，实现了性能、表达能力与效率之间的良好平衡。",
+    descriptionEn: "PixelRefer is a unified multimodal framework designed for object-level understanding. It enables fine-grained semantic understanding and reasoning over arbitrary user-specified regions in images and videos. By constructing high-quality object-level representations, it allows language models to aggregate information and make decisions centered around objects during the reasoning process, significantly improving the understanding of local semantics in complex scenes. Furthermore, this work reveals the dependency mechanism of multimodal large models on object tokens during reasoning, and based on this insight, proposes a more efficient lightweight version. This variant substantially reduces computational cost while maintaining performance, achieving a strong balance among performance, expressiveness, and efficiency.",
+  },
+  {
+    name: "LMMs Meet Object-Centric Vision",
+    year: "2025 - ",
+    image: "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/projects/LLMsMeetObjectCentricVision.png",
+    link: "https://github.com/DCDmllm/Awesome-Object-Centric-LMMs",
+    descriptionZh: "这篇综述从整体视角出发，系统分析了大规模多模态模型在对象级理解与操作方面面临的核心挑战，并提出以对象为中心的视觉建模范式来弥合语言推理与像素级感知之间的鸿沟。论文围绕对象理解、分割、编辑与生成四类关键能力，对现有方法进行了结构化梳理，并进一步总结了不同建模路径背后的统一思想与关键技术问题。通过这一系统性分析，该工作不仅提供了一张清晰的研究全景图，也指出了未来多模态模型在精细空间理解、对象一致性以及可控交互等方面的发展方向，为构建更加通用且可靠的对象中心智能系统奠定了基础。",
+    descriptionEn: "This survey takes a holistic perspective to systematically analyze the core challenges faced by large-scale multimodal models in object-level understanding and manipulation. It proposes an object-centric visual modeling paradigm to bridge the gap between language reasoning and pixel-level perception. The paper provides a structured review of existing methods across four key capabilities: object understanding, segmentation, editing, and generation, and further summarizes the unifying ideas and key technical issues underlying different modeling approaches. Through this systematic analysis, the work not only offers a clear panoramic view of the research landscape, but also outlines future directions for multimodal models in fine-grained spatial understanding, object consistency, and controllable interaction, laying the foundation for building more general and reliable object-centric intelligent systems.",
+  },
+]
+
 // 孵化项目
 export const incubatingProjects = [
   {

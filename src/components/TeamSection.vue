@@ -359,7 +359,7 @@ export default {
 }
 
 .team-section {
-  background-color: #fff;
+  background-color: #f7f8fc;
   padding: 150px 0;
 }
 

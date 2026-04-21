@@ -140,6 +140,75 @@
       </Transition>
     </div>
   </div>
+
+  <!-- Object-Centric Vision for Intelligent Multimodal Systems -->
+  <div class="section healthcare-section">
+    <div class="project-container">
+      <div class="text-center">
+        <h4 class="module-title">
+          {{
+            currentLang === "zh"
+              ? "面向对象中心视觉的智能多模态系统"
+              : "Object-Centric Vision for Intelligent Multimodal Systems"
+          }}
+        </h4>
+      </div>
+      <p class="project-description">
+        {{
+          currentLang === "zh"
+            ? "本系列工作聚焦于对象中心（object-centric）视觉智能与多模态大模型的融合，旨在突破传统模型以“整体场景理解”为主的局限，构建能够对具体对象进行精细理解、推理与可控操作的统一框架。通过结合大语言模型与对象级视觉表示，我们致力于推动多模态系统从“看懂一张图”，走向“理解、操作并控制具体对象”，为智能代理、医疗分析、机器人感知等场景提供关键技术支撑。"
+            : "This line of work focuses on the integration of object-centric visual intelligence with multimodal large models. It aims to overcome the limitations of traditional models that primarily rely on holistic scene understanding, and to build a unified framework capable of fine-grained understanding, reasoning, and controllable manipulation of specific objects. By combining large language models with object-level visual representations, we strive to advance multimodal systems from merely “understanding an image” to “understanding, manipulating, and controlling specific objects,” thereby providing key technical support for applications such as intelligent agents, medical analysis, and robotic perception."
+        }}
+      </p>
+      <div class="project-tags">
+        <div
+          v-for="item in multimodalProjects"
+          :key="item.name"
+          class="project-tag"
+          :class="{ active: selectedMultimodal === item.name }"
+          @click="selectedMultimodal = item.name"
+        >
+          {{ item.name }}
+        </div>
+      </div>
+
+      <!-- 项目详情 -->
+      <Transition name="fade" mode="out-in">
+        <div class="project-detail" v-if="selectedMultimodal" :key="selectedMultimodal">
+          <div class="project-detail-left">
+            <div class="project-year">
+              {{ getMultimodalProject(selectedMultimodal).year }}
+            </div>
+            <p class="project-detail-description">
+              {{
+                currentLang === "zh"
+                  ? getMultimodalProject(selectedMultimodal).descriptionZh
+                  : getMultimodalProject(selectedMultimodal).descriptionEn
+              }}
+            </p>
+            <a
+              :href="getMultimodalProject(selectedMultimodal).url"
+              target="_blank"
+              class="project-detail-link"
+            >
+              <img
+                src="/assets/img/materials/news/right-arrow-icon.png"
+                alt="arrow"
+                class="detail-arrow-icon"
+              />
+            </a>
+          </div>
+          <div class="project-detail-right">
+            <img
+              :src="getMultimodalProject(selectedMultimodal).icon"
+              alt="project icon"
+              class="project-icon"
+            />
+          </div>
+        </div>
+      </Transition>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -148,6 +217,7 @@ import { useLanguage } from "../composables/useLanguage";
 import {
   healthcareProjects as healthcareProjectsData,
   aiSystemProjects,
+  multimodalProjects as multimodalProjectsData,
 } from "../data/projectsData";
 
 export default {
@@ -158,6 +228,7 @@ export default {
     // 默认选中第一个项目
     const selectedHealthcare = ref(healthcareProjectsData[0]?.name || "");
     const selectedCore = ref(aiSystemProjects[0]?.name || "");
+    const selectedMultimodal = ref(multimodalProjectsData[0]?.name || "");
 
     // 适配医疗项目数据（添加url和icon字段）
     const healthcareProjects = healthcareProjectsData.map((project) => ({
@@ -173,6 +244,12 @@ export default {
       icon: project.image,
     }));
 
+    const multimodalProjects = multimodalProjectsData.map((project) => ({
+      ...project,
+      url: project.link,
+      icon: project.image
+    }));
+
     const getHealthcareProject = (name) => {
       return healthcareProjects.find((p) => p.name === name);
     };
@@ -181,14 +258,21 @@ export default {
       return coreDataProjects.find((p) => p.name === name);
     };
 
+    const getMultimodalProject = (name) => {
+      return multimodalProjects.find((p) => p.name === name);
+    };
+
     return {
       currentLang,
       healthcareProjects,
       coreDataProjects,
+      multimodalProjects,
       selectedHealthcare,
       selectedCore,
+      selectedMultimodal,
       getHealthcareProject,
       getCoreProject,
+      getMultimodalProject,
     };
   },
 };
@@ -250,8 +334,11 @@ export default {
 
 /* 项目标签 */
 .project-tag {
-  width: 300px;
   height: 70px;
+  padding: 0 36px;
+  width: auto;
+  min-width: 300px;
+  max-width: 100%;
   background: #ffffff;
   box-shadow: 0 5px 16px 0 rgba(21, 34, 50, 0.08);
   border-radius: 35px;

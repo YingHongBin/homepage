@@ -163,7 +163,7 @@ export default {
 }
 
 .publications-section {
-  background-color: #f7f8fc;
+  background-color: #fff;
   padding: 150px 0;
 }
 
