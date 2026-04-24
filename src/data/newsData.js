@@ -29,76 +29,6 @@ export const newsData = [
     `,
   },
   {
-    id: "2025-12-16",
-    image:
-      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-12-16-1.png",
-    title_zh:
-      "第二届CCF中国数据大会｜中国科学院外籍院士黄铭钧：数据价值如何才能真正释放？",
-    title_en:
-      "CCF China Data 2025 | Ooi Beng Chin, Foreign Academician of the Chinese Academy of Sciences: How Can the Value of Data Truly Be Unleashed?",
-    date_zh: "2025年12月16日",
-    date_en: "December 16, 2025",
-    source_link:
-      "https://dsj.guizhou.gov.cn/xwzx/snyw/202512/t20251216_89056046.html",
-    zh_translation: "",
-    en_translation: "ChatGPT 5.1",
-    summary_zh:
-      '12月13日，在第二届CCF中国数据大会开幕式现场，中国科学院外籍院士、浙江大学教授黄铭钧以"NeurDB数据库内分析：面向高效部署的模型选择、切片与定制化"为主题作主旨报告。',
-    summary_en:
-      'On December 13, at the opening ceremony of the Second CCF China Data Conference, Ooi Beng Chin, Foreign Academician of the Chinese Academy of Sciences and Professor at Zhejiang University, delivered a keynote speech titled "NeurDB In-Database Analytics: Model Selection, Slicing, and Customization for Efficient Deployment."',
-    content_zh: `
-      <p>"数据库是数字经济的关键基础设施，市场规模预计2028年将突破930亿元。"12月13日，在第二届CCF中国数据大会开幕式现场，中国科学院外籍院士、浙江大学教授黄铭钧以"NeurDB数据库内分析：面向高效部署的模型选择、切片与定制化"为主题作主旨报告。</p>
-      <p>黄铭钧认为，各行业正推进智能化转型，智慧金融、智慧医疗等场景对数据智能化应用提出了更高要求。</p>
-      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-12-16-1.png" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
-      <p>然而，现有数据库系统尚未实现AI与数据库的深度融合，AI应用研发多采用跨数据库与AI两套独立系统的模式，既因数据频繁跨系统流动产生性能损耗，又存在数据暴露于外部模型的安全风险。</p>
-      <p>黄铭钧院士梳理了数据驱动智能的演进脉络，从依赖人类编码知识的符号智能时代，到依托神经网络学习数据规律的统计学习时代，再到以大模型与数据生态为核心的中心化智能时代；数据库也历经关系型、NoSQL、NewSQL的迭代，到目前亟需突破"AI与数据库割裂"的技术瓶颈。</p>
-      <p>"事实上，我们团队早在2016年便提出'AI与数据库能力互补'的愿景，从2014年跨模态检索研究起步，到2015年SINGA孵化器落地、2019年技术纳入Apache顶级项目，逐步搭建起AI与数据库融合的技术体系。"黄铭钧说。</p>
-      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-12-16-2.png" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
-      <p>黄铭钧院士详解了两大核心成果，一是以AI驱动的新型数据库系统NeurDB，能够打破数据库与AI系统的技术阻隔，实现一体化设计；二是数据库原生智能数据分析框架NeurIDA，其三大核心技术模块聚焦破解行业难题。</p>
-      <p>"数据的价值，唯有通过高效管理与深度分析才能真正释放。"黄铭钧院士强调，NeurDB与NeurIDA实现了模型结构与查询意图、关系模式、任务语义的深度对齐，不仅降低了各行业应用AI技术的门槛，更代表着下一代数据库管理系统的发展。</p>
-    `,
-    content_en: `
-      <p>"Databases are a critical infrastructure of the digital economy, and the market size is expected to exceed RMB 93 billion by 2028." On December 13, at the opening ceremony of the Second CCF China Data Conference, Huang Mingjun, Foreign Academician of the Chinese Academy of Sciences and Professor at Zhejiang University, delivered a keynote speech titled "NeurDB In-Database Analytics: Model Selection, Slicing, and Customization for Efficient Deployment."</p>
-      <p>Prof. Ooi Beng Chin noted that industries across the board are advancing intelligent transformation, and scenarios such as smart finance and smart healthcare are placing higher demands on intelligent data applications.</p>
-      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-12-16-1.png" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
-      <p>However, existing database systems have yet to achieve deep integration between AI and databases. AI application development often adopts two separate systems—one for databases and another for AI—which not only incurs performance overhead due to frequent cross-system data movement, but also introduces security risks as data are exposed to external models.</p>
-      <p>Prof. Ooi Beng Chin reviewed the evolution of data-driven intelligence—from the era of symbolic intelligence that relied on human-encoded knowledge, to the era of statistical learning powered by neural networks, and further to the current era of centralized intelligence centered on large models and data ecosystems. In parallel, databases have evolved from relational systems to NoSQL and NewSQL, and now urgently need to break through the technological bottleneck of the separation between AI and databases.</p>
-      <p>"In fact, our team proposed the vision of 'complementary capabilities between AI and databases' as early as 2016," Prof. Ooi Beng Chin said. "Starting with cross-modal retrieval research in 2014, followed by the launch of the SINGA incubator in 2015 and the inclusion of related technologies into an Apache top-level project in 2019, we have gradually built a technical system that integrates AI and databases."</p>
-      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-12-16-2.png" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
-      <p>Prof. Ooi Beng Chin then elaborated on two core achievements. The first is NeurDB, a new AI-driven database system that breaks the technical barriers between databases and AI systems through an integrated, unified design. The second is NeurIDA, a database-native intelligent data analytics framework whose three core technical modules are designed to address key industry challenges.</p>
-      <p>"The value of data can only be truly unleashed through efficient management and deep analysis," Huang emphasized. By deeply aligning model structures with query intent, relational schemas, and task semantics, NeurDB and NeurIDA not only lower the barrier to adopting AI technologies across industries, but also represent the future direction of next-generation database management systems.</p>
-    `,
-  },
-  {
-    id: "2025-11-09",
-    image:
-      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-11-09.png",
-    title_zh: "世界互联网大会：黄铭钧谈数据与人工智能协同",
-    title_en:
-      "World Internet Conference: Ooi Beng Chin Talks about Data and AI Collaboration",
-    date_zh: "2025年11月9日",
-    date_en: "November 09, 2025",
-    source_link: "",
-    zh_translation: "",
-    en_translation: "",
-    summary_zh:
-      "在2025年11月8日举行的世界互联网大会乌镇峰会人工智能技术创新与治理论坛上，黄铭钧院士围绕数据与人工智能协同发展进行分享。",
-    summary_en:
-      "At the Artificial Intelligence Technology Innovation and Governance Forum held during the 2025 World Internet Conference Wuzhen Summit on November 8, Academician Ooi Beng Chin shared insights on the collaborative development of data and AI.",
-    content_zh: `
-      <p>11月8日，2025年世界互联网大会乌镇峰会人工智能技术创新与治理论坛在浙江乌镇举行。论坛以"擘画人工智能新时代，共谋创新治理新篇章"为主题，围绕生成式人工智能、大模型等技术热点，探讨人工智能发展趋势与全球治理路径，推动技术创新与安全治理协同并进。</p>
-      <p>来自中国及多个国家和地区的政府代表、院士专家、国际组织负责人和企业代表参加论坛。与会嘉宾认为，人工智能在赋能经济社会发展的同时，也对安全、伦理和治理提出了更高要求，需要在开放合作中凝聚国际共识。</p>
-      <p>中国科学院外籍院士、新加坡工程院院士、浙江大学求是讲席教授黄铭钧结合实践指出，数据系统与人工智能具有显著协同效应，通过融合数据库技术、深度学习和大语言模型，可构建高效、可信的智能系统，为人工智能在重点行业的应用奠定基础。</p>
-      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-11-09.png" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
-    `,
-    content_en: `
-      <p>On November 8th, the 2025 World Internet Conference Wuzhen Summit Artificial Intelligence Technology Innovation and Governance Forum was held in Wuzhen, Zhejiang. The forum, themed "Drawing a New Era of Artificial Intelligence, Jointly Creating a New Chapter of Innovative Governance," focused on hot topics such as generative AI and large models, discussing AI development trends and global governance paths, promoting the coordinated advancement of technological innovation and security governance.</p>
-      <p>Government representatives, academicians, experts, heads of international organizations, and enterprise representatives from China and multiple countries and regions attended the forum. Participants believed that while AI empowers economic and social development, it also raises higher requirements for security, ethics, and governance, necessitating the consolidation of international consensus through open cooperation.</p>
-      <p>Academician of the Chinese Academy of Sciences, Academician of the Singapore Academy of Engineering, and Qiu Shi Chair Professor at Zhejiang University, Ooi Beng Chin, pointed out based on practice that data systems and AI have significant synergy. By integrating database technology, deep learning, and large language models, efficient and trustworthy intelligent systems can be built, laying the foundation for AI applications in key industries.</p>
-      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-11-09.png" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
-    `,
-  },
-    {
     id: "2025-11-04",
     image:
       "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-11-04.jpg",
@@ -167,6 +97,76 @@ export const newsData = [
         <li>Introduced an automated data preparation and feature transformation pipeline for AI analytical queries.</li>
         <li>Supports training-ready dataset generation.</li>
       </ul>
+    `,
+  },
+  {
+    id: "2025-12-16",
+    image:
+      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-12-16-1.png",
+    title_zh:
+      "第二届CCF中国数据大会｜中国科学院外籍院士黄铭钧：数据价值如何才能真正释放？",
+    title_en:
+      "CCF China Data 2025 | Ooi Beng Chin, Foreign Academician of the Chinese Academy of Sciences: How Can the Value of Data Truly Be Unleashed?",
+    date_zh: "2025年12月16日",
+    date_en: "December 16, 2025",
+    source_link:
+      "https://dsj.guizhou.gov.cn/xwzx/snyw/202512/t20251216_89056046.html",
+    zh_translation: "",
+    en_translation: "ChatGPT 5.1",
+    summary_zh:
+      '12月13日，在第二届CCF中国数据大会开幕式现场，中国科学院外籍院士、浙江大学教授黄铭钧以"NeurDB数据库内分析：面向高效部署的模型选择、切片与定制化"为主题作主旨报告。',
+    summary_en:
+      'On December 13, at the opening ceremony of the Second CCF China Data Conference, Ooi Beng Chin, Foreign Academician of the Chinese Academy of Sciences and Professor at Zhejiang University, delivered a keynote speech titled "NeurDB In-Database Analytics: Model Selection, Slicing, and Customization for Efficient Deployment."',
+    content_zh: `
+      <p>"数据库是数字经济的关键基础设施，市场规模预计2028年将突破930亿元。"12月13日，在第二届CCF中国数据大会开幕式现场，中国科学院外籍院士、浙江大学教授黄铭钧以"NeurDB数据库内分析：面向高效部署的模型选择、切片与定制化"为主题作主旨报告。</p>
+      <p>黄铭钧认为，各行业正推进智能化转型，智慧金融、智慧医疗等场景对数据智能化应用提出了更高要求。</p>
+      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-12-16-1.png" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+      <p>然而，现有数据库系统尚未实现AI与数据库的深度融合，AI应用研发多采用跨数据库与AI两套独立系统的模式，既因数据频繁跨系统流动产生性能损耗，又存在数据暴露于外部模型的安全风险。</p>
+      <p>黄铭钧院士梳理了数据驱动智能的演进脉络，从依赖人类编码知识的符号智能时代，到依托神经网络学习数据规律的统计学习时代，再到以大模型与数据生态为核心的中心化智能时代；数据库也历经关系型、NoSQL、NewSQL的迭代，到目前亟需突破"AI与数据库割裂"的技术瓶颈。</p>
+      <p>"事实上，我们团队早在2016年便提出'AI与数据库能力互补'的愿景，从2014年跨模态检索研究起步，到2015年SINGA孵化器落地、2019年技术纳入Apache顶级项目，逐步搭建起AI与数据库融合的技术体系。"黄铭钧说。</p>
+      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-12-16-2.png" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+      <p>黄铭钧院士详解了两大核心成果，一是以AI驱动的新型数据库系统NeurDB，能够打破数据库与AI系统的技术阻隔，实现一体化设计；二是数据库原生智能数据分析框架NeurIDA，其三大核心技术模块聚焦破解行业难题。</p>
+      <p>"数据的价值，唯有通过高效管理与深度分析才能真正释放。"黄铭钧院士强调，NeurDB与NeurIDA实现了模型结构与查询意图、关系模式、任务语义的深度对齐，不仅降低了各行业应用AI技术的门槛，更代表着下一代数据库管理系统的发展。</p>
+    `,
+    content_en: `
+      <p>"Databases are a critical infrastructure of the digital economy, and the market size is expected to exceed RMB 93 billion by 2028." On December 13, at the opening ceremony of the Second CCF China Data Conference, Huang Mingjun, Foreign Academician of the Chinese Academy of Sciences and Professor at Zhejiang University, delivered a keynote speech titled "NeurDB In-Database Analytics: Model Selection, Slicing, and Customization for Efficient Deployment."</p>
+      <p>Prof. Ooi Beng Chin noted that industries across the board are advancing intelligent transformation, and scenarios such as smart finance and smart healthcare are placing higher demands on intelligent data applications.</p>
+      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-12-16-1.png" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+      <p>However, existing database systems have yet to achieve deep integration between AI and databases. AI application development often adopts two separate systems—one for databases and another for AI—which not only incurs performance overhead due to frequent cross-system data movement, but also introduces security risks as data are exposed to external models.</p>
+      <p>Prof. Ooi Beng Chin reviewed the evolution of data-driven intelligence—from the era of symbolic intelligence that relied on human-encoded knowledge, to the era of statistical learning powered by neural networks, and further to the current era of centralized intelligence centered on large models and data ecosystems. In parallel, databases have evolved from relational systems to NoSQL and NewSQL, and now urgently need to break through the technological bottleneck of the separation between AI and databases.</p>
+      <p>"In fact, our team proposed the vision of 'complementary capabilities between AI and databases' as early as 2016," Prof. Ooi Beng Chin said. "Starting with cross-modal retrieval research in 2014, followed by the launch of the SINGA incubator in 2015 and the inclusion of related technologies into an Apache top-level project in 2019, we have gradually built a technical system that integrates AI and databases."</p>
+      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-12-16-2.png" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+      <p>Prof. Ooi Beng Chin then elaborated on two core achievements. The first is NeurDB, a new AI-driven database system that breaks the technical barriers between databases and AI systems through an integrated, unified design. The second is NeurIDA, a database-native intelligent data analytics framework whose three core technical modules are designed to address key industry challenges.</p>
+      <p>"The value of data can only be truly unleashed through efficient management and deep analysis," Huang emphasized. By deeply aligning model structures with query intent, relational schemas, and task semantics, NeurDB and NeurIDA not only lower the barrier to adopting AI technologies across industries, but also represent the future direction of next-generation database management systems.</p>
+    `,
+  },
+  {
+    id: "2025-11-09",
+    image:
+      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-11-09.png",
+    title_zh: "世界互联网大会：黄铭钧谈数据与人工智能协同",
+    title_en:
+      "World Internet Conference: Ooi Beng Chin Talks about Data and AI Collaboration",
+    date_zh: "2025年11月9日",
+    date_en: "November 09, 2025",
+    source_link: "",
+    zh_translation: "",
+    en_translation: "",
+    summary_zh:
+      "在2025年11月8日举行的世界互联网大会乌镇峰会人工智能技术创新与治理论坛上，黄铭钧院士围绕数据与人工智能协同发展进行分享。",
+    summary_en:
+      "At the Artificial Intelligence Technology Innovation and Governance Forum held during the 2025 World Internet Conference Wuzhen Summit on November 8, Academician Ooi Beng Chin shared insights on the collaborative development of data and AI.",
+    content_zh: `
+      <p>11月8日，2025年世界互联网大会乌镇峰会人工智能技术创新与治理论坛在浙江乌镇举行。论坛以"擘画人工智能新时代，共谋创新治理新篇章"为主题，围绕生成式人工智能、大模型等技术热点，探讨人工智能发展趋势与全球治理路径，推动技术创新与安全治理协同并进。</p>
+      <p>来自中国及多个国家和地区的政府代表、院士专家、国际组织负责人和企业代表参加论坛。与会嘉宾认为，人工智能在赋能经济社会发展的同时，也对安全、伦理和治理提出了更高要求，需要在开放合作中凝聚国际共识。</p>
+      <p>中国科学院外籍院士、新加坡工程院院士、浙江大学求是讲席教授黄铭钧结合实践指出，数据系统与人工智能具有显著协同效应，通过融合数据库技术、深度学习和大语言模型，可构建高效、可信的智能系统，为人工智能在重点行业的应用奠定基础。</p>
+      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-11-09.png" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+    `,
+    content_en: `
+      <p>On November 8th, the 2025 World Internet Conference Wuzhen Summit Artificial Intelligence Technology Innovation and Governance Forum was held in Wuzhen, Zhejiang. The forum, themed "Drawing a New Era of Artificial Intelligence, Jointly Creating a New Chapter of Innovative Governance," focused on hot topics such as generative AI and large models, discussing AI development trends and global governance paths, promoting the coordinated advancement of technological innovation and security governance.</p>
+      <p>Government representatives, academicians, experts, heads of international organizations, and enterprise representatives from China and multiple countries and regions attended the forum. Participants believed that while AI empowers economic and social development, it also raises higher requirements for security, ethics, and governance, necessitating the consolidation of international consensus through open cooperation.</p>
+      <p>Academician of the Chinese Academy of Sciences, Academician of the Singapore Academy of Engineering, and Qiu Shi Chair Professor at Zhejiang University, Ooi Beng Chin, pointed out based on practice that data systems and AI have significant synergy. By integrating database technology, deep learning, and large language models, efficient and trustworthy intelligent systems can be built, laying the foundation for AI applications in key industries.</p>
+      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-11-09.png" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
     `,
   },
   {
@@ -279,34 +279,6 @@ export const newsData = [
       <p>Awarded by CCF, this distinction represents the highest honour which supports the academic and professional advancement of computing professionals worldwide.</p>
       <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2024-10-09.png" alt="post">
       <p>With only 180 CCF Fellows selected globally, Professor Ooi's achievement demonstrates his outstanding contribution to the field of computing. This recognition not only reflects his dedication to pushing the frontiers of technology but also reinforces our leadership in research and innovation on the global stage.</p>
-    `,
-  },
-  {
-    id: "2024-08-23",
-    image:
-      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2024-08-23.jpg",
-    title_zh: "APACHE SINGA 4.3.0发布",
-    title_en: "APACHE SINGA 4.3.0 released",
-    date_zh: "2024年8月23日",
-    date_en: "August 23, 2024",
-    source_link: "",
-    zh_translation: "",
-    en_translation: "",
-    summary_zh:
-      "我们很高兴地宣布发布Apache SINGA v4.3，该版本包括对在PostgreSQL和其他PostgreSQL变体上运行动态模型切片的支持。",
-    summary_en:
-      "We are happy to announce the release of Apache SINGA v4.3, which includes support for running dynamic model slicing on PostgreSQL and other PostgreSQL variants.",
-    content_zh: `
-      <p>我们很高兴地宣布发布Apache SINGA v4.3，该版本包括对在PostgreSQL和其他PostgreSQL变体上运行动态模型切片的支持。</p>
-      <p>它拥有一个适用于各种应用的模型库，包括医疗保健、金融和结构化数据建模。</p>
-      <p>我们于2014年启动了<a href="https://singa.apache.org/" target="_blank">Apache SINGA</a>，这是一个分布式深度学习平台；在2015年在Apache软件基金会（ASF）孵化，并于2015年10月发布了<a href="https://en.wikipedia.org/wiki/Apache_SINGA" target="_blank">第一个版本</a>。它于2019年10月毕业成为第一个ASF顶级项目（TOP），专注于分布式学习。</p>
-      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2024-08-23.jpg" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
-    `,
-    content_en: `
-      <p>We are happy to announce the release of Apache SINGA v4.3, which includes support for running dynamic model slicing on PostgreSQL and other PostgreSQL variants.</p>
-      <p>It has a model zoo for various applications, including healthcare, finance, and structured data modeling.</p>
-      <p>We started <a href="https://singa.apache.org/" target="_blank">Apache SINGA</a>, a distributed deep learning platform, in 2014; incubated it at Apache Software Foundation (ASF) in 2015, and released its <a href="https://en.wikipedia.org/wiki/Apache_SINGA" target="_blank">first version</a> in October 2015. It graduated as the first ASF top-level-project (TOP) on distributed learning in Oct 2019.</p>
-      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2024-08-23.jpg" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
     `,
   },
 ];
