@@ -52,7 +52,7 @@
           <h3>
             {{ currentLang === "zh" ? "新闻未找到" : "News not found" }}
           </h3>
-          <router-link to="/news" class="sigma_btn-custom">
+          <router-link :to="{ path: '/', hash: '#news' }" class="sigma_btn-custom">
             {{ currentLang === "zh" ? "返回新闻列表" : "Back to News" }}
           </router-link>
         </div>
