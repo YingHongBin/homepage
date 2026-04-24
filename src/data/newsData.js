@@ -1,6 +1,34 @@
 ﻿// 新闻数据
 export const newsData = [
   {
+    id: "2026-04-01",
+    image:
+      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-04-08.jpg",
+    title_zh: "APACHE SINGA 5.1.0 发布",
+    title_en: "APACHE SINGA 5.1.0 released",
+    date_zh: "2026年4月1日",
+    date_en: "April 01, 2026",
+    source_link: "",
+    zh_translation: "",
+    en_translation: "",
+    summary_zh:
+      "我们很高兴地宣布 Apache SINGA v5.1.0 正式发布！在本版本中，我们添加了LLMs的低秩适应（LORA）和参数高效微调（PEFT）的实现，更新了医疗模型库，并添加了更多医疗示例等。",
+    summary_en:
+      "We are happy to announce the release of Apache SINGA v5.1.0! In this version, we added the implementations for Low-Rank Adaptation of LLMs (LORA) and Parameter-Efficient Fine-Tuning (PEFT), update the healthcare model zoo, and add more healthcare examples, etc.",
+    content_zh: `
+      <p>我们很高兴地宣布 Apache SINGA v5.1.0 正式发布！</p>
+      <p>在本版本中，我们添加了LLMs的低秩适应（LORA）和参数高效微调（PEFT）的实现，更新了医疗模型库，并添加了更多医疗示例等。</p>
+      <p>我们于2014年启动了<a href="https://singa.apache.org/" target="_blank">Apache SINGA</a>，这是一个分布式深度学习平台；在2015年在Apache软件基金会（ASF）孵化，并于2015年10月发布了<a href="https://en.wikipedia.org/wiki/Apache_SINGA" target="_blank">第一个版本</a>。它于2019年10月毕业成为第一个ASF顶级项目（TOP），专注于分布式学习。</p>
+      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-04-08.jpg" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+    `,
+    content_en: `
+      <p>We are happy to announce the release of Apache SINGA v5.1.0!</p>
+      <p>In this version, we added the implementations for Low-Rank Adaptation of LLMs (LORA) and Parameter-Efficient Fine-Tuning (PEFT), update the healthcare model zoo, and add more healthcare examples, etc.</p>
+      <p>We started <a href="https://singa.apache.org/" target="_blank">Apache SINGA</a>, a distributed deep learning platform, in 2014; incubated it at Apache Software Foundation (ASF) in 2015, and released its <a href="https://en.wikipedia.org/wiki/Apache_SINGA" target="_blank">first version</a> in October 2015. It graduated as the first ASF top-level-project (TOP) on distributed learning in Oct 2019.</p>
+      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-04-08.jpg" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+    `,
+  },
+  {
     id: "2025-12-16",
     image:
       "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-12-16-1.png",
@@ -68,6 +96,77 @@ export const newsData = [
       <p>Government representatives, academicians, experts, heads of international organizations, and enterprise representatives from China and multiple countries and regions attended the forum. Participants believed that while AI empowers economic and social development, it also raises higher requirements for security, ethics, and governance, necessitating the consolidation of international consensus through open cooperation.</p>
       <p>Academician of the Chinese Academy of Sciences, Academician of the Singapore Academy of Engineering, and Qiu Shi Chair Professor at Zhejiang University, Ooi Beng Chin, pointed out based on practice that data systems and AI have significant synergy. By integrating database technology, deep learning, and large language models, efficient and trustworthy intelligent systems can be built, laying the foundation for AI applications in key industries.</p>
       <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-11-09.png" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+    `,
+  },
+    {
+    id: "2025-11-04",
+    image:
+      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-11-04.jpg",
+    title_zh: "NeurDB 0.5.0 发布",
+    title_en:
+      "NeurDB 0.5.0 released",
+    date_zh: "2025年11月4日",
+    date_en: "November 04, 2025",
+    source_link: "",
+    zh_translation: "",
+    en_translation: "",
+    summary_zh:
+      "我们很高兴地发布 NeurDB v0.5.0，带来在AI驱动的数据分析和自主操作方面的重大增强。",
+    summary_en:
+      "We are pleased to release NeurDB v0.5.0, bringing substantial enhancements in AI-powered data analytics and autonomous operations.",
+    content_zh: `
+      <p>我们很高兴地发布 NeurDB <a href="https://github.com/neurdb/neurdb/releases/tag/v0.5.0/" target="_blank">v0.5.0</a>，带来在AI驱动的数据分析和自主操作方面的重大增强。</p>
+      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-11-04.jpg" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+      <p>在本版本中，我们发布了以下关键功能：</p>
+      <p><strong>数据库内模型管理</strong></p>
+      <ul>
+        <li>集成了数据库原生的深度学习模型存储（NeurStore），实现高效的模型持久化和检索。</li>
+        <li>优化了模型加载和保存机制，降低存储开销并提升I/O性能。</li>
+        <li>增强了元数据跟踪，支持多版本模型管理和依赖关系追踪。</li>
+      </ul>
+      <p><strong>并发控制增强</strong></p>
+      <ul>
+        <li>优化了NRAM（NeurDB访问方法），提升混合工作负载下的事务吞吐量。</li>
+        <li>增强了学习型并发控制（NeurCC）的锁管理和状态抽象。</li>
+        <li>添加了测试用例验证事务隔离性并检测潜在异常。</li>
+      </ul>
+      <p><strong>基于KV的存储引擎增强</strong></p>
+      <ul>
+        <li>集成了进程间通信（IPC）通道，降低上下文切换开销并提升延迟性能。</li>
+        <li>添加了测试用例验证并发读写下的正确性。</li>
+      </ul>
+      <p><strong>自动数据准备管道</strong></p>
+      <ul>
+        <li>引入了面向AI分析查询的自动化数据准备和特征转换管道。</li>
+        <li>支持训练就绪数据集的生成。</li>
+      </ul>
+    `,
+    content_en: `
+      <p>We are pleased to release NeurDB <a href="https://github.com/neurdb/neurdb/releases/tag/v0.5.0/" target="_blank">v0.5.0</a>, bringing substantial enhancements in AI-powered data analytics and autonomous operations.</p>
+      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2025-11-04.jpg" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+      <p>In this version, we released the following key features:</p>
+      <p><strong>In-Database Model Management</strong></p>
+      <ul>
+        <li>Integrated a database-native deep learning model store (NeurStore) for efficient model persistence and retrieval.</li>
+        <li>Optimized model loading and saving mechanisms with reduced storage overhead and improved I/O performance.</li>
+        <li>Enhanced metadata tracking to support multi-version model management and dependency tracing.</li>
+      </ul>
+      <p><strong>Concurrency Control Enhancement</strong></p>
+      <ul>
+        <li>Refined the NRAM (NeurDB Access Method) for improved transaction throughput under mixed workloads.</li>
+        <li>Enhanced lock management and state abstraction for learned concurrency control (NeurCC).</li>
+        <li>Added test cases to validate transaction isolation and detect potential anomalies.</li>
+      </ul>
+      <p><strong>KV-based Storage Engine Enhancement</strong></p>
+      <ul>
+        <li>Integrated an inter-process communication (IPC) channel to reduce context-switch overhead and improve latency.</li>
+        <li>Added test cases to validate correctness under concurrent read/write.</li>
+      </ul>
+      <p><strong>Automatic Data Preparation Pipeline</strong></p>
+      <ul>
+        <li>Introduced an automated data preparation and feature transformation pipeline for AI analytical queries.</li>
+        <li>Supports training-ready dataset generation.</li>
+      </ul>
     `,
   },
   {

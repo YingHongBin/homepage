@@ -133,10 +133,24 @@ export default {
 }
 
 .news-content {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 22px;
-  color: #222222;
-  line-height: 50px;
+  font-size: 20px;
+  color: #777777;
+  line-height: 1.8;
+  word-break: break-word;
+}
+
+.news-content :deep(h1),
+.news-content :deep(h2),
+.news-content :deep(h3),
+.news-content :deep(h4),
+.news-content :deep(h5),
+.news-content :deep(h6) {
+  margin: 28px 0 16px;
+  font-weight: 600;
+  color: #252525;
+  line-height: 1.5;
 }
 
 .news-content :deep(img) {
@@ -150,8 +164,67 @@ export default {
   line-height: 2;
 }
 
+.news-content :deep(p),
+.news-content :deep(ul),
+.news-content :deep(ol),
+.news-content :deep(li) {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+.news-content :deep(strong),
+.news-content :deep(b) {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
 .news-content :deep(p) {
   margin-bottom: 15px;
+}
+
+.news-content :deep(ul),
+.news-content :deep(ol) {
+  margin: 0 0 15px;
+  padding-left: 1.5em;
+  list-style-position: outside;
+}
+
+.news-content :deep(ul) {
+  list-style-type: disc;
+}
+
+.news-content :deep(ol) {
+  list-style-type: decimal;
+}
+
+.news-content :deep(li) {
+  margin-bottom: 8px;
+}
+
+.news-content :deep(li:last-child) {
+  margin-bottom: 0;
+}
+
+.news-content :deep(a) {
+  color: #20b9b2;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.news-content :deep(a:hover) {
+  color: #1a9690;
 }
 
 .news-source {
@@ -235,8 +308,17 @@ export default {
   }
 
   .news-content {
-    font-size: calc(26 / 750 * 100vw);
-    line-height: calc(50 / 750 * 100vw);
+    font-size: calc(23 / 750 * 100vw);
+    line-height: 1.8;
+  }
+
+  .news-content :deep(h1),
+  .news-content :deep(h2),
+  .news-content :deep(h3),
+  .news-content :deep(h4),
+  .news-content :deep(h5),
+  .news-content :deep(h6) {
+    margin: calc(28 / 750 * 100vw) 0 calc(16 / 750 * 100vw);
   }
 
   .news-content :deep(img) {
@@ -245,6 +327,15 @@ export default {
 
   .news-content :deep(p) {
     margin-bottom: calc(15 / 750 * 100vw);
+  }
+
+  .news-content :deep(ul),
+  .news-content :deep(ol) {
+    margin-bottom: calc(15 / 750 * 100vw);
+  }
+
+  .news-content :deep(li) {
+    margin-bottom: calc(8 / 750 * 100vw);
   }
 
   .news-source {
