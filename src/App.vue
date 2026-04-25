@@ -27,6 +27,10 @@ export default {
 <style>
 /* 全局样式已通过外部CSS加载 */
 
+html {
+  filter: grayscale(100%);
+}
+
 /* 覆盖外部CSS的header默认样式 - 只针对首�?*/
 [data-home-page] .sigma_header.style-5 {
   background-color: transparent;
