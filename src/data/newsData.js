@@ -5,7 +5,7 @@ export const newsData = [
     image:
       "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2026-04-25.jpg",
     title_zh: "讣告",    
-    title_en: "",
+    title_en: "In Memoriam Professor Ooi Beng Chin",
     date_zh: "2026年4月25日",
     date_en: "April 25, 2026",
     source_link: "",
@@ -22,7 +22,16 @@ export const newsData = [
       <p>黄院士长期从事数据库性能优化、索引技术、内存数据管理、人工智能、云计算和并行分布式系统的研究与应用，并致力于ABC领域（AI，Big Data，Cloud Computing）的创新与产业化，对企业级平台开发和系统集成有数十年经验，涉及领域包括大数据分析与解决方案、智能制造、金融科技和人工智能服务等。完整解决了数据库系统全流程中的关键技术难题，突破了复杂数据查询的局限；为区块链数据管理的发展做出了奠基性贡献；提出了数据管理和人工智能协同设计思想，其主导研发的系统Apache SINGA列入全球十大通用机器学习框架。</p>
       <p>黄铭钧院士毕生热爱科学，矢志追求卓越。他始终潜心研究，坚持求是创新，开数据库领域之先河，树国际学术之典范。他奖掖后进，桃李满天下，为我国计算机领域培养了大批人才。作为外籍院士，他始终心系中国科技事业的发展，积极推动中外学术交流合作，为我国数据库领域的进步建言献策。黄铭钧院士的逝世是全球计算机领域的重大损失。我们沉痛悼念并深切缅怀黄铭钧院士！他的精神与风范长存！</p>
     `,
-    content_en: `   
+    content_en: `
+      <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2026-04-25.jpg" alt="post" style="display: block; margin: 10 auto; max-width: 50%;">
+      <p>We are deeply saddened by the passing of Professor Ooi Beng Chin, a distinguished scholar, visionary leader, and beloved member of the NUS Computing community.</p>
+      <p>Professor Ooi served NUS with extraordinary dedication for over three decades, joining the University in 1991 and later serving as Dean of the School of Computing from 2007 to 2013. He was the Lee Kong Chian Centennial Professor at NUS. Through his leadership, he helped shape the School’s growth, reputation, and international standing, and played a pivotal role in advancing computing research and education in Singapore.</p>
+      <p>An internationally renowned computer scientist, Professor Ooi made foundational contributions to database systems, distributed systems, blockchain systems, machine learning systems, and large-scale data analytics. His work combined deep scientific insight with the design and deployment of practical, high-impact systems. He led the development of Apache SINGA, the first Apache Top-Level Project on distributed deep learning.</p>
+      <p>Professor Ooi’s contributions were recognised with many of the highest honours in computing. He was a Fellow of ACM, IEEE, the Singapore National Academy of Science, the Singapore Academy of Engineering, and the China Computer Federation, as well as a Foreign Member of Academia Europaea and the Chinese Academy of Sciences. He received the ACM SIGMOD Contributions Award, the ACM SIGMOD Edgar F. Codd Innovations Award, the ACM SIGMOD Systems Award, the IEEE Computer Society Kanai Award, the IEEE TCDE CSEE Impact Award, and the China Computer Federation Overseas Outstanding Contributions Award. He was also a co-recipient of the Singapore President’s Science Award.</p>
+      <p>Beyond his research achievements, Professor Ooi was a generous mentor, deeply respected colleague, and influential academic leader. He served the global research community in many capacities, including as President of the VLDB Endowment, Editor-in-Chief of IEEE Transactions on Knowledge and Data Engineering, founding Editor-in-Chief of ACM Transactions on Data Science, and in senior leadership roles for major conferences.</p>
+      <p>He inspired generations of students, researchers, and faculty members in Singapore and around the world, and will be remembered for his wisdom, intellectual generosity, and unwavering commitment to excellence. His passing is a profound loss to NUS Computing, to Singapore, and to the international computer science community.</p>
+      <p>Professor Ooi’s legacy lives on in the School he helped build, the research community he shaped, the systems and ideas he created, and the many lives he touched.</p>
+      <p>We extend our deepest condolences to his family and loved ones during this time of profound loss.</p>
   `,
   },
   {
