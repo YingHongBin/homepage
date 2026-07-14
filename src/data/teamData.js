@@ -1,22 +1,4 @@
-﻿// PI 学科带头人
-export const piData = [
-  {
-    name: "黄铭钧",
-    name_en: "OOI Beng Chin",
-    position: "教授",
-    position_en: "Professor",
-    description:
-      "浙江大学求是讲席教授、浙江大学软件学院教授、北京大学客座讲席教授 、清华大学杰出访问教授，同时任中国科学院外籍院士、新加坡科学院院士、新加坡工程院院士、欧洲人文和自然科学院外籍院士、ACM Fellow 、IEEE Fellow、CCF会士。",
-    description_en:
-      "Qiushi Chair Professor at Zhejiang University and professor at the School of Software Technology, Zhejiang University. Visiting Chair Professor at Peking University, and Distinguished Visiting Professor at Tsinghua University. \nHe is a Foreign Member of the Chinese Academy of Sciences, Fellow of the Singapore Academy of Sciences, Fellow of the Singapore Academy of Engineering, Foreign Member of the European Academy of Sciences and Arts, ACM Fellow, IEEE Fellow, and CCF Fellow.",
-    email: "",
-    website: "https://ooibc88.github.io/",
-    image:
-      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/ooibc.webp",
-  },
-];
-
-// Faculty 教师
+﻿// Faculty 教师
 export const facultyData = [
   {
     name: "张文桥",

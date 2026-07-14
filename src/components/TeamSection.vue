@@ -7,64 +7,6 @@
         </h4>
       </div>
 
-      <!-- PI Section -->
-      <div class="team-category">
-        <div class="category-title">
-          {{ currentLang === "zh" ? "学科带头人" : "PI & Manager" }}
-        </div>
-        <div
-          v-for="member in piData"
-          :key="member.name"
-          class="team-member-row"
-        >
-          <div class="member-avatar">
-            <img :src="member.image" :alt="member.name" />
-          </div>
-          <div class="member-info">
-            <div class="member-name">
-              <span>{{
-                currentLang === "zh" ? member.name : member.name_en
-              }}</span>
-              <div class="member-icons">
-                <a
-                  v-if="member.email"
-                  :href="`mailto:${member.email}`"
-                  class="member-icon"
-                  title="Email"
-                >
-                  <img
-                    src="/assets/img/materials/team/email-icon.png"
-                    alt="Email"
-                  />
-                </a>
-                <a
-                  v-if="member.website"
-                  :href="member.website"
-                  target="_blank"
-                  class="member-icon"
-                  title="Website"
-                >
-                  <img
-                    src="/assets/img/materials/team/home-web-icon.png"
-                    alt="Website"
-                  />
-                </a>
-              </div>
-            </div>
-            <span class="member-position">
-              {{ currentLang === "zh" ? member.position : member.position_en }}
-            </span>
-            <span class="member-description">
-              {{
-                currentLang === "zh"
-                  ? member.description
-                  : member.description_en
-              }}
-            </span>
-          </div>
-        </div>
-      </div>
-
       <!-- Faculty Section -->
       <div class="team-category">
         <div class="category-title">
@@ -319,7 +261,6 @@
 <script>
 import { useLanguage } from "../composables/useLanguage";
 import {
-  piData,
   facultyData,
   assistantData,
   studentsData,
@@ -333,7 +274,6 @@ export default {
 
     return {
       currentLang,
-      piData,
       facultyData,
       assistantData,
       studentData: studentsData,
