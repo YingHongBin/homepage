@@ -18,6 +18,9 @@
 
     <!-- Team Section -->
     <TeamSection id="team" />
+
+    <!-- Memorial Section -->
+    <MemorialSection id="memorial" />
   </div>
 </template>
 
@@ -31,6 +34,7 @@ import ProjectsSection from "../components/ProjectsSection.vue";
 import IncubatingSection from "../components/IncubatingSection.vue";
 import TeamSection from "../components/TeamSection.vue";
 import PublicationsSection from "../components/PublicationsSection.vue";
+import MemorialSection from "../components/MemorialSection.vue";
 
 export default {
   name: "Home",
@@ -41,6 +45,7 @@ export default {
     IncubatingSection,
     TeamSection,
     PublicationsSection,
+    MemorialSection,
   },
   setup() {
     const { currentLang, initLanguage } = useLanguage();
