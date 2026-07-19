@@ -160,13 +160,15 @@ export default {
 }
 
 .research-card-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 34px;
 }
 
 .research-card {
   display: block;
+  width: calc((100% - 102px) / 4);
   min-width: 0;
   color: inherit;
   text-decoration: none;
@@ -251,8 +253,11 @@ export default {
   }
 
   .research-card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: calc(34 / 750 * 100vw) calc(24 / 750 * 100vw);
+  }
+
+  .research-card {
+    width: calc((100% - calc(24 / 750 * 100vw)) / 2);
   }
 
   .research-card:hover {
