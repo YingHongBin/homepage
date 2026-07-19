@@ -10,9 +10,6 @@
     <!-- Projects Section -->
     <ProjectsSection />
 
-    <!-- Incubating Projects Section -->
-    <IncubatingSection />
-
     <!-- Publications CTA -->
     <PublicationsSection id="publications" />
 
@@ -31,7 +28,6 @@ import { useLanguage } from "../composables/useLanguage";
 import BannerSection from "../components/BannerSection.vue";
 import NewsSection from "../components/NewsSection.vue";
 import ProjectsSection from "../components/ProjectsSection.vue";
-import IncubatingSection from "../components/IncubatingSection.vue";
 import TeamSection from "../components/TeamSection.vue";
 import PublicationsSection from "../components/PublicationsSection.vue";
 import MemorialSection from "../components/MemorialSection.vue";
@@ -42,7 +38,6 @@ export default {
     BannerSection,
     NewsSection,
     ProjectsSection,
-    IncubatingSection,
     TeamSection,
     PublicationsSection,
     MemorialSection,

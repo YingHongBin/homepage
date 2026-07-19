@@ -6,69 +6,37 @@
         <h4 class="module-title">
           {{
             currentLang === "zh"
-              ? "面向医疗的智能数据系统"
-              : "Data and AI Systems for Healthcare"
+              ? "面向医疗的智能体生态系统"
+              : "Agent Ecosystem for Healthcare"
           }}
         </h4>
       </div>
       <p class="project-description">
         {{
           currentLang === "zh"
-            ? "本研究方向探索智能数据和人工智能系统的设计，以应对医疗保健领域的关键挑战。我们专注于构建基于通用数据技术的智能平台，以高效管理、处理和分析复杂的医疗数据，从而支持预测模型、个性化护理和全人群健康洞察。关键领域包括基于队列的分析、多模态医疗数据集成以及用于诊断和决策支持的特定领域大语言模型。通过结合数据系统、机器学习和领域知识的创新，我们旨在推动值得信赖、可扩展且可操作的医疗保健技术的发展。"
-            : "This research direction explores the design of intelligent data and AI systems to address critical challenges in healthcare. We focus on building platforms that can efficiently manage, process, and analyze complex medical data to support predictive modeling, personalized care, and population-level health insights. Key areas include cohort-based analysis, multimodal medical data integration, and domain-specific large language models(LLMs) for diagnosis and decision support. By combining innovations in data systems, machine learning, and domain knowledge, we aim to advance the development of trustworthy, scalable, and actionable healthcare technologies."
+            ? "本研究方向致力于构建面向真实医疗场景的智能体生态系统，探索人工智能智能体（AI Agents）在临床诊疗、生物医药研究及医疗决策中的创新应用。我们以医学大模型、多模态医疗数据和医学知识为基础，研发具备感知、推理、规划、工具调用、协同决策与持续学习能力的专业医疗智能体，实现复杂医疗任务的智能分析与辅助决策。围绕医疗智能体的核心能力，我们重点研究多智能体协作、知识驱动推理、强化学习优化与Agent Memory 记忆增强机制等关键技术，持续提升智能体在复杂医疗场景中的自主学习、动态决策与协同执行能力。通过真实世界临床验证，我们致力于打造可信、安全、可扩展的医疗智能体平台，为智慧医疗提供新一代人工智能基础设施，推动医疗 AI 从\"单一模型\"迈向\"智能体生态\"。"
+            : "This research direction focuses on building an agent ecosystem for real-world healthcare scenarios, exploring innovative applications of AI Agents in clinical diagnosis, biomedical research, and medical decision-making. We develop professional healthcare agents with capabilities in perception, reasoning, planning, tool invocation, collaborative decision-making, and continual learning, based on medical large language models, multimodal healthcare data, and medical knowledge. Our research emphasizes multi-agent collaboration, knowledge-driven reasoning, reinforcement learning optimization, and Agent Memory enhancement mechanisms to continuously improve agents' autonomous learning, dynamic decision-making, and collaborative execution in complex healthcare scenarios. Through real-world clinical validation, we aim to create a trustworthy, secure, and scalable healthcare agent platform that serves as the next-generation AI infrastructure for smart healthcare, advancing AI in medicine from \"single models\" to an \"agent ecosystem.\""
         }}
       </p>
-      <div class="project-tags">
-        <div
+      <div class="research-card-grid">
+        <a
           v-for="item in healthcareProjects"
           :key="item.name"
-          class="project-tag"
-          :class="{ active: selectedHealthcare === item.name }"
-          @click="selectedHealthcare = item.name"
+          :href="item.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="research-card"
         >
-          {{ item.name }}
-        </div>
-      </div>
-
-      <!-- 项目详情 -->
-      <Transition name="fade" mode="out-in">
-        <div
-          class="project-detail"
-          v-if="selectedHealthcare"
-          :key="selectedHealthcare"
-        >
-          <div class="project-detail-left">
-            <div class="project-year">
-              {{ getHealthcareProject(selectedHealthcare).year }}
-            </div>
-            <p class="project-detail-description">
-              {{
-                currentLang === "zh"
-                  ? getHealthcareProject(selectedHealthcare).descriptionZh
-                  : getHealthcareProject(selectedHealthcare).descriptionEn
-              }}
-            </p>
-            <a
-              :href="getHealthcareProject(selectedHealthcare).url"
-              target="_blank"
-              class="project-detail-link"
-            >
-              <img
-                src="/assets/img/materials/news/right-arrow-icon.png"
-                alt="arrow"
-                class="detail-arrow-icon"
-              />
-            </a>
-          </div>
-          <div class="project-detail-right">
+          <div class="research-card-image-wrap">
             <img
-              :src="getHealthcareProject(selectedHealthcare).icon"
-              alt="project icon"
-              class="project-icon"
+              :src="item.icon"
+              :alt="item.name"
+              class="research-card-image"
             />
           </div>
-        </div>
-      </Transition>
+          <h5 class="research-card-title">{{ item.name }}</h5>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -79,145 +47,47 @@
         <h4 class="module-title">
           {{
             currentLang === "zh"
-              ? "人工智能驱动的核心数据系统"
-              : "Core Data + AI Systems"
+              ? "大模型推理加速"
+              : "Large Language Model Inference Acceleration"
           }}
         </h4>
       </div>
       <p class="project-description">
         {{
           currentLang === "zh"
-            ? "该方向专注于将人工智能深度集成到核心数据系统架构中。我们的目标是设计智能、自优化的平台，以实现分析自动化、提升系统性能并降低运营复杂性。通过将人工智能功能嵌入到数据堆栈的每个主要组件中，这些系统支持数据库内学习、自适应优化和人工智能原生查询处理。这种人工智能与数据基础设施的协同设计，助力打造专为人工智能工作负载构建的新一代系统。"
-            : "This direction focuses on the deep integration of AI into the architecture of core data systems. We aim to design intelligent, self-optimizing platforms that automate analytics, enhance system performance, and reduce operational complexity. By embedding AI capabilities into every major component of the data stack, these systems support in-database learning, adaptive optimization, and AI-native query processing. This co-design of AI and data infrastructure enables a new generation of systems purpose-built for AI workloads."
+            ? "该方向专注于提升大模型在长文本理解、语义表征和向量检索等场景中的推理效率。我们的目标是在尽量保持模型效果的前提下，通过状态压缩、动态计算和高效算子等技术，降低计算开销、显存占用与推理延迟。通过模型结构、推理流程与硬件执行的协同优化，构建面向长上下文和高并发任务的高效推理方法，为大模型的规模化部署与应用提供支撑。"
+            : "This direction focuses on improving the inference efficiency of large language models in long-context understanding, semantic representation, and vector retrieval. Our goal is to reduce computational cost, memory usage, and latency while preserving model quality through techniques such as state compression, adaptive computation, and efficient operators. By jointly optimizing model architecture, inference workflows, and hardware execution, we develop efficient inference methods for long-context and high-throughput applications, supporting the scalable deployment of large language models."
         }}
       </p>
-      <div class="project-tags">
-        <div
+      <div class="research-card-grid">
+        <a
           v-for="item in coreDataProjects"
           :key="item.name"
-          class="project-tag"
-          :class="{ active: selectedCore === item.name }"
-          @click="selectedCore = item.name"
+          :href="item.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="research-card"
         >
-          {{ item.name }}
-        </div>
-      </div>
-
-      <!-- 项目详情 -->
-      <Transition name="fade" mode="out-in">
-        <div class="project-detail" v-if="selectedCore" :key="selectedCore">
-          <div class="project-detail-left">
-            <div class="project-year">
-              {{ getCoreProject(selectedCore).year }}
-            </div>
-            <p class="project-detail-description">
-              {{
-                currentLang === "zh"
-                  ? getCoreProject(selectedCore).descriptionZh
-                  : getCoreProject(selectedCore).descriptionEn
-              }}
-            </p>
-            <a
-              :href="getCoreProject(selectedCore).url"
-              target="_blank"
-              class="project-detail-link"
-            >
-              <img
-                src="/assets/img/materials/news/right-arrow-icon.png"
-                alt="arrow"
-                class="detail-arrow-icon"
-              />
-            </a>
-          </div>
-          <div class="project-detail-right">
+          <div class="research-card-image-wrap">
             <img
-              :src="getCoreProject(selectedCore).icon"
-              alt="project icon"
-              class="project-icon"
+              :src="item.icon"
+              :alt="item.name"
+              class="research-card-image"
             />
           </div>
-        </div>
-      </Transition>
+          <h5 class="research-card-title">{{ item.name }}</h5>
+        </a>
+      </div>
     </div>
   </div>
 
-  <!-- Object-Centric Vision for Intelligent Multimodal Systems -->
-  <div class="section healthcare-section">
-    <div class="project-container">
-      <div class="text-center">
-        <h4 class="module-title">
-          {{
-            currentLang === "zh"
-              ? "面向对象中心视觉的智能多模态系统"
-              : "Object-Centric Vision for Intelligent Multimodal Systems"
-          }}
-        </h4>
-      </div>
-      <p class="project-description">
-        {{
-          currentLang === "zh"
-            ? "本系列工作聚焦于对象中心（object-centric）视觉智能与多模态大模型的融合，旨在突破传统模型以“整体场景理解”为主的局限，构建能够对具体对象进行精细理解、推理与可控操作的统一框架。通过结合大语言模型与对象级视觉表示，我们致力于推动多模态系统从“看懂一张图”，走向“理解、操作并控制具体对象”，为智能代理、医疗分析、机器人感知等场景提供关键技术支撑。"
-            : "This line of work focuses on the integration of object-centric visual intelligence with multimodal large models. It aims to overcome the limitations of traditional models that primarily rely on holistic scene understanding, and to build a unified framework capable of fine-grained understanding, reasoning, and controllable manipulation of specific objects. By combining large language models with object-level visual representations, we strive to advance multimodal systems from merely “understanding an image” to “understanding, manipulating, and controlling specific objects,” thereby providing key technical support for applications such as intelligent agents, medical analysis, and robotic perception."
-        }}
-      </p>
-      <div class="project-tags">
-        <div
-          v-for="item in multimodalProjects"
-          :key="item.name"
-          class="project-tag"
-          :class="{ active: selectedMultimodal === item.name }"
-          @click="selectedMultimodal = item.name"
-        >
-          {{ item.name }}
-        </div>
-      </div>
-
-      <!-- 项目详情 -->
-      <Transition name="fade" mode="out-in">
-        <div class="project-detail" v-if="selectedMultimodal" :key="selectedMultimodal">
-          <div class="project-detail-left">
-            <div class="project-year">
-              {{ getMultimodalProject(selectedMultimodal).year }}
-            </div>
-            <p class="project-detail-description">
-              {{
-                currentLang === "zh"
-                  ? getMultimodalProject(selectedMultimodal).descriptionZh
-                  : getMultimodalProject(selectedMultimodal).descriptionEn
-              }}
-            </p>
-            <a
-              :href="getMultimodalProject(selectedMultimodal).url"
-              target="_blank"
-              class="project-detail-link"
-            >
-              <img
-                src="/assets/img/materials/news/right-arrow-icon.png"
-                alt="arrow"
-                class="detail-arrow-icon"
-              />
-            </a>
-          </div>
-          <div class="project-detail-right">
-            <img
-              :src="getMultimodalProject(selectedMultimodal).icon"
-              alt="project icon"
-              class="project-icon"
-            />
-          </div>
-        </div>
-      </Transition>
-    </div>
-  </div>
 </template>
 
 <script>
-import { ref } from "vue";
 import { useLanguage } from "../composables/useLanguage";
 import {
   healthcareProjects as healthcareProjectsData,
   aiSystemProjects,
-  multimodalProjects as multimodalProjectsData,
 } from "../data/projectsData";
 
 export default {
@@ -225,54 +95,25 @@ export default {
   setup() {
     const { currentLang } = useLanguage();
 
-    // 默认选中第一个项目
-    const selectedHealthcare = ref(healthcareProjectsData[0]?.name || "");
-    const selectedCore = ref(aiSystemProjects[0]?.name || "");
-    const selectedMultimodal = ref(multimodalProjectsData[0]?.name || "");
-
-    // 适配医疗项目数据（添加url和icon字段）
     const healthcareProjects = healthcareProjectsData.map((project) => ({
       ...project,
       url: project.link,
       icon: project.image,
     }));
 
-    // 适配核心数据系统项目（使用所有aiSystemProjects）
-    const coreDataProjects = aiSystemProjects.map((project) => ({
-      ...project,
-      url: project.link,
-      icon: project.image,
-    }));
-
-    const multimodalProjects = multimodalProjectsData.map((project) => ({
-      ...project,
-      url: project.link,
-      icon: project.image
-    }));
-
-    const getHealthcareProject = (name) => {
-      return healthcareProjects.find((p) => p.name === name);
-    };
-
-    const getCoreProject = (name) => {
-      return coreDataProjects.find((p) => p.name === name);
-    };
-
-    const getMultimodalProject = (name) => {
-      return multimodalProjects.find((p) => p.name === name);
-    };
+    const coreProjectNames = ["NeurDB", "HAKES", "Structured Data", "SINGA"];
+    const coreDataProjects = aiSystemProjects
+      .filter((project) => coreProjectNames.includes(project.name))
+      .map((project) => ({
+        ...project,
+        url: project.link,
+        icon: project.image,
+      }));
 
     return {
       currentLang,
       healthcareProjects,
       coreDataProjects,
-      multimodalProjects,
-      selectedHealthcare,
-      selectedCore,
-      selectedMultimodal,
-      getHealthcareProject,
-      getCoreProject,
-      getMultimodalProject,
     };
   },
 };
@@ -307,16 +148,10 @@ export default {
   padding: 150px 0;
 }
 
-/* 孵化项目模块 - 白色背景 */
-.incubating-section {
-  background-color: #fff;
-  padding: 150px 0;
-}
-
 /* 项目描述 */
 .project-description {
   max-width: 100%;
-  margin: 0 auto 80px;
+  margin: 0 auto 70px;
   font-weight: 400;
   font-size: 22px;
   color: #8c8c8c;
@@ -324,146 +159,64 @@ export default {
   text-align: left;
 }
 
-/* 项目标签容器 */
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 50px 80px;
+.research-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 34px;
 }
 
-/* 项目标签 */
-.project-tag {
-  height: 70px;
-  padding: 0 36px;
-  width: auto;
-  min-width: 300px;
-  max-width: 100%;
+.research-card {
+  display: block;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.research-card:hover {
+  color: inherit;
+  text-decoration: none;
+  transform: translateY(-6px);
+}
+
+.research-card-image-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding: 24px;
   background: #ffffff;
+  border: 1px solid #e9edf2;
+  border-radius: 8px;
   box-shadow: 0 5px 16px 0 rgba(21, 34, 50, 0.08);
-  border-radius: 35px;
-  display: inline-block;
-  background-color: #f7f8fc;
-  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.research-card:hover .research-card-image-wrap {
+  border-color: rgba(30, 186, 178, 0.45);
+  box-shadow: 0 10px 24px 0 rgba(21, 34, 50, 0.12);
+}
+
+.research-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.research-card:hover .research-card-image {
+  transform: scale(1.04);
+}
+
+.research-card-title {
+  margin: 22px 0 0;
   font-weight: 600;
   font-size: 26px;
   color: #222222;
-  line-height: 70px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  line-height: 36px;
   text-align: center;
-  cursor: pointer;
-}
-
-.project-tag:hover {
-  background-color: #1ebab2;
-  color: #fff;
-  border-color: #1ebab2;
-  transform: translateY(-2px);
-}
-
-.project-tag.active {
-  background-color: #1ebab2;
-  color: #fff;
-  border-color: #1ebab2;
-}
-
-/* 项目详情 */
-.project-detail {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 80px;
-  gap: 100px;
-}
-
-.project-detail-left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.project-year {
-  font-weight: 600;
-  font-size: 32px;
-  color: #222222;
-  line-height: 45px;
-}
-
-.project-detail-description {
-  font-weight: 400;
-  font-size: 22px;
-  color: #8c8c8c;
-  line-height: 50px;
-  margin: 0;
-}
-
-.project-detail-link {
-  margin-top: 16px;
-  width: 140px;
-  height: 40px;
-  background: #fff;
-  box-shadow: 0 5px 16px 0 rgba(21, 34, 50, 0.08);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.project-detail-link:hover {
-  transform: scale(1.1);
-  background-color: #1ebab2;
-  box-shadow: 0 5px 16px 0 rgba(30, 186, 178, 0.3);
-
-  .detail-arrow-icon {
-    filter: brightness(0) invert(1);
-  }
-}
-
-.detail-arrow-icon {
-  width: 32px;
-  height: 32px;
-}
-
-.project-detail-right {
-  flex-shrink: 0;
-  width: 400px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-}
-
-.project-icon {
-  width: 400px;
-  height: 400px;
-  object-fit: contain;
-  border-radius: 20px;
-}
-
-/* 淡入淡出动画 */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.fade-enter-from {
-  opacity: 0;
-  transform: translateY(10px);
-}
-
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
-.fade-enter-to,
-.fade-leave-from {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* 移动端响应式样式 */
@@ -484,12 +237,6 @@ export default {
     padding: calc(60 / 750 * 100vw) 0;
   }
 
-  /* 孵化项目模块 - 白色背景 */
-  .incubating-section {
-    background-color: #fff;
-    padding: calc(60 / 750 * 100vw) 0;
-  }
-
   .module-title {
     font-size: calc(40 / 750 * 100vw);
     line-height: calc(56 / 750 * 100vw);
@@ -503,91 +250,26 @@ export default {
     margin-bottom: calc(40 / 750 * 100vw);
   }
 
-  /* project-tags的gap变小 */
-  .project-tags {
-    gap: calc(40 / 750 * 100vw) calc(20 / 750 * 100vw);
+  .research-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: calc(34 / 750 * 100vw) calc(24 / 750 * 100vw);
   }
 
-  .project-tag {
-    width: calc(50% - calc(20 / 750 * 100vw));
-    max-width: calc(300 / 750 * 100vw);
-    height: calc(70 / 750 * 100vw);
+  .research-card:hover {
+    transform: none;
+  }
+
+  .research-card-image-wrap {
+    padding: calc(18 / 750 * 100vw);
+    border-radius: calc(8 / 750 * 100vw);
     box-shadow: 0 calc(5 / 750 * 100vw) calc(16 / 750 * 100vw) 0
       rgba(21, 34, 50, 0.08);
-    border-radius: calc(35 / 750 * 100vw);
-    border: calc(1 / 750 * 100vw) solid #e0e0e0;
-    font-size: calc(26 / 750 * 100vw);
-    color: #222222;
-    line-height: calc(70 / 750 * 100vw);
   }
 
-  .project-tag:hover {
-    transform: translateY(calc(-2 / 750 * 100vw));
-  }
-
-  /* 项目详情上下排列 */
-  .project-detail {
-    flex-direction: column-reverse;
-    gap: calc(30 / 750 * 100vw);
-    margin-top: calc(40 / 750 * 100vw);
-  }
-
-  .project-detail-left {
-    gap: calc(12 / 750 * 100vw);
-  }
-
-  /* 详情字体变小 */
-  .project-year {
-    font-weight: 600;
-    font-size: calc(32 / 750 * 100vw);
-    color: #222222;
-    line-height: calc(45 / 750 * 100vw);
-  }
-
-  .project-detail-description {
-    font-size: calc(26 / 750 * 100vw);
-    color: #222222;
-    line-height: calc(50 / 750 * 100vw);
-  }
-
-  .project-detail-link {
-    width: calc(120 / 750 * 100vw);
-    height: calc(36 / 750 * 100vw);
-    margin-top: calc(12 / 750 * 100vw);
-    border-radius: calc(20 / 750 * 100vw);
-    transform: scale(1.1);
-    background-color: #1ebab2;
-    box-shadow: 0 calc(5 / 750 * 100vw) calc(16 / 750 * 100vw) 0
-      rgba(30, 186, 178, 0.3);
-  }
-
-  .project-detail-link .detail-arrow-icon {
-    filter: brightness(0) invert(1);
-  }
-
-  .detail-arrow-icon {
-    width: calc(24 / 750 * 100vw);
-    height: calc(24 / 750 * 100vw);
-  }
-
-  .project-detail-right {
-    max-width: calc(400 / 750 * 100vw);
-    max-height: calc(400 / 750 * 100vw);
-    border-radius: calc(20 / 750 * 100vw);
-  }
-
-  .project-icon {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: calc(20 / 750 * 100vw);
-  }
-
-  .fade-enter-from {
-    transform: translateY(calc(10 / 750 * 100vw));
-  }
-
-  .fade-leave-to {
-    transform: translateY(calc(-10 / 750 * 100vw));
+  .research-card-title {
+    margin-top: calc(16 / 750 * 100vw);
+    font-size: calc(24 / 750 * 100vw);
+    line-height: calc(34 / 750 * 100vw);
   }
 }
 </style>
