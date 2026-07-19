@@ -6,8 +6,8 @@
         <h4 class="module-title">
           {{
             currentLang === "zh"
-              ? "面向医疗的智能体生态系统"
-              : "Agent Ecosystem for Healthcare"
+              ? "数据驱动的医疗人工智能"
+              : "Data-Driven AI for Healthcare"
           }}
         </h4>
       </div>
@@ -18,7 +18,10 @@
             : "This research direction focuses on building an agent ecosystem for real-world healthcare scenarios, exploring innovative applications of AI Agents in clinical diagnosis, biomedical research, and medical decision-making. We develop professional healthcare agents with capabilities in perception, reasoning, planning, tool invocation, collaborative decision-making, and continual learning, based on medical large language models, multimodal healthcare data, and medical knowledge. Our research emphasizes multi-agent collaboration, knowledge-driven reasoning, reinforcement learning optimization, and Agent Memory enhancement mechanisms to continuously improve agents' autonomous learning, dynamic decision-making, and collaborative execution in complex healthcare scenarios. Through real-world clinical validation, we aim to create a trustworthy, secure, and scalable healthcare agent platform that serves as the next-generation AI infrastructure for smart healthcare, advancing AI in medicine from \"single models\" to an \"agent ecosystem.\""
         }}
       </p>
-      <div class="research-card-grid">
+      <div
+        class="research-card-grid"
+        :class="`card-count-${healthcareProjects.length}`"
+      >
         <a
           v-for="item in healthcareProjects"
           :key="item.name"
@@ -47,8 +50,8 @@
         <h4 class="module-title">
           {{
             currentLang === "zh"
-              ? "大模型推理加速"
-              : "Large Language Model Inference Acceleration"
+              ? "高性能AI技术"
+              : "High-Performance AI Technology"
           }}
         </h4>
       </div>
@@ -59,7 +62,10 @@
             : "This direction focuses on improving the inference efficiency of large language models in long-context understanding, semantic representation, and vector retrieval. Our goal is to reduce computational cost, memory usage, and latency while preserving model quality through techniques such as state compression, adaptive computation, and efficient operators. By jointly optimizing model architecture, inference workflows, and hardware execution, we develop efficient inference methods for long-context and high-throughput applications, supporting the scalable deployment of large language models."
         }}
       </p>
-      <div class="research-card-grid">
+      <div
+        class="research-card-grid"
+        :class="`card-count-${coreDataProjects.length}`"
+      >
         <a
           v-for="item in coreDataProjects"
           :key="item.name"
@@ -166,6 +172,15 @@ export default {
   gap: 34px;
 }
 
+.research-card-grid.card-count-2,
+.research-card-grid.card-count-3 {
+  column-gap: 72px;
+}
+
+.research-card-grid.card-count-3 {
+  column-gap: 56px;
+}
+
 .research-card {
   display: block;
   width: calc((100% - 102px) / 4);
@@ -254,6 +269,11 @@ export default {
 
   .research-card-grid {
     gap: calc(34 / 750 * 100vw) calc(24 / 750 * 100vw);
+  }
+
+  .research-card-grid.card-count-2,
+  .research-card-grid.card-count-3 {
+    column-gap: calc(24 / 750 * 100vw);
   }
 
   .research-card {
