@@ -299,53 +299,63 @@ export default {
 }
 
 .team-section {
-  background-color: #f7f8fc;
+  background-color: #ffffff;
   padding: 150px 0;
 }
 
 /* 团队分类 */
 .team-category {
-  margin-top: 90px;
+  margin-top: 48px;
 }
 
 /* 分类标题 */
 .category-title {
-  width: 300px;
-  height: 70px;
-  background: #1ebab2;
-  box-shadow: 0 5px 16px 0 rgba(21, 34, 50, 0.08);
-  border-radius: 35px;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
   font-weight: 600;
-  font-size: 32px;
-  color: #ffffff;
-  line-height: 70px;
-  text-align: center;
-  margin-bottom: 60px;
+  font-size: 22px;
+  color: #222222;
+  line-height: 30px;
+  text-align: left;
+  margin-bottom: 22px;
+  padding-left: 14px;
+  border-left: 3px solid #003F88;
 }
 
 /* 团队成员行 */
 .team-member-row {
   display: flex;
   align-items: flex-start;
-  gap: 40px;
+  gap: 28px;
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .team-member-row.half-width {
-  width: calc(50% - 80px);
+  width: calc(50% - 28px);
 }
 
 /* 团队网格布局 (教师和学生一行两个) */
 .team-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px 160px;
+  gap: 42px 56px;
 }
 
 /* 成员头像 */
 .member-avatar {
   flex-shrink: 0;
-  width: 200px;
-  height: 200px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 5px 16px rgba(21, 34, 50, 0.08);
@@ -363,18 +373,19 @@ export default {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
+  padding-top: 0;
+  min-width: 0;
 }
 
 .member-name {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 22px;
   color: #222222;
-  line-height: 45px;
+  line-height: 30px;
 }
 
 .member-name > span {
@@ -384,15 +395,15 @@ export default {
 .member-icons {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .member-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 22px;
+  height: 22px;
   transition: all 0.3s ease;
 }
 
@@ -410,19 +421,19 @@ export default {
 
 .member-position {
   font-weight: 400;
-  font-size: 26px;
+  font-size: 16px;
   color: #8c8c8c;
-  line-height: 37px;
-  margin-top: 6px;
+  line-height: 24px;
+  margin-top: 2px;
   text-align: left;
 }
 
 .member-description {
-  margin-top: 12px;
+  margin-top: 8px;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 15px;
   color: #222222;
-  line-height: 44px;
+  line-height: 24px;
   text-align: left;
 }
 
@@ -433,7 +444,7 @@ export default {
   }
 
   .team-grid {
-    gap: calc(40 / 750 * 100vw);
+    gap: 36px;
   }
 }
 
@@ -454,43 +465,43 @@ export default {
   }
 
   .team-category {
-    margin-top: calc(50 / 750 * 100vw);
+    margin-top: calc(42 / 750 * 100vw);
   }
 
   /* 分类标题居中 */
   .category-title {
-    width: calc(300 / 750 * 100vw);
-    height: calc(70 / 750 * 100vw);
-    box-shadow: 0 calc(5 / 750 * 100vw) calc(16 / 750 * 100vw) 0
-      rgba(21, 34, 50, 0.08);
-    border-radius: calc(35 / 750 * 100vw);
-    font-size: calc(32 / 750 * 100vw);
-    line-height: calc(70 / 750 * 100vw);
-    margin: 0 auto calc(40 / 750 * 100vw);
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: calc(28 / 750 * 100vw);
+    line-height: calc(38 / 750 * 100vw);
+    margin: 0 0 calc(22 / 750 * 100vw);
+    padding-left: calc(14 / 750 * 100vw);
+    border-left-width: calc(3 / 750 * 100vw);
   }
 
   /* 团队成员行 - 移动端布局 */
   .team-member-row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: calc(20 / 750 * 100vw);
-    margin-bottom: calc(40 / 750 * 100vw);
+    margin-bottom: 0;
+    padding: 0;
+    border-radius: 0;
   }
 
   /* 上半部分：头像、名字职称、icons */
   .team-member-row .member-avatar {
-    width: calc(150 / 750 * 100vw);
-    height: calc(150 / 750 * 100vw);
-    position: absolute;
-    left: 0;
-    top: 0;
+    width: calc(120 / 750 * 100vw);
+    height: calc(120 / 750 * 100vw);
+    position: static;
     box-shadow: 0 calc(5 / 750 * 100vw) calc(16 / 750 * 100vw)
       rgba(21, 34, 50, 0.08);
   }
 
   .team-member-row {
     position: relative;
-    padding-left: 0;
   }
 
   /* 信息区域容器 */
@@ -498,30 +509,24 @@ export default {
     padding-top: 0;
   }
 
-  /* 头部信息区（头像+名字职称+icons） */
   .member-info::before {
-    content: "";
-    display: block;
-    height: calc(160 / 750 * 100vw); /* 为头像+名字职称区域预留空间 */
+    content: none;
   }
 
   .member-avatar {
-    width: calc(150 / 750 * 100vw);
-    height: calc(150 / 750 * 100vw);
+    width: calc(120 / 750 * 100vw);
+    height: calc(120 / 750 * 100vw);
   }
 
   /* 名字和icons的容器 */
   .member-name {
-    position: absolute;
-    top: calc(40 / 750 * 100vw);
-    left: calc(170 / 750 * 100vw); /* 头像150px + 20px间距 */
-    right: calc(80 / 750 * 100vw); /* 为icons预留空间 */
-    flex-direction: column;
-    align-items: flex-start;
-    gap: calc(4 / 750 * 100vw);
-    width: calc(100% - calc(180 / 750 * 100vw));
-    font-size: calc(32 / 750 * 100vw);
-    line-height: calc(45 / 750 * 100vw);
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: calc(8 / 750 * 100vw);
+    width: 100%;
+    font-size: calc(26 / 750 * 100vw);
+    line-height: calc(36 / 750 * 100vw);
   }
 
   .member-name > span {
@@ -531,10 +536,8 @@ export default {
 
   /* Icons固定在右侧 */
   .member-icons {
-    position: absolute;
-    top: calc(-6 / 750 * 100vw);
-    right: 0;
-    gap: calc(12 / 750 * 100vw);
+    position: static;
+    gap: calc(8 / 750 * 100vw);
   }
 
   .member-icon img {
@@ -543,37 +546,34 @@ export default {
   }
 
   .member-icon {
-    width: calc(50 / 750 * 100vw);
-    height: calc(50 / 750 * 100vw);
+    width: calc(28 / 750 * 100vw);
+    height: calc(28 / 750 * 100vw);
   }
 
   /* 职称位置 */
   .member-position {
-    position: absolute;
-    top: calc(86 / 750 * 100vw);
-    left: calc(170 / 750 * 100vw);
-    right: calc(80 / 750 * 100vw);
+    position: static;
     margin-top: 0;
     padding-right: 0;
-    font-size: calc(26 / 750 * 100vw);
-    line-height: calc(37 / 750 * 100vw);
+    font-size: calc(22 / 750 * 100vw);
+    line-height: calc(32 / 750 * 100vw);
   }
 
   /* 个人详情在最下方 */
   .member-description {
-    margin-top: calc(20 / 750 * 100vw);
+    margin-top: calc(8 / 750 * 100vw);
     text-align: left;
-    font-size: calc(26 / 750 * 100vw);
-    line-height: calc(50 / 750 * 100vw);
+    font-size: calc(22 / 750 * 100vw);
+    line-height: calc(34 / 750 * 100vw);
   }
 
   .team-grid {
-    gap: calc(30 / 750 * 100vw);
+    gap: calc(20 / 750 * 100vw);
   }
 
   .team-member-row.half-width {
     width: 100%;
-    margin-bottom: calc(40 / 750 * 100vw);
+    margin-bottom: 0;
   }
 }
 </style>

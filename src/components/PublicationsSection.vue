@@ -163,7 +163,7 @@ export default {
 }
 
 .publications-section {
-  background-color: #fff;
+  background-color: #f3f7fc;
   padding: 150px 0;
 }
 
@@ -172,65 +172,62 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 20px;
-  margin-top: 80px;
-  margin-bottom: 60px;
+  gap: 10px;
+  margin-top: 34px;
+  margin-bottom: 30px;
 }
 
 /* 年份标签 */
 .year-tag {
-  width: 190px;
-  height: 70px;
-  background: #ffffff;
-  box-shadow: 0 5px 16px 0 rgba(21, 34, 50, 0.08);
-  border-radius: 35px;
+  min-width: 76px;
+  height: 36px;
+  background: transparent;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 15px;
   color: #222222;
-  line-height: 37px;
+  line-height: 36px;
   cursor: pointer;
   transition: all 0.3s ease;
-  padding: 0 20px;
+  padding: 0 14px;
+  border: 1px solid #e6e9ee;
 }
 
 .year-tag:hover {
-  background-color: #1ebab2;
-  font-size: 36px;
-  color: #ffffff;
-  line-height: 50px;
-  border-color: #1ebab2;
+  background-color: rgba(0, 63, 136, 0.08);
+  color: #003F88;
+  border-color: #003F88;
 }
 
 .year-tag.active {
-  background-color: #1ebab2;
-  font-size: 36px;
-  color: #ffffff;
-  line-height: 50px;
-  border-color: #1ebab2;
+  background-color: rgba(0, 63, 136, 0.12);
+  color: #003F88;
+  border-color: #003F88;
 }
 
 /* 论文box - 一个大的容器 */
 .publications-box {
   width: 100%;
   max-width: 1580px;
-  background: #ffffff;
-  box-shadow: 0 5px 16px 0 rgba(21, 34, 50, 0.08);
-  border-radius: 40px;
-  padding: 50px 60px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
   transition: all 0.3s ease;
 }
 
 .publications-box:hover {
-  box-shadow: 0 10px 24px 0 rgba(21, 34, 50, 0.12);
+  box-shadow: none;
 }
 
 /* 论文项 */
 .publication-item {
   position: relative;
-  padding: 30px 0 0;
+  padding: 20px 0 0;
 }
 
 .publication-item:first-child {
@@ -247,15 +244,15 @@ export default {
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 /* 论文标题 */
 .publication-title {
   font-weight: 600;
-  font-size: 32px;
+  font-size: 21px;
   color: #222222;
-  line-height: 45px;
+  line-height: 30px;
   margin: 0;
   flex: 1;
 }
@@ -263,16 +260,16 @@ export default {
 /* 论文作者 */
 .publication-authors {
   font-weight: 400;
-  font-size: 26px;
+  font-size: 16px;
   color: #8c8c8c;
-  line-height: 37px;
+  line-height: 26px;
   margin: 0;
 }
 
 /* 图标容器 */
 .publication-icons {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
   flex-shrink: 0;
 }
@@ -289,8 +286,8 @@ export default {
 
 /* 图标样式 */
 .icon-link {
-  width: 50px;
-  height: 50px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   transition: all 0.3s ease;
   object-fit: contain;
@@ -310,7 +307,7 @@ export default {
   width: 100%;
   height: 1px;
   background: #e6e6e6;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 /* 论文切换动画 - 向左滑动（年份变大） */
@@ -368,58 +365,55 @@ export default {
   }
 
   .year-tags {
-    gap: calc(20 / 750 * 100vw);
-    margin-top: calc(80 / 750 * 100vw);
-    margin-bottom: calc(60 / 750 * 100vw);
+    gap: calc(10 / 750 * 100vw);
+    margin-top: calc(34 / 750 * 100vw);
+    margin-bottom: calc(30 / 750 * 100vw);
   }
 
   .year-tag {
-    width: calc(33% - 16 / 750 * 100vw);
-    height: calc(70 / 750 * 100vw);
-    box-shadow: 0 calc(5 / 750 * 100vw) calc(16 / 750 * 100vw) 0
-      rgba(21, 34, 50, 0.08);
-    border-radius: calc(35 / 750 * 100vw);
-    font-size: calc(26 / 750 * 100vw);
-    line-height: calc(37 / 750 * 100vw);
-    padding: 0 calc(20 / 750 * 100vw);
+    width: auto;
+    min-width: calc(76 / 750 * 100vw);
+    height: calc(36 / 750 * 100vw);
+    border-radius: calc(8 / 750 * 100vw);
+    font-size: calc(20 / 750 * 100vw);
+    line-height: calc(36 / 750 * 100vw);
+    padding: 0 calc(14 / 750 * 100vw);
   }
 
   .year-tag:hover,
   .year-tag.active {
-    font-size: calc(36 / 750 * 100vw);
-    line-height: calc(50 / 750 * 100vw);
+    font-size: calc(20 / 750 * 100vw);
+    line-height: calc(36 / 750 * 100vw);
   }
 
   .publications-box {
     max-width: calc(1580 / 750 * 100vw);
-    box-shadow: 0 calc(5 / 750 * 100vw) calc(16 / 750 * 100vw) 0
-      rgba(21, 34, 50, 0.08);
-    border-radius: calc(40 / 750 * 100vw);
-    padding: calc(50 / 750 * 100vw) calc(60 / 750 * 100vw);
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
   }
 
   .publications-box:hover {
-    box-shadow: 0 calc(10 / 750 * 100vw) calc(24 / 750 * 100vw) 0
-      rgba(21, 34, 50, 0.12);
+    box-shadow: none;
   }
 
   .publication-item {
-    padding: calc(30 / 750 * 100vw) 0 0;
+    padding: calc(20 / 750 * 100vw) 0 0;
   }
 
   .publication-title-container {
     gap: calc(20 / 750 * 100vw);
-    margin-bottom: calc(12 / 750 * 100vw);
+    margin-bottom: calc(8 / 750 * 100vw);
   }
 
   .publication-title {
-    font-size: calc(32 / 750 * 100vw);
-    line-height: calc(45 / 750 * 100vw);
+    font-size: calc(24 / 750 * 100vw);
+    line-height: calc(34 / 750 * 100vw);
   }
 
   .publication-authors {
-    font-size: calc(26 / 750 * 100vw);
-    line-height: calc(37 / 750 * 100vw);
+    font-size: calc(22 / 750 * 100vw);
+    line-height: calc(32 / 750 * 100vw);
   }
 
   /* 隐藏桌面端图标 */
@@ -431,21 +425,21 @@ export default {
   .publication-icons-mobile {
     display: flex;
     justify-content: flex-end;
-    margin-top: calc(15 / 750 * 100vw);
+    margin-top: calc(10 / 750 * 100vw);
   }
 
   .publication-icons {
-    gap: calc(15 / 750 * 100vw);
+    gap: calc(10 / 750 * 100vw);
   }
 
   .icon-link {
-    width: calc(50 / 750 * 100vw);
-    height: calc(50 / 750 * 100vw);
+    width: calc(28 / 750 * 100vw);
+    height: calc(28 / 750 * 100vw);
   }
 
   .publication-divider {
     height: calc(1 / 750 * 100vw);
-    margin-top: calc(30 / 750 * 100vw);
+    margin-top: calc(20 / 750 * 100vw);
   }
 
   .slide-left-enter-from {

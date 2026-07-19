@@ -63,8 +63,8 @@
 
   /* 鼠标悬停效果 */
   .sigma_header .aside-toggle:hover {
-    background-color: #20b9b2 !important;
-    border-color: #20b9b2 !important;
+    background-color: #003F88 !important;
+    border-color: #003F88 !important;
   }
 
   .sigma_header .aside-toggle:hover span {
@@ -142,14 +142,14 @@
   }
 
   .sigma_aside .navbar-nav li a:hover {
-    background-color: #20b9b2 !important;
+    background-color: #003F88 !important;
     color: #fff !important;
   }
 
   /* 侧边栏logo - 全屏菜单样式 */
   .sigma_aside .sigma_logo-wrapper {
     padding: 0 !important;
-    border-bottom: 2px solid #20b9b2 !important;
+    border-bottom: 2px solid #003F88 !important;
     margin-bottom: 20px !important;
     padding-bottom: 20px !important;
     text-align: center !important;
@@ -175,7 +175,7 @@
   }
 
   .sigma_aside .sigma_close:hover {
-    background-color: #20b9b2 !important;
+    background-color: #003F88 !important;
     color: #fff !important;
     transform: rotate(90deg) !important;
   }

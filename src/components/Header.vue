@@ -45,16 +45,6 @@
             <li class="menu-item">
               <a
                 :class="['lang', 'lang-' + currentLang]"
-                href="#incubating"
-                :style="linkStyle"
-                @click.prevent="scrollToSection('incubating')"
-              >
-                {{ currentLang === "zh" ? "孵化项目" : "Incubating" }}
-              </a>
-            </li>
-            <li class="menu-item">
-              <a
-                :class="['lang', 'lang-' + currentLang]"
                 href="#publications"
                 :style="linkStyle"
                 @click.prevent="scrollToSection('publications')"
@@ -107,7 +97,7 @@
       >
         <span
           class="logo-text"
-          style="font-size: 24px; font-weight: bold; color: #20b9b2"
+          style="font-size: 24px; font-weight: bold; color: #003F88"
           >Data X AI</span
         >
       </a>
@@ -129,15 +119,6 @@
           @click.prevent="scrollToSectionAndClose('projects')"
         >
           {{ currentLang === "zh" ? "项目研究" : "Projects" }}
-        </a>
-      </li>
-      <li class="menu-item">
-        <a
-          :class="['lang', 'lang-' + currentLang]"
-          href="#incubating"
-          @click.prevent="scrollToSectionAndClose('incubating')"
-        >
-          {{ currentLang === "zh" ? "孵化项目" : "Incubating" }}
         </a>
       </li>
       <li class="menu-item">
@@ -216,22 +197,17 @@ export default {
 
     // 计算logo文字颜色
     const logoStyle = computed(() => {
-      // 如果在新闻详情页，使用#1EBAB2
-      if (route.path.startsWith("/news/")) {
-        return { color: "#1EBAB2" };
-      }
-
-      if (!isHomePage.value) {
-        return { color: "#222222" };
+      if (!isHomePage.value || route.path.startsWith("/news/")) {
+        return { color: "#003F88" };
       }
 
       const maxScroll = 300;
       const progress = Math.min(scrollY.value / maxScroll, 1);
 
-      // 从白色(255,255,255)渐变到#1EBAB2(30,186,178)
-      const r = Math.round(255 - (255 - 30) * progress);
-      const g = Math.round(255 - (255 - 186) * progress);
-      const b = Math.round(255 - (255 - 178) * progress);
+      // 从白色(255,255,255)渐变到浙江大学求是蓝#003F88(0,63,136)
+      const r = Math.round(255 - 255 * progress);
+      const g = Math.round(255 - (255 - 63) * progress);
+      const b = Math.round(255 - (255 - 136) * progress);
 
       return { color: `rgb(${r}, ${g}, ${b})` };
     });
@@ -404,7 +380,7 @@ export default {
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #1ebab2;
+  background-color: #003F88;
   transition: width 0.3s ease;
 }
 
@@ -422,7 +398,7 @@ export default {
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #1ebab2;
+  background-color: #003F88;
   transition: width 0.3s ease;
 }
 
@@ -434,7 +410,7 @@ export default {
 /* hover和选中状态文字颜色变化 */
 :deep(.navbar-nav li a:hover),
 :deep(.navbar-nav li.active > a) {
-  color: #1ebab2 !important;
+  color: #003F88 !important;
 }
 
 /* 中英文切换按钮样式统一 */
@@ -445,7 +421,7 @@ export default {
 
 /* logo hover效果 */
 :deep(.logo-text:hover) {
-  color: #1ebab2 !important;
+  color: #003F88 !important;
 }
 
 /* 侧边栏样式 */
@@ -538,7 +514,7 @@ export default {
 }
 
 .sigma_aside ul li a:hover {
-  color: #20b9b2;
+  color: #003F88;
 }
 
 /* 遮罩层 */

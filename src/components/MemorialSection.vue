@@ -56,13 +56,13 @@ export default {
 
 <style scoped>
 .memorial-section {
-  background: #ffffff;
+  background: #f3f7fc;
   padding: 150px 0;
 }
 
 .memorial-container {
   width: 100%;
-  max-width: 1460px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 60px;
 }
@@ -71,9 +71,9 @@ export default {
   position: relative;
   overflow: hidden;
   padding: 56px 60px;
-  border-radius: 24px;
+  border-radius: 8px;
   background: linear-gradient(145deg, #181818 0%, #303030 42%, #505050 100%);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 8px 24px rgba(21, 34, 50, 0.18);
 }
 
 .memorial-card::after {
@@ -86,8 +86,8 @@ export default {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(255, 255, 255, 0.24) 0%,
-    rgba(255, 255, 255, 0.12) 42%,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0.08) 42%,
     rgba(255, 255, 255, 0) 72%
   );
 }
@@ -98,7 +98,7 @@ export default {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(230px, 0.52fr);
   align-items: start;
-  gap: 56px;
+  gap: 40px;
 }
 
 .memorial-copy {
@@ -164,12 +164,12 @@ export default {
 
 .memorial-portrait {
   display: block;
-  width: min(100%, 220px);
+  width: min(100%, 180px);
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center top;
   border: 3px solid rgba(255, 255, 255, 0.18);
-  border-radius: 22px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.08);
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.24);
   filter: grayscale(100%);

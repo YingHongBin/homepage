@@ -218,7 +218,7 @@ export default {
 }
 
 .news-content :deep(a) {
-  color: #20b9b2;
+  color: #003F88;
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
@@ -243,7 +243,7 @@ export default {
 }
 
 .news-source a:hover {
-  color: #20b9b2;
+  color: #003F88;
   text-decoration: underline;
 }
 
@@ -259,7 +259,7 @@ export default {
 .sigma_btn-custom {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #20b9b2;
+  background-color: #003F88;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;

@@ -63,22 +63,22 @@ export default {
 .banner-text-content {
   display: inline-block;
   width: 100%;
-  max-width: 860px;
+  max-width: 760px;
   padding: 0 48px;
 }
 
 .banner-text-content .title {
   font-weight: 600;
-  font-size: 56px;
-  line-height: 76px;
+  font-size: 48px;
+  line-height: 64px;
 }
 
 .data-lab-description {
-  margin-top: 24px;
+  margin-top: 20px;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 20px;
   color: #ffffff;
-  line-height: 36px;
+  line-height: 32px;
 }
 
 /* Banner贴顶显示 */
@@ -93,8 +93,8 @@ export default {
 }
 
 .banner-3.sigma_banner :deep(.sigma_banner-slider-inner) {
-  min-height: 620px;
-  padding: 96px 0 128px !important;
+  min-height: 580px;
+  padding: 88px 0 112px !important;
 }
 
 /* 数据库实验室标题不换行 */

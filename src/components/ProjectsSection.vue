@@ -144,13 +144,13 @@ export default {
 
 /* 医疗数据系统模块 - 白色背景 */
 .healthcare-section {
-  background-color: #fff;
+  background-color: #f3f7fc;
   padding: 150px 0;
 }
 
 /* 核心数据系统模块 - 灰色背景 */
 .core-section {
-  background-color: #f7f8fc;
+  background-color: #fff;
   padding: 150px 0;
 }
 
@@ -169,21 +169,21 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 34px;
+  gap: 28px;
 }
 
 .research-card-grid.card-count-2,
 .research-card-grid.card-count-3 {
-  column-gap: 72px;
+  column-gap: 64px;
 }
 
 .research-card-grid.card-count-3 {
-  column-gap: 56px;
+  column-gap: 48px;
 }
 
 .research-card {
   display: block;
-  width: calc((100% - 102px) / 4);
+  width: calc((100% - 84px) / 4);
   min-width: 0;
   color: inherit;
   text-decoration: none;
@@ -193,7 +193,7 @@ export default {
 .research-card:hover {
   color: inherit;
   text-decoration: none;
-  transform: translateY(-6px);
+  transform: translateY(-3px);
 }
 
 .research-card-image-wrap {
@@ -203,7 +203,7 @@ export default {
   background: #ffffff;
   border: 1px solid #e9edf2;
   border-radius: 8px;
-  box-shadow: 0 5px 16px 0 rgba(21, 34, 50, 0.08);
+  box-shadow: 0 8px 24px rgba(21, 34, 50, 0.08);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -212,8 +212,8 @@ export default {
 }
 
 .research-card:hover .research-card-image-wrap {
-  border-color: rgba(30, 186, 178, 0.45);
-  box-shadow: 0 10px 24px 0 rgba(21, 34, 50, 0.12);
+  border-color: rgba(0, 63, 136, 0.45);
+  box-shadow: 0 10px 24px rgba(21, 34, 50, 0.12);
 }
 
 .research-card-image {
@@ -228,11 +228,11 @@ export default {
 }
 
 .research-card-title {
-  margin: 22px 0 0;
+  margin: 16px 0 0;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 18px;
   color: #222222;
-  line-height: 36px;
+  line-height: 26px;
   text-align: center;
 }
 
@@ -244,13 +244,13 @@ export default {
 
   /* 医疗数据系统模块 - 白色背景 */
   .healthcare-section {
-    background-color: #fff;
+    background-color: #f3f7fc;
     padding: calc(60 / 750 * 100vw) 0;
   }
 
   /* 核心数据系统模块 - 灰色背景 */
   .core-section {
-    background-color: #f7f8fc;
+    background-color: #fff;
     padding: calc(60 / 750 * 100vw) 0;
   }
 

@@ -26,6 +26,13 @@ export default {
 
 <style>
 /* 全局样式已通过外部CSS加载 */
+:root {
+  --zju-blue: #003f88;
+  --zju-blue-dark: #002f66;
+  --zju-blue-soft: rgba(0, 63, 136, 0.08);
+  --zju-blue-border: rgba(0, 63, 136, 0.22);
+  --zju-red: #b01f24;
+}
 
 /* 覆盖外部CSS的header默认样式 - 只针对首�?*/
 [data-home-page] .sigma_header.style-5 {
@@ -57,23 +64,22 @@ body {
 :where(
     .header-container,
     .news-container,
-    .news-carousel-container,
     .project-container,
     .team-container,
     .memorial-container,
     .footer-divider,
     .footer-bottom
   ) {
-  max-width: 1280px !important;
+  max-width: 1200px !important;
 }
 
 :where(.project-container, .team-container, .memorial-container) {
-  padding-left: 48px !important;
-  padding-right: 48px !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
 }
 
 :where(
-    .news-carousel-section,
+    .news-section,
     .healthcare-section,
     .core-section,
     .publications-section,
@@ -81,87 +87,126 @@ body {
     .memorial-section,
     .contact-section
   ) {
-  padding-top: 110px !important;
-  padding-bottom: 110px !important;
+  padding-top: 96px !important;
+  padding-bottom: 96px !important;
 }
 
 :where(.module-title) {
-  font-size: 46px !important;
-  line-height: 64px !important;
+  font-size: 42px !important;
+  line-height: 56px !important;
 }
 
 :where(.project-description, .project-detail-description) {
-  font-size: 18px !important;
-  line-height: 34px !important;
+  font-size: 17px !important;
+  line-height: 30px !important;
 }
 
 :where(.project-description) {
-  margin-bottom: 48px !important;
+  margin-bottom: 42px !important;
 }
 
 :where(.research-card-title, .project-tag, .year-tag, .member-position) {
-  font-size: 22px !important;
+  font-size: 18px !important;
 }
 
 :where(.publication-title, .member-name, .project-year, .category-title) {
-  font-size: 28px !important;
+  font-size: 22px !important;
 }
 
 :where(.publication-authors, .member-description) {
-  font-size: 20px !important;
-  line-height: 36px !important;
+  font-size: 16px !important;
+  line-height: 28px !important;
 }
 
 :where(.publications-box) {
-  max-width: 1280px !important;
-  border-radius: 28px !important;
-  padding: 40px 48px !important;
+  max-width: 1200px !important;
+  border-radius: 8px !important;
+  padding: 32px 36px !important;
+  box-shadow: 0 8px 24px rgba(21, 34, 50, 0.08) !important;
 }
 
 :where(.year-tags) {
-  margin-top: 56px !important;
-  margin-bottom: 44px !important;
+  margin-top: 34px !important;
+  margin-bottom: 30px !important;
 }
 
 :where(.year-tag, .project-tag, .category-title) {
-  height: 58px !important;
-  line-height: 58px !important;
-  border-radius: 29px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  border-radius: 8px !important;
 }
 
 :where(.project-tag) {
-  min-width: 240px !important;
+  min-width: 180px !important;
 }
 
 :where(.research-card-image-wrap) {
-  padding: 18px !important;
+  padding: 16px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(21, 34, 50, 0.08) !important;
 }
 
 :where(.team-category) {
-  margin-top: 64px !important;
+  margin-top: 48px !important;
 }
 
 :where(.member-avatar) {
-  width: 160px !important;
-  height: 160px !important;
+  width: 96px !important;
+  height: 96px !important;
 }
 
 :where(.memorial-card) {
-  padding: 44px 48px !important;
+  padding: 36px 40px !important;
 }
 
 :where(.memorial-title) {
-  font-size: 58px !important;
+  font-size: 44px !important;
 }
 
 :where(.memorial-text) {
-  font-size: 18px !important;
-  line-height: 30px !important;
+  font-size: 17px !important;
+  line-height: 28px !important;
+}
+
+:where(
+    a:hover,
+    .footer-link:hover,
+    .member-icon:hover,
+    .year-tag:hover,
+    .year-tag.active
+  ) {
+  color: var(--zju-blue) !important;
+}
+
+:where(
+    .sigma_btn-custom,
+    .project-tag.active,
+    .project-tag:hover
+  ) {
+  background-color: var(--zju-blue) !important;
+}
+
+:where(
+    .year-tag:hover,
+    .year-tag.active,
+    .project-tag.active,
+    .project-tag:hover,
+    .research-card:hover .research-card-image-wrap
+  ) {
+  border-color: var(--zju-blue) !important;
+}
+
+:where(.category-title) {
+  border-left-color: var(--zju-blue) !important;
+}
+
+:where(.year-tag:hover, .year-tag.active) {
+  background-color: var(--zju-blue-soft) !important;
 }
 
 @media (max-width: 768px) {
   :where(
-      .news-carousel-section,
+      .news-section,
       .healthcare-section,
       .core-section,
       .publications-section,

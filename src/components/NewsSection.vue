@@ -1,81 +1,105 @@
 <template>
-  <div id="news" class="section news-carousel-section">
+  <div id="news" class="section news-section">
     <div class="news-container">
-      <div class="text-center">
+      <div class="news-heading">
         <div class="module-title">
           {{ currentLang === "zh" ? "最新新闻" : "Latest News" }}
         </div>
       </div>
 
-      <div class="news-carousel-wrapper">
-        <!-- 左箭头 -->
-        <button class="carousel-arrow carousel-arrow-left" @click="prevNews">
-          <i class="fa fa-chevron-left"></i>
-        </button>
-
-        <!-- 新闻轮播容器 -->
-        <div class="news-carousel-container">
-          <div class="news-carousel-track" :style="carouselStyle">
-            <div
-              v-for="(news, index) in displayNews"
-              :key="`${news.id}-${index}`"
-              class="news-carousel-item"
-              :class="getItemClass(index)"
-              @click="handleNewsClick(index)"
-            >
-              <article class="news-card">
-                <div class="news-card-image">
-                  <img :src="news.image" alt="news" />
+      <div
+        class="zju-news-layout"
+        @mouseenter="pauseNewsCarousel"
+        @mouseleave="resumeNewsCarousel"
+      >
+        <article
+          v-if="featuredNews"
+          class="featured-news"
+          @click="openNews(featuredNews)"
+        >
+          <Transition name="featured-news-fade" mode="out-in">
+            <div :key="featuredNews.id" class="featured-news-panel">
+              <div class="featured-news-image">
+                <img :src="featuredNews.image" alt="news" />
+              </div>
+              <div class="featured-news-content">
+                <div class="news-date">
+                  {{
+                    currentLang === "zh"
+                      ? featuredNews.date_zh
+                      : featuredNews.date_en
+                  }}
                 </div>
-                <div class="news-card-content">
-                  <div class="news-card-header">
-                    <div class="news-card-date">
-                      <img
-                        src="/assets/img/materials/news/time-icon.png"
-                        alt="time"
-                        class="time-icon"
-                      />
-                      <span>{{
-                        currentLang === "zh" ? news.date_zh : news.date_en
-                      }}</span>
-                    </div>
-                    <img
-                      src="/assets/img/materials/news/right-arrow-icon.png"
-                      alt="arrow"
-                      class="arrow-icon"
-                    />
-                  </div>
-                  <h5 class="news-card-title">
-                    {{ currentLang === "zh" ? news.title_zh : news.title_en }}
-                  </h5>
-                </div>
-              </article>
+                <h3 class="featured-news-title">
+                  {{
+                    currentLang === "zh"
+                      ? featuredNews.title_zh
+                      : featuredNews.title_en
+                  }}
+                </h3>
+                <p class="featured-news-summary">
+                  {{ featuredSummary }}
+                </p>
+              </div>
             </div>
+          </Transition>
+        </article>
+
+        <div class="news-list" aria-label="latest news list">
+          <div class="news-list-viewport">
+            <Transition name="news-page-fade" mode="out-in">
+              <div :key="currentNewsPage" class="news-list-items">
+                <article
+                  v-for="news in secondaryNews"
+                  :key="news.id"
+                  class="news-list-item"
+                  :class="{ active: news.id === featuredNews?.id }"
+                  @mouseenter="setFeaturedNews(news)"
+                  @focusin="setFeaturedNews(news)"
+                  @click="openNews(news)"
+                  tabindex="0"
+                >
+                  <div class="news-list-content">
+                    <div class="news-date">
+                      {{ currentLang === "zh" ? news.date_zh : news.date_en }}
+                    </div>
+                    <h4 class="news-list-title">
+                      {{
+                        currentLang === "zh" ? news.title_zh : news.title_en
+                      }}
+                    </h4>
+                  </div>
+                  <span class="news-list-arrow" aria-hidden="true">
+                    <i class="fa fa-angle-right"></i>
+                  </span>
+                </article>
+              </div>
+            </Transition>
+          </div>
+
+          <div v-if="totalNewsPages > 1" class="news-page-dots">
+            <button
+              v-for="page in totalNewsPages"
+              :key="page"
+              class="news-page-dot"
+              :class="{ active: currentNewsPage === page - 1 }"
+              :aria-label="
+                currentLang === 'zh'
+                  ? `切换到第 ${page} 页新闻`
+                  : `Show news page ${page}`
+              "
+              type="button"
+              @click="goToNewsPage(page - 1)"
+            ></button>
           </div>
         </div>
-
-        <!-- 右箭头 -->
-        <button class="carousel-arrow carousel-arrow-right" @click="nextNews">
-          <i class="fa fa-chevron-right"></i>
-        </button>
-      </div>
-
-      <!-- 锚点导航 -->
-      <div class="news-pagination">
-        <span
-          v-for="(news, index) in newsData"
-          :key="news.id"
-          class="pagination-dot"
-          :class="{ active: currentIndex === index }"
-          @click="goToNews(index)"
-        ></span>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { ref, computed } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import { useLanguage } from "../composables/useLanguage";
 import { newsData } from "../data/newsData";
@@ -85,123 +109,125 @@ export default {
   setup() {
     const { currentLang } = useLanguage();
     const router = useRouter();
-    const currentIndex = ref(0);
-    const isAnimating = ref(false);
+    const newsPageSize = 5;
+    const activeNewsId = ref(newsData[0]?.id || "");
+    const currentNewsPage = ref(0);
+    const isCarouselPaused = ref(false);
+    let newsCarouselTimer = null;
 
-    // 显示的新闻（取5个，中间的是焦点）
-    const displayNews = computed(() => {
-      const news = [];
-      const totalNews = newsData.length;
-
-      // 显示当前索引前后各2个新闻，共5个
-      for (let i = -2; i <= 2; i++) {
-        const index = (currentIndex.value + i + totalNews) % totalNews;
-        news.push(newsData[index]);
-      }
-
-      return news;
+    const featuredNews = computed(() => {
+      return (
+        newsData.find((news) => news.id === activeNewsId.value) || newsData[0]
+      );
+    });
+    const totalNewsPages = computed(() => {
+      return Math.ceil(newsData.length / newsPageSize);
+    });
+    const secondaryNews = computed(() => {
+      const start = currentNewsPage.value * newsPageSize;
+      return newsData.slice(start, start + newsPageSize);
+    });
+    const featuredSummary = computed(() => {
+      const news = featuredNews.value;
+      if (!news) return "";
+      return currentLang.value === "zh" ? news.summary_zh : news.summary_en;
     });
 
-    // 轮播样式
-    const carouselStyle = computed(() => {
-      return {
-        transform: "translateX(0)",
-        transition: "none",
-      };
-    });
-
-    // 获取卡片样式类
-    const getItemClass = (index) => {
-      if (index === 2) return "center";
-      if (index === 1 || index === 3) return "side";
-      return "outer";
+    const openNews = (news) => {
+      router.push(`/news/${news.id}`);
     };
 
-    // 上一个新闻
-    const prevNews = () => {
-      if (isAnimating.value) return;
-      isAnimating.value = true;
-
-      currentIndex.value =
-        (currentIndex.value - 1 + newsData.length) % newsData.length;
-
-      setTimeout(() => {
-        isAnimating.value = false;
-      }, 600);
+    const setActiveNewsByIndex = (newsIndex) => {
+      const news = newsData[newsIndex];
+      if (!news) return;
+      activeNewsId.value = news.id;
+      currentNewsPage.value = Math.floor(newsIndex / newsPageSize);
     };
 
-    // 下一个新闻
-    const nextNews = () => {
-      if (isAnimating.value) return;
-      isAnimating.value = true;
-
-      currentIndex.value = (currentIndex.value + 1) % newsData.length;
-
-      setTimeout(() => {
-        isAnimating.value = false;
-      }, 600);
+    const setFeaturedNews = (news) => {
+      activeNewsId.value = news.id;
     };
 
-    // 点击卡片
-    const handleNewsClick = (index) => {
-      if (isAnimating.value) return;
-
-      if (index === 2) {
-        // 点击中间卡片，跳转到详情页
-        const news = displayNews.value[2];
-        router.push(`/news/${news.id}`);
-      } else {
-        // 点击左侧或右侧卡片，直接切换到该卡片
-        isAnimating.value = true;
-
-        const steps = index - 2; // 计算需要移动的步数，负数表示向左，正数表示向右
-        currentIndex.value =
-          (currentIndex.value + steps + newsData.length) % newsData.length;
-
-        setTimeout(() => {
-          isAnimating.value = false;
-        }, 600);
+    const goToNewsPage = (pageIndex) => {
+      currentNewsPage.value = pageIndex;
+      const firstNews = newsData[pageIndex * newsPageSize];
+      if (firstNews) {
+        setFeaturedNews(firstNews);
       }
     };
 
-    // 跳转到指定新闻
-    const goToNews = (index) => {
-      if (isAnimating.value || currentIndex.value === index) return;
-      isAnimating.value = true;
-
-      currentIndex.value = index;
-
-      setTimeout(() => {
-        isAnimating.value = false;
-      }, 600);
+    const goToNextNews = () => {
+      if (!newsData.length || isCarouselPaused.value) return;
+      const activeIndex = newsData.findIndex(
+        (news) => news.id === activeNewsId.value
+      );
+      const nextIndex = (activeIndex + 1 + newsData.length) % newsData.length;
+      setActiveNewsByIndex(nextIndex);
     };
+
+    const startNewsCarousel = () => {
+      if (newsCarouselTimer || newsData.length <= 1) return;
+      newsCarouselTimer = window.setInterval(goToNextNews, 5000);
+    };
+
+    const stopNewsCarousel = () => {
+      if (!newsCarouselTimer) return;
+      window.clearInterval(newsCarouselTimer);
+      newsCarouselTimer = null;
+    };
+
+    const pauseNewsCarousel = () => {
+      isCarouselPaused.value = true;
+    };
+
+    const resumeNewsCarousel = () => {
+      isCarouselPaused.value = false;
+    };
+
+    onMounted(() => {
+      startNewsCarousel();
+    });
+
+    onBeforeUnmount(() => {
+      stopNewsCarousel();
+    });
 
     return {
       currentLang,
-      currentIndex,
-      displayNews,
-      carouselStyle,
-      getItemClass,
-      prevNews,
-      nextNews,
-      handleNewsClick,
-      isAnimating,
-      newsData,
-      goToNews,
+      featuredNews,
+      secondaryNews,
+      totalNewsPages,
+      currentNewsPage,
+      featuredSummary,
+      openNews,
+      setFeaturedNews,
+      goToNewsPage,
+      pauseNewsCarousel,
+      resumeNewsCarousel,
     };
   },
 };
 </script>
 
 <style scoped>
+.news-section {
+  background: #ffffff;
+  overflow: hidden;
+  padding: 150px 0;
+}
+
 .news-container {
   width: 100%;
-  max-width: 1580px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
-/* 模块标题样式 */
+.news-heading {
+  text-align: left;
+  margin-bottom: 42px;
+}
+
 .module-title {
   font-weight: 500;
   font-size: 60px;
@@ -209,249 +235,296 @@ export default {
   line-height: 84px;
 }
 
-/* 模块标题样式 */
-.module-title {
-  font-weight: 500;
-  font-size: 60px;
-  color: #252525;
-  line-height: 84px;
-}
-
-/* 新闻轮播样式 */
-.news-carousel-section {
-  background-color: #f7f8fc;
-  padding: 150px 0;
-  overflow: hidden;
-}
-
-.news-carousel-wrapper {
-  position: relative;
+.zju-news-layout {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 0;
-  max-width: 1280px;
-  margin: 0 auto;
+  align-items: stretch;
+  gap: 42px;
 }
 
-.news-carousel-container {
-  width: 100%;
-  max-width: 1120px;
-  position: relative;
-  overflow: hidden;
-}
-
-.news-carousel-track {
-  display: flex;
-  gap: -30px;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
-  position: relative;
-}
-
-.news-carousel-item {
-  flex-shrink: 0;
-  width: min(620px, calc(100vw - 260px));
-  max-width: 620px;
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+.featured-news,
+.news-list-item {
   cursor: pointer;
-  position: relative;
 }
 
-/* 外侧卡片 */
-.news-carousel-item.outer {
-  opacity: 1;
-  transform: scale(0.6);
-  filter: blur(1px);
-  z-index: 1;
-  margin: 0 -20px;
-}
-
-/* 侧边卡片 */
-.news-carousel-item.side {
-  opacity: 1;
-  transform: scale(0.8);
-  z-index: 2;
-  margin: 0 -440px;
-}
-
-/* 中间卡片 */
-.news-carousel-item.center {
-  opacity: 1;
-  transform: scale(1);
-  z-index: 10;
-  margin: 0;
-}
-
-.news-carousel-item.outer:hover {
-  transform: scale(0.65);
-}
-
-.news-carousel-item.side:hover {
-  transform: scale(0.85);
-}
-
-.news-carousel-item.center:hover {
-  transform: scale(1.05);
-}
-
-/* 新闻卡片样式 */
-.news-card {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 8 / 7;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 16px 0 rgba(21, 34, 50, 0.08);
-  border-radius: 21px;
-  background: #fff;
+.featured-news {
+  width: 58%;
+  height: 530px;
+  box-sizing: border-box;
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid rgba(0, 63, 136, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(21, 34, 50, 0.08);
   overflow: hidden;
-  transition: all 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  will-change: transform, box-shadow;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.news-card:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+.featured-news:hover {
+  border-color: rgba(0, 63, 136, 0.32);
+  box-shadow: 0 18px 34px rgba(21, 34, 50, 0.12);
+  transform: translateY(-4px);
 }
 
-.news-card-image {
+.featured-news-panel {
+  height: 100%;
+}
+
+.featured-news-image {
   width: 100%;
-  height: 64.3%;
+  height: 300px;
   overflow: hidden;
-  position: relative;
-  flex-shrink: 0;
+  background: #ffffff;
 }
 
-.news-carousel-item.center .news-card-image {
-  height: 64.3%;
-}
-
-.news-card-image img {
+.featured-news-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  object-fit: contain;
+  transition: transform 0.45s ease;
 }
 
-.news-card:hover .news-card-image img {
-  transform: scale(1.1);
+.featured-news:hover .featured-news-image img {
+  transform: none;
 }
 
-.news-card-content {
-  padding: 5%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+.featured-news-content {
+  height: 230px;
+  box-sizing: border-box;
+  padding: 22px 30px 24px;
 }
 
-.news-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 14px;
-}
-
-.news-card-date {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 400;
-  font-size: 16px;
-  color: #b2b2b2;
+.news-date {
+  color: #003f88;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 22px;
+  margin-bottom: 10px;
 }
 
-.time-icon {
-  width: 20px;
-  height: 20px;
-}
-
-.arrow-icon {
-  width: 32px;
-  height: 32px;
-}
-
-.news-card-title {
-  font-weight: 400;
-  font-size: 22px;
-  color: #252525;
-  line-height: 32px;
-  margin: 0;
+.featured-news-title {
+  color: #20242b;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 40px;
+  margin: 0;
   overflow: hidden;
-  text-overflow: ellipsis;
-  height: 64px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
-/* 箭头按钮 */
-.carousel-arrow {
+.featured-news-summary {
+  color: #5e6877;
+  display: -webkit-box;
+  font-size: 16px;
+  line-height: 28px;
+  margin: 14px 0 0;
+  min-height: 56px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.news-list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  min-width: 0;
+  border-top: 2px solid #003f88;
+  background: #ffffff;
+}
+
+.news-list-viewport {
+  position: relative;
+  height: 528px;
+  flex: 0 0 528px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.news-list-items {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.news-list-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 28px;
+  align-items: center;
+  gap: 22px;
+  height: 105.6px;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(0, 63, 136, 0.14);
+  transition: background-color 0.3s ease;
+}
+
+.news-list-item:hover,
+.news-list-item.active {
+  background: rgba(0, 63, 136, 0.04);
+}
+
+.news-list-item.active {
+  border-bottom-color: rgba(0, 63, 136, 0.3);
+}
+
+.news-list-item.active .news-list-title {
+  color: #003f88;
+}
+
+.news-list-content {
+  min-width: 0;
+}
+
+.news-list .news-date {
+  line-height: 20px;
+  margin-bottom: 4px;
+}
+
+.news-list-title {
+  color: #20242b;
+  display: -webkit-box;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  margin: 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.news-list-arrow {
+  color: #003f88;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  opacity: 0.7;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.news-list-item:hover .news-list-arrow,
+.news-list-item.active .news-list-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+.news-page-dots {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 66px;
+  flex: 0 0 66px;
+  padding-top: 28px;
+  margin-top: 10px;
+}
+
+.news-page-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 1px solid #003f88;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.news-page-dot:hover,
+.news-page-dot.active {
+  background: #003f88;
+}
+
+.news-page-dot:hover {
+  transform: scale(1.12);
+}
+
+.featured-news-fade-enter-active,
+.featured-news-fade-leave-active,
+.news-page-fade-enter-active,
+.news-page-fade-leave-active {
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.news-page-fade-leave-active {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #fff;
-  border: 2px solid #20b9b2;
-  color: #20b9b2;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 20;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-arrow:hover {
-  background: #20b9b2;
-  color: #fff;
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-arrow-left {
+  top: 0;
   left: 0;
-}
-
-.carousel-arrow-right {
   right: 0;
+  width: 100%;
 }
 
-/* 锚点导航 */
-.news-pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
+.featured-news-fade-enter-from,
+.featured-news-fade-leave-to {
+  opacity: 0;
+  transform: translateY(8px);
 }
 
-.pagination-dot {
-  width: 18px;
-  height: 18px;
-  border: 1px solid #979797;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.news-page-fade-enter-from,
+.news-page-fade-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
 }
 
-.pagination-dot:hover {
-  border-color: #1ebab2;
+@media (max-width: 991px) {
+  .zju-news-layout {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .featured-news {
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-news-image {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .featured-news-content {
+    height: auto;
+  }
+
+  .news-list-viewport {
+    height: auto;
+    min-height: 0;
+    flex-basis: auto;
+    overflow: visible;
+  }
+
+  .news-list-items {
+    height: auto;
+  }
+
+  .news-list {
+    height: auto;
+  }
+
+  .news-page-dots {
+    height: auto;
+    flex-basis: auto;
+    padding-top: 22px;
+  }
 }
 
-.pagination-dot.active {
-  background: #1ebab2;
-  border: none;
-}
-
-/* 响应式设计 */
 @media (max-width: 768px) {
+  .news-section {
+    padding: calc(60 / 750 * 100vw) 0;
+  }
+
   .news-container {
     padding: 0 calc(60 / 750 * 100vw);
+  }
+
+  .news-heading {
+    margin-bottom: calc(36 / 750 * 100vw);
   }
 
   .module-title {
@@ -459,99 +532,68 @@ export default {
     line-height: calc(56 / 750 * 100vw);
   }
 
-  .news-carousel-section {
-    padding: calc(60 / 750 * 100vw) 0;
+  .featured-news-content {
+    padding: calc(26 / 750 * 100vw) calc(28 / 750 * 100vw)
+      calc(30 / 750 * 100vw);
   }
 
-  .news-carousel-wrapper {
-    padding: calc(40 / 750 * 100vw) 0;
-    max-width: 100%;
+  .featured-news-title {
+    font-size: calc(32 / 750 * 100vw);
+    line-height: calc(44 / 750 * 100vw);
   }
 
-  .news-carousel-track {
-    padding: calc(20 / 750 * 100vw) 0;
+  .featured-news-summary {
+    font-size: calc(22 / 750 * 100vw);
+    line-height: calc(34 / 750 * 100vw);
   }
 
-  /* 移动端只显示中间卡片 */
-  .news-carousel-item.outer,
-  .news-carousel-item.side {
-    display: none;
+  .news-date {
+    font-size: calc(20 / 750 * 100vw);
+    line-height: calc(30 / 750 * 100vw);
   }
 
-  .news-carousel-item.center {
-    transform: scale(1);
-    margin: 0;
-    width: min(100%, calc(100vw - calc(160 / 750 * 100vw)));
+  .news-list-item {
+    grid-template-columns: minmax(0, 1fr) calc(28 / 750 * 100vw);
+    gap: calc(18 / 750 * 100vw);
+    height: auto;
+    min-height: calc(118 / 750 * 100vw);
+    padding: calc(18 / 750 * 100vw) calc(14 / 750 * 100vw);
   }
 
-  .news-card {
-    box-shadow: 0 calc(5 / 750 * 100vw) calc(16 / 750 * 100vw) 0
-      rgba(21, 34, 50, 0.08);
-    border-radius: calc(21 / 750 * 100vw);
+  .news-list-title {
+    font-size: calc(24 / 750 * 100vw);
+    line-height: calc(34 / 750 * 100vw);
   }
 
-  .news-card:hover {
-    box-shadow: 0 calc(8 / 750 * 100vw) calc(30 / 750 * 100vw)
-      rgba(0, 0, 0, 0.15);
-  }
-
-  .news-card-header {
-    margin-bottom: calc(20 / 750 * 100vw);
-  }
-
-  .news-card-date {
-    gap: calc(8 / 750 * 100vw);
-    font-size: calc(21 / 750 * 100vw);
-    line-height: calc(29 / 750 * 100vw);
-  }
-
-  .time-icon {
-    width: calc(26 / 750 * 100vw);
-    height: calc(26 / 750 * 100vw);
-  }
-
-  .arrow-icon {
-    width: calc(42 / 750 * 100vw);
-    height: calc(42 / 750 * 100vw);
-  }
-
-  .news-card-title {
-    -webkit-line-clamp: 1;
+  .news-list-arrow {
     font-size: calc(28 / 750 * 100vw);
-    line-height: calc(40 / 750 * 100vw);
-    height: calc(40 / 750 * 100vw);
   }
 
-  .carousel-arrow {
-    width: calc(40 / 750 * 100vw);
-    height: calc(40 / 750 * 100vw);
-    font-size: calc(16 / 750 * 100vw);
-    border: calc(2 / 750 * 100vw) solid #20b9b2;
-    box-shadow: 0 calc(2 / 750 * 100vw) calc(10 / 750 * 100vw)
-      rgba(0, 0, 0, 0.1);
-  }
-
-  .carousel-arrow-left {
-    left: 0;
-  }
-
-  .carousel-arrow-right {
-    right: 0;
-  }
-
-  .news-carousel-container {
-    padding: 0 calc(50 / 750 * 100vw);
-    overflow: visible;
-  }
-
-  .news-pagination {
+  .news-page-dots {
     gap: calc(12 / 750 * 100vw);
+    padding-top: calc(24 / 750 * 100vw);
   }
 
-  .pagination-dot {
-    width: calc(18 / 750 * 100vw);
-    height: calc(18 / 750 * 100vw);
-    border: calc(1 / 750 * 100vw) solid #979797;
+  .news-page-dot {
+    width: calc(16 / 750 * 100vw);
+    height: calc(16 / 750 * 100vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-news-fade-enter-active,
+  .featured-news-fade-leave-active,
+  .news-page-fade-enter-active,
+  .news-page-fade-leave-active {
+    transition: none;
+  }
+
+  .featured-news-fade-enter-from,
+  .featured-news-fade-leave-to,
+  .news-page-fade-enter-from,
+  .news-page-fade-leave-to {
+    opacity: 1;
+    transform: none;
   }
 }
 </style>
