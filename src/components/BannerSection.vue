@@ -63,22 +63,22 @@ export default {
 .banner-text-content {
   display: inline-block;
   width: 100%;
-  max-width: 740px;
-  padding: 0 60px;
+  max-width: 860px;
+  padding: 0 48px;
 }
 
 .banner-text-content .title {
   font-weight: 600;
-  font-size: 80px;
-  line-height: 112px;
+  font-size: 56px;
+  line-height: 76px;
 }
 
 .data-lab-description {
-  margin-top: 30px;
+  margin-top: 24px;
   font-weight: 300;
-  font-size: 36px;
+  font-size: 24px;
   color: #ffffff;
-  line-height: 46px;
+  line-height: 36px;
 }
 
 /* Banner贴顶显示 */
@@ -89,7 +89,12 @@ export default {
 
 /* Banner内容区域添加顶部padding以适应固定header */
 .home-banner :deep(.sigma_banner-text) {
-  padding-top: 80px;
+  padding-top: 64px;
+}
+
+.banner-3.sigma_banner :deep(.sigma_banner-slider-inner) {
+  min-height: 620px;
+  padding: 96px 0 128px !important;
 }
 
 /* 数据库实验室标题不换行 */
@@ -104,44 +109,45 @@ export default {
 
 /* 移动端响应式 */
 @media (max-width: 768px) {
-  .banner-3.sigma_banner .sigma_banner-slider-inner {
+  .banner-3.sigma_banner :deep(.sigma_banner-slider-inner) {
     background-position: top 0 center;
   }
   .banner-text-content {
-    max-width: calc(740 / 750 * 100vw);
-    padding: 0 calc(60 / 750 * 100vw);
+    max-width: calc(660 / 750 * 100vw);
+    padding: 0 calc(48 / 750 * 100vw);
   }
 
   .banner-text-content .title {
-    font-size: calc(48 / 750 * 100vw);
-    line-height: calc(64 / 750 * 100vw);
+    font-size: calc(40 / 750 * 100vw);
+    line-height: calc(56 / 750 * 100vw);
   }
 
   .data-lab-description {
-    font-size: calc(24 / 750 * 100vw);
-    line-height: calc(32 / 750 * 100vw);
-    margin-top: calc(20 / 750 * 100vw);
+    font-size: calc(22 / 750 * 100vw);
+    line-height: calc(34 / 750 * 100vw);
+    margin-top: calc(18 / 750 * 100vw);
   }
 
   .home-banner :deep(.sigma_banner-text) {
-    padding-top: calc(80 / 750 * 100vw);
+    padding-top: calc(64 / 750 * 100vw);
   }
 
-  .banner-3.sigma_banner .sigma_banner-slider-inner {
-    padding: calc(120 / 750 * 100vw) 0 calc(120 / 750 * 100vw) !important;
+  .banner-3.sigma_banner :deep(.sigma_banner-slider-inner) {
+    min-height: calc(500 / 750 * 100vw);
+    padding: calc(88 / 750 * 100vw) 0 calc(96 / 750 * 100vw) !important;
   }
 }
 
 @media (max-width: 480px) {
   .banner-text-content .title {
-    font-size: calc(56 / 750 * 100vw);
-    line-height: calc(78 / 750 * 100vw);
+    font-size: calc(42 / 750 * 100vw);
+    line-height: calc(58 / 750 * 100vw);
   }
 
   .data-lab-description {
-    font-size: calc(24 / 750 * 100vw);
-    line-height: calc(40 / 750 * 100vw);
-    margin-top: calc(15 / 750 * 100vw);
+    font-size: calc(22 / 750 * 100vw);
+    line-height: calc(34 / 750 * 100vw);
+    margin-top: calc(14 / 750 * 100vw);
   }
 }
 </style>

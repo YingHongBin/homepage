@@ -230,12 +230,15 @@ export default {
   align-items: center;
   justify-content: center;
   padding: 40px 0;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .news-carousel-container {
   width: 100%;
-  max-width: 1580px;
+  max-width: 1120px;
   position: relative;
+  overflow: hidden;
 }
 
 .news-carousel-track {
@@ -249,8 +252,8 @@ export default {
 
 .news-carousel-item {
   flex-shrink: 0;
-  width: min(800px, calc(100vw - 160px));
-  max-width: 800px;
+  width: min(620px, calc(100vw - 260px));
+  max-width: 620px;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   position: relative;
@@ -270,7 +273,7 @@ export default {
   opacity: 1;
   transform: scale(0.8);
   z-index: 2;
-  margin: 0 -580px;
+  margin: 0 -440px;
 }
 
 /* 中间卡片 */
@@ -347,7 +350,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .news-card-date {
@@ -355,33 +358,33 @@ export default {
   align-items: center;
   gap: 8px;
   font-weight: 400;
-  font-size: 21px;
+  font-size: 16px;
   color: #b2b2b2;
-  line-height: 29px;
+  line-height: 22px;
 }
 
 .time-icon {
-  width: 26px;
-  height: 26px;
+  width: 20px;
+  height: 20px;
 }
 
 .arrow-icon {
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
 }
 
 .news-card-title {
   font-weight: 400;
-  font-size: 28px;
+  font-size: 22px;
   color: #252525;
-  line-height: 40px;
+  line-height: 32px;
   margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 80px; /* 40px * 2 = 80px */
+  height: 64px;
 }
 
 /* 箭头按钮 */
@@ -412,11 +415,11 @@ export default {
 }
 
 .carousel-arrow-left {
-  left: 20px;
+  left: 0;
 }
 
 .carousel-arrow-right {
-  right: 20px;
+  right: 0;
 }
 
 /* 锚点导航 */
@@ -462,6 +465,7 @@ export default {
 
   .news-carousel-wrapper {
     padding: calc(40 / 750 * 100vw) 0;
+    max-width: 100%;
   }
 
   .news-carousel-track {
@@ -477,6 +481,7 @@ export default {
   .news-carousel-item.center {
     transform: scale(1);
     margin: 0;
+    width: min(100%, calc(100vw - calc(160 / 750 * 100vw)));
   }
 
   .news-card {
@@ -527,15 +532,16 @@ export default {
   }
 
   .carousel-arrow-left {
-    left: calc(-20 / 750 * 100vw);
+    left: 0;
   }
 
   .carousel-arrow-right {
-    right: calc(-20 / 750 * 100vw);
+    right: 0;
   }
 
   .news-carousel-container {
-    padding: 0 calc(20 / 750 * 100vw);
+    padding: 0 calc(50 / 750 * 100vw);
+    overflow: visible;
   }
 
   .news-pagination {
