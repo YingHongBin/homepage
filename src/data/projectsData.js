@@ -49,17 +49,6 @@ export const healthcareProjects = [
 // AI系统项目
 export const aiSystemProjects = [
   {
-    name: "NeurDB",
-    year: "2024 - ",
-    image:
-      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/projects/neurdb.png",
-    link: "https://neurdb.com/",
-    descriptionZh:
-      "随着人工智能（AI）的快速发展，我们正站在数据系统变革跃迁的前沿。我们正在构建 NeurDB，这是一款新一代数据系统，旨在在各个主要系统组件中全面融合 AI 设计，并实现数据库内的 AI 驱动分析能力。",
-    descriptionEn:
-      "In the wake of rapid advancements in artificial intelligence (AI), we stand on the brink of a transformative leap in data systems. We are building NeurDB, our next-generation data system designed to fully embrace AI design in each major system component and provide in-database AI-powered analytics.",
-  },
-  {
     name: "HAKES",
     year: "2024 - ",
     image:
@@ -69,28 +58,6 @@ export const aiSystemProjects = [
       "HAKES 是一个可扩展、模块化的向量数据库，专为语义搜索优化，由三层组成：嵌入生成、向量检索和数据存储。它在资源利用与可扩展性方面表现优异，在并发负载下的性能比现有系统高出 10 倍，且几乎能实现 100% 的准确率。其模块化设计支持灵活定制，同时通过加密机制保障数据管理的安全性。",
     descriptionEn:
       "HAKES is a scalable, modular vector database optimized for semantic search, comprising three layers - embedding generation, vector search, and data storage. It enhances resource use and scalability, outperforming existing systems by 10 times under concurrent workloads with nearly 100% accuracy. Its modular design allows customization, while encryption ensures secure data management.",
-  },
-  {
-    name: "NewsLLM",
-    year: "2024 - ",
-    image:
-      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/projects/newsllm.png",
-    link: "https://www.comp.nus.edu.sg/~dbsystem/newsllm/",
-    descriptionZh:
-      "在突破性的人工智能进展中，NewsLLM 作为金融分析领域的一项关键创新应运而生。该先进的股票预测系统利用 AI 技术，将新闻和金融数据转化为精准的交易决策与股票预测，正在革新市场分析方式，为投资者赋能。",
-    descriptionEn:
-      "Amid groundbreaking AI advancements, NewsLLM emerges as a pivotal innovation in financial analytics. This advanced stock prediction system leverages AI to transform news and financial data into precise trading decisions and stock forecasts, revolutionizing market analysis and empowering investors.",
-  },
-  {
-    name: "Structured Data",
-    year: "2020 - ",
-    image:
-      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/projects/structured-data.png",
-    link: "https://www.comp.nus.edu.sg/~dbsystem/structured-data/",
-    descriptionZh:
-      "我们正在构建一整套结构化数据分析工具，涵盖从结构化数据规整、结构化数据建模，到神经网络自动生成（NAS）。该工具旨在通过深度学习网络，实现结构化数据的易用、高效与高精度建模。结合我们此前在半结构化医疗数据方面的研究成果，我们希望帮助用户和企业驾驭数据，从中高效提取洞见与知识。",
-    descriptionEn:
-      "We are building a suite of tools for structured data analytics, from structured data regularization, to structured data modelling and NAS (auto generation of NN). The aim is to support easy-to-use, fast and accurate modeling of structured data using deep learning networks. Together with our earlier work on semi-structured healthcare data, we hope to help users/companies to tame the data for effective extraction of insights and knowledge.",
   },
   {
     name: "SINGA",
@@ -103,119 +70,6 @@ export const aiSystemProjects = [
     descriptionEn:
       "A distributed Deep Learning platform (indirectly funded by ASTAR, MOE and NRF CRP grants). Apache SINGA is an Apache Top Level Project, open source distributed training platform for deep learning amd machine learning models, and has been designed based on four principles, namely, usability, scalability, extensibility and elasticity. Apache SINGA v2.0.0 has AutoML features, and a Healthcare model zoo which contains deep learning models that have been used for healthcare research, and facility for porting other models onto SINGA. SINGA-lite, SINGA-easy and SINGA-db are upcoming releases.",
   },
-  // {
-  //   name: "MLCask",
-  //   year: "2021 - ",
-  //   image:
-  //     "https://www.comp.nus.edu.sg/~dbsystem/static/63ab7d91e233fbf046e0513b4d503851/b4386/mlcask_banner.png",
-  //   link: "https://www.comp.nus.edu.sg/~dbsystem/mlcask/",
-  //   descriptionZh:
-  //     "MLCask 是一个类似 Git 的端到端机器学习（ML）生命周期管理系统。在实际的机器学习应用中，在协作环境中维护 ML 流水线是一项重要且具有挑战性的任务。频繁的模型重训练以及由不同用户异步更新组件所带来的成本必须被纳入考虑。MLCask 支持线性和非线性版本控制语义，从而实现对机器学习流水线的高效管理。",
-  //   descriptionEn:
-  //     "MLCask is a Git-like end-to-end ML life-cycle management system. In real-world machine learning (ML) applications, maintaining an ML pipeline in a collaborative environment is significant and challenging. The costs of frequent retraining and asynchronous component update by different users need to be taken into consideration. MLCask supports both linear and non-linear version control semantics for efficient management of ML pipelines.",
-  // },
-  // {
-  //   name: "Falcon",
-  //   year: "2020 - ",
-  //   image:
-  //     "https://www.comp.nus.edu.sg/~dbsystem/static/14fa34b01e07a753dd3922b3256656d3/b4386/falcon_banner.png",
-  //   link: "https://www.comp.nus.edu.sg/~dbsystem/fintech-Falcon/",
-  //   descriptionZh:
-  //     "Falcon 是一个注重隐私保护、高效且具备激励机制的联邦学习平台，专注于跨数据孤岛的数据协作。我们将隐私保护视为最重要的目标，基于部分同态加密和安全多方计算等先进技术，设计了一套隐私保护型机器学习算法。",
-  //   descriptionEn:
-  //     "Falcon is a privacy-preserving, efficient, and incentive-aware federated learning platform. It focuses on cross-silo data collaboration. We consider privacy protection the most important and design a set of privacy-preserving machine learning algorithms based on advanced techniques such as partially homomorphic encryption and secure multi-party computation.",
-  // },
+
 ];
 
-export const multimodalProjects = [
-  {
-    name: "PixelRefer",
-    year: "2025 - ",
-    image: "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/projects/pixelrefer.png",
-    link: "https://github.com/alibaba-damo-academy/PixelRefer",
-    descriptionZh: "PixelRefer是一个面向对象级理解的统一多模态框架，能够针对用户指定的任意区域，在图像与视频中进行细粒度的语义理解与推理。通过构建高质量的对象级表示，使语言模型在推理过程中能够以对象为核心进行信息聚合与决策，从而显著提升对复杂场景中局部语义的理解能力。进一步地，该工作还揭示了多模态大模型在推理过程中对对象token的依赖机制，并基于这一发现设计了更高效的轻量化版本，在保持性能的同时大幅降低计算开销，实现了性能、表达能力与效率之间的良好平衡。",
-    descriptionEn: "PixelRefer is a unified multimodal framework designed for object-level understanding. It enables fine-grained semantic understanding and reasoning over arbitrary user-specified regions in images and videos. By constructing high-quality object-level representations, it allows language models to aggregate information and make decisions centered around objects during the reasoning process, significantly improving the understanding of local semantics in complex scenes. Furthermore, this work reveals the dependency mechanism of multimodal large models on object tokens during reasoning, and based on this insight, proposes a more efficient lightweight version. This variant substantially reduces computational cost while maintaining performance, achieving a strong balance among performance, expressiveness, and efficiency.",
-  },
-  {
-    name: "LMMs Meet Object-Centric Vision",
-    year: "2025 - ",
-    image: "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/projects/LLMsMeetObjectCentricVision.png",
-    link: "https://github.com/DCDmllm/Awesome-Object-Centric-LMMs",
-    descriptionZh: "这篇综述从整体视角出发，系统分析了大规模多模态模型在对象级理解与操作方面面临的核心挑战，并提出以对象为中心的视觉建模范式来弥合语言推理与像素级感知之间的鸿沟。论文围绕对象理解、分割、编辑与生成四类关键能力，对现有方法进行了结构化梳理，并进一步总结了不同建模路径背后的统一思想与关键技术问题。通过这一系统性分析，该工作不仅提供了一张清晰的研究全景图，也指出了未来多模态模型在精细空间理解、对象一致性以及可控交互等方面的发展方向，为构建更加通用且可靠的对象中心智能系统奠定了基础。",
-    descriptionEn: "This survey takes a holistic perspective to systematically analyze the core challenges faced by large-scale multimodal models in object-level understanding and manipulation. It proposes an object-centric visual modeling paradigm to bridge the gap between language reasoning and pixel-level perception. The paper provides a structured review of existing methods across four key capabilities: object understanding, segmentation, editing, and generation, and further summarizes the unifying ideas and key technical issues underlying different modeling approaches. Through this systematic analysis, the work not only offers a clear panoramic view of the research landscape, but also outlines future directions for multimodal models in fine-grained spatial understanding, object consistency, and controllable interaction, laying the foundation for building more general and reliable object-centric intelligent systems.",
-  },
-]
-
-// 孵化项目
-export const incubatingProjects = [
-  {
-    name: "ESGtogether",
-    year: "2024 - ",
-    image:
-      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/projects/esgtogether.png",
-    link: "https://esgtogether.ai",
-    descriptionZh:
-      "ESGtogether 是一个创新的 ESG 平台，连接政府、企业与投资者，共同推动可持续发展。该平台利用区块链技术提升透明度，运用人工智能提供洞察，确保 ESG 管理的可信性与高效性。政府可制定并监管标准，企业可通过自动化工具简化报告流程，投资者则可获取经验证的数据，并获得基于 AI 的投资建议。灵活的指标管理与自动化流程使 ESGtogether 成为面向未来的解决方案，赋能各方协作，基于数据做出有影响力的决策，共创可持续的未来。",
-    descriptionEn:
-      "ESGtogether is an innovative ESG platform connecting governments, enterprises, and investors to drive sustainability. Using blockchain for transparency and AI for insights, it ensures trust and efficiency in ESG management. Governments define and monitor standards, enterprises streamline reporting with automated tools, and investors access verified data with AI-driven investment suggestions. Flexible metrics management and automated processes make ESGtogether a future-ready solution, empowering stakeholders to collaborate and make impactful, data-informed decisions for a more sustainable world.",
-  },
-  {
-    name: "IP8Value",
-    year: "2022 - ",
-    image:
-      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/projects/ip8value.png",
-    link: "https://ip8value.com",
-    descriptionZh:
-      "IP8Value 为高校、科研机构和科技企业提供知识产权管理与成果转化服务，加速创新成果的产业化。我们的核心产品「数字化科技经理」在全球范围内广泛应用，助力科技管理、市场分析与协同合作，缩短从实验室到市场的转化周期，构建合作网络，推动创新发展。",
-    descriptionEn:
-      "IP8Value offers intellectual property management and commercialization services to universities, research institutions, and technology companies, accelerating the industrialization of innovations. Our core product, 'Digital Technology Manager,' is widely used globally, streamlining technology management, market analysis, and collaboration, reducing the time from lab to market while building cooperation networks and driving innovation.",
-  },
-  {
-    name: "TezSign",
-    year: "2022 - ",
-    image:
-      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/projects/tezsign.png",
-    link: "https://www.tezsign.com/",
-    descriptionZh:
-      "TezSign 是一款面向个人和企业的数字签署平台，利用区块链和加密安全技术确保记录不可篡改，降低欺诈风险。平台通过直观的随时随地签署功能与无缝集成，简化流程，实现文档验证的安全、高效与透明。此外，TezSign 还提供 AI 驱动的合同生成功能，优化合同创建流程，节省时间、提升效率，并确保语法无误。",
-    descriptionEn:
-      "TezSign is a digital signing platform for individuals and enterprises, leveraging blockchain and cryptographic security to ensure tamper-proof records and reduce fraud risks. It streamlines processes with intuitive, anytime-anywhere signing and seamless integration, delivering secure, efficient, and transparent document verification. Furthermore, TezSign offers AI-Powered Contract Creation, streamlining the contract creation process to save time, enhance efficiency, and deliver error-free grammar.",
-  },
-  {
-    name: "Verazt Security",
-    year: "2020 - ",
-    image:
-      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/projects/verazt.png",
-    link: "https://verazt.com/",
-    descriptionZh:
-      "通过严格的形式化验证、全面的静态分析、实用的模糊测试以及强大的机器学习技术，保障智能合约的安全性。",
-    descriptionEn:
-      "Safeguarding smart contracts with rigorous formal verification, comprehensive static analysis, pragmatic fuzz-testing, and robust machine learning.",
-  },
-];
-
-// 高级数据库项目
-// export const advancedDatabaseProjects = [
-//   {
-//     name: "VerifiableDatabases",
-//     year: "2018",
-//     image:
-//       "https://www.comp.nus.edu.sg/~dbsystem/static/3e561c952614d074f1ad7080898375f0/b4386/verifiabledatabases_banner.png",
-//     link: "https://www.comp.nus.edu.sg/~dbsystem/verifiabledatabases/",
-//     descriptionZh:
-//       "如今大多数数据都存在于云端，因此安全性至关重要，因为云数据库往往由可能存在恶意行为的第三方运营。我们正在构建可验证的数据库系统，以满足区块链、协同分析、众包等新兴应用的需求，这些场景对数据及其操作的完整性有着严格保障要求。除了提供安全性保障，我们构建的系统还追求高性能、可扩展性和易用性。",
-//     descriptionEn:
-//       "As most of today's data lives in the cloud, security is crucial because the cloud databases are run by potentially malicious third parties. We are building verifiable database systems to satisfy the demand of emerging applications, such as blockchains, collaborative analytics, and crowdsourcing, where the integrity of the data and operations on the data must be guaranteed. In addition to the security guarantee, the systems we built target high performance, scalability and usability.",
-//   },
-//   {
-//     name: "ForkBase",
-//     year: "2015",
-//     image:
-//       "https://www.comp.nus.edu.sg/~dbsystem/static/19da0b71d7dc2846ea5328052f51a1f9/b4386/forkbase_banner.png",
-//     link: "https://www.comp.nus.edu.sg/~dbsystem/forkbase/",
-//     descriptionZh:
-//       "ForkBase 是一个高效的防篡改数据存储系统，旨在为支持分叉的应用程序提供高效支持和快速开发，如「GIT-for-Data」、篡改可见的区块链、协同分析以及带版本控制的在线事务处理（OLTP）。ForkBase 被部署为 Hyperledger++ 的存储引擎。ForkCloud 是一个「GIT-for-Data」系统，封装了数据清洗、众包处理、机器学习设计与测试以及版本控制，旨在促进敏感数据上的 AI 开发。",
-//     descriptionEn:
-//       "ForkBase is an efficient tamper-proof data storage system designed to provide efficient support and fast development of forking-enabled applications, such as 'GIT-for-Data', tamper-evident Blockchain, collaborative analytics and OLTP with versioning. ForkBase is deployed as the storage engine of Hyperledger++. ForkCloud is a GIT-for-Data system that encapsulates data cleansing, crowdsourcing, ML design and testing, and versioning to facilitate AI development on sensitive data.",
-//   },
-// ];
