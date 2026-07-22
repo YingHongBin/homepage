@@ -130,7 +130,7 @@ body {
   margin-bottom: 30px !important;
 }
 
-:where(.year-tag, .project-tag, .category-title) {
+:where(.year-tag, .project-tag) {
   height: 40px !important;
   line-height: 40px !important;
   border-radius: 8px !important;
@@ -194,10 +194,6 @@ body {
     .research-card:hover .research-card-image-wrap
   ) {
   border-color: var(--zju-blue) !important;
-}
-
-:where(.category-title) {
-  border-left-color: var(--zju-blue) !important;
 }
 
 :where(.year-tag:hover, .year-tag.active) {

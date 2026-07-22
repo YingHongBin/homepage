@@ -310,21 +310,36 @@ export default {
 
 /* 分类标题 */
 .category-title {
-  width: auto;
+  width: 100%;
   height: auto;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  gap: 16px;
   background: transparent;
   box-shadow: none;
   border-radius: 0;
   font-weight: 600;
   font-size: 22px;
-  color: #222222;
+  color: #003f88;
   line-height: 30px;
   text-align: left;
   margin-bottom: 22px;
-  padding-left: 14px;
-  border-left: 3px solid #003F88;
+  padding: 0;
+  border: 0;
+}
+
+.category-title::after {
+  content: "";
+  height: 2px;
+  flex: 1;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #003f88 0%,
+    rgba(0, 63, 136, 0.36) 28%,
+    rgba(0, 63, 136, 0.06) 76%,
+    rgba(0, 63, 136, 0) 100%
+  );
 }
 
 /* 团队成员行 */
@@ -468,17 +483,21 @@ export default {
     margin-top: calc(42 / 750 * 100vw);
   }
 
-  /* 分类标题居中 */
+  /* 分类标题 */
   .category-title {
-    width: auto;
+    width: 100%;
     height: auto;
     box-shadow: none;
     border-radius: 0;
     font-size: calc(28 / 750 * 100vw);
     line-height: calc(38 / 750 * 100vw);
     margin: 0 0 calc(22 / 750 * 100vw);
-    padding-left: calc(14 / 750 * 100vw);
-    border-left-width: calc(3 / 750 * 100vw);
+    padding: 0;
+    gap: calc(16 / 750 * 100vw);
+  }
+
+  .category-title::after {
+    height: max(1px, calc(2 / 750 * 100vw));
   }
 
   /* 团队成员行 - 移动端布局 */
