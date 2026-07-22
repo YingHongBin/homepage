@@ -120,6 +120,17 @@ export const studentsData = [
     image: "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/chenweizhu.jpg",
   },
   {
+    name: "李坤熹",
+    name_en: "Li Kunxi",
+    position: "博士研究生",
+    position_en: "Ph.D. Student",
+    description: "浙江大学计算机科学与技术学院2026级博士生，硕士就读于浙江大学软件学院。曾在阿里巴巴淘天集团实习，参与多模态大模型KV Cache优化策略研究，在AAAI、ACL等会议发表论文。目前主要研究方向为Agent与大模型高效训练/推理。",
+    description_en: "I am a Ph.D. student who began doctoral studies in 2026 at the College of Computer Science and Technology, Zhejiang University, after completing my master’s studies at Zhejiang University’s School of Software Technology. I previously interned at Alibaba’s Taobao and Tmall Group, where I worked on KV cache optimization for multimodal large language models. I have published papers at conferences including AAAI and ACL. My current research focuses on AI agents and efficient training and inference for large language models.",
+    website: "https://scholar.google.com/citations?user=ws7ZrM8AAAAJ&hl=zh-CN&authuser=1",
+    email: "kunxili@zju.edu.cn",
+    image: "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/likunxi.jpg",
+  },
+  {
     name: "刘可涵",
     name_en: "Liu Kehan",
     position: "硕士研究生",
@@ -189,6 +200,41 @@ export const studentsData = [
     image:
       "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/lingexi.jpg",
   },
+  {
+    name: "范倬宁",
+    name_en: "Fan Zhuoning",
+    position: "硕士研究生",
+    position_en: "Master Student",
+    description: "本科毕业于南开大学数学与应用数学专业，主要学习方向为概率与统计。浙江大学软件学院硕士研究生在读。研究兴趣集中于智能体记忆、长程推理以及高效智能体系统。",
+    description_en: "I received my B.S. in Mathematics and Applied Mathematics from Nankai University, where I studied probability and statistics. I am currently pursuing my M.S. at Zhejiang University. My research interests lie in agent memory, long-horizon reasoning, and efficient agent systems.",
+    email: "zoeminus@163.com",
+    website: "https://github.com/zoeplus",
+    image:
+      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/fanzhuoning.jpg",
+  },
+  {
+    name: "刘汉铖",
+    name_en: "Liu Hancheng",
+    position: "硕士研究生",
+    position_en: "Master Student",
+    description: "本科毕业于北京航空航天大学软件学院，浙江大学计算机学院硕士研究生在读。研究兴趣主要集中于大语言模型的高效训练与推理优化，关注长上下文场景下大模型的计算与存储效率问题。",
+    description_en: "I completed my undergraduate studies at the School of Software, Beihang University, and am currently pursuing a master's degree at the College of Computer Science and Technology, Zhejiang University. My research interests include efficient training and inference of large language models, with a focus on computational and memory efficiency in long-context scenarios.",
+    email: "hancheng_liu04@163.com",
+    image:
+      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/liuhancheng.jpg",
+  },
+  {
+    name: "李嘉宁",
+    name_en: "Li Jianing",
+    position: "硕士研究生",
+    position_en: "Master Student",
+    description: "本科毕业于华南理工大学软件工程专业，浙江大学软件学院硕士在读，主攻医疗大模型与药物毒性推理中的多智能体系统研究，关注如何结合大语言模型与多智能体协作框架，提升药物安全评估的自动化与可解释性。",
+    description_en: "I graduated from South China University of Technology with a bachelor's degree in Software Engineering, and I am currently a master's student in Artificial Intelligence at Zhejiang University. My research mainly focuses on medical large language models and multi-agent systems for drug toxicity reasoning. My current research interest centers on how to combine large language models with multi-agent collaboration frameworks to improve the automation and interpretability of drug safety assessment.",
+    email: "18743946198@163.com",
+    website: "https://github.com/jinyu2003",
+    image:
+      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/lijianing.jpg",
+  }
 ];
 
 // Interns 实习生
@@ -220,5 +266,16 @@ export const internData = [
     website: "",
     image:
       "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/jizhe.jpg",
+  },
+  {
+    name: "魏畇钊",
+    name_en: "Wei Yunzhao",
+    position: "实习生",
+    position_en: "Intern",
+    description: "本科就读于华东师范大学计算机科学与技术专业，目前在浙江大学开展大语言模型确定性训推与 On-Policy Distillation（OPD）相关研究，主要关注推理一致性与训练过程可重复性。",
+    description_en: "I’m currently an undergrad majoring in Computer Science and Technology at East China Normal University. Right now, I’m doing research at Zhejiang University on deterministic training and inference of large language models and On-Policy Distillation (OPD), mainly focusing on consistency in reasoning and reproducibility in the training process.",
+    email: "l129211091179@163.com",
+    image:
+      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/weiyunzhao.jpg",
   }
 ];
