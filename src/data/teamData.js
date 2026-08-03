@@ -236,7 +236,7 @@ export const studentsData = [
     name_en: "Shao Pengcheng",
     position: "硕士研究生",
     position_en: "Master Student",
-    description: "本科毕业于浙江工商大学计算机科学与技术专业，浙江大学软件学院硕士研究生在读。主要研究方向为大模型应用与智能体系统，关注大语言模型驱动的多智能体协作、任务规划与智能决策等方向。大模型技术在智能制造、企业自动化等场景中的落地应用。",
+    description: "本科毕业于浙江工商大学计算机科学与技术专业，浙江大学软件学院硕士研究生在读。主要研究方向为大模型应用与智能体系统，关注大语言模型驱动的多智能体协作、任务规划与智能决策，探索大模型技术在智能制造、企业自动化等场景中的应用。",
     description_en: "I graduated from Zhejiang Gongshang University with a bachelor's degree in Computer Science and Technology and am currently pursuing a master's degree at Zhejiang University. My research interests focus on large language model applications and intelligent agent systems, especially multi-agent collaboration and intelligent decision-making in scenarios such as intelligent manufacturing and enterprise automation. ",
     image: "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/shaopengcheng.png",
   },
