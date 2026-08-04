@@ -1,6 +1,43 @@
 ﻿// 新闻数据
 export const newsData = [
     {
+      id: "2026-08-04",
+      image: "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2026-08-04-3.jpg",
+      title_zh: "实验室研究生荣获第二十五届CCF数据库暑期研修营一等奖",
+      title_en: "Graduate Student of the Laboratory Wins First Prize in the 25th CCF Database Summer Camp",
+      date_zh: "2026年8月4日",
+      date_en: "August 04, 2026",
+      source_link: "",
+      zh_translation: "",
+      en_translation: "ChatGPT 5.6",
+      summary_zh: "实验室研究生参加第二十五届CCF数据库暑期研修营，围绕“大模型与数据库”开展学习实践，与多校学生组成团队完成数据库性能优化任务，荣获小组一等奖。",
+      summary_en: "Graduate student of the laboratory participated in the 25th CCF Database Summer Camp, focusing on learning and practice around 'Large Models and Databases', and formed a team with students from multiple schools to complete database performance optimization tasks, winning the first prize in the group.",
+      content_zh: `
+        <p>中国数据库暑期研修营下属于中国计算机学会数据库专业委员会, 旨在为中国从事或有志于从事数据库理论与技术研究的教师、学者和研究生提供一个学习和交流的机会。每年不定期地邀请数据库及相关领域内国际知名的学者来中国讲学，以促进我国对国际数据库学科前沿全面及时了解，并在此前提下，立足应用研发具有特色的数据管理技术和系统。</p>
+        <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2026-08-04-1.jpg" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+        <p>第二十五届CCF数据库暑期研修营将于2026年7月12日-7月19日在中国桂林举办，由桂林电子科技大学承办，北京奥星贝斯科技有限公司（OceanBase）协办。本期CCF数据库暑期研修营由周傲英教授担任校长。研修营汇聚了来自学术界和产业界的10余位专家学者，围绕“大模型与数据库”这一前沿交叉领域，开展了多场高质量特邀报告与系统化专题授课。OceanBase CTO杨传辉、清华大学王健楠教授、新加坡南洋理工大学丛高教授、香港中文大学方一向教授等高校学者和行业专家，结合前沿研究成果与产业实践经验进行深入分享。</p>
+        <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2026-08-04-2.jpg" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+        <p>来自全国32所高校的102名同学共同参与并完成了AI数据库理论学习与技术实训。作为暑期研修营的参与者，实验室研究生有幸参与了精心策划的一系列前沿技术培训，培训以数据在系统中的流转路径为主线，自底向上串联起架构层、数据层、检索层、查询层、应用层五大模块，构建起一条层次清晰的完整应用链路。</p>
+        <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2026-08-04-3.jpg" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+        <p>本次实验室研究生刘可涵、陈蔚竹与华东师范大学、东北大学3名同学跨校组队，完成了课程与实训任务以及小组答辩，包括在Seekdb上实现从查询到存储层面的细粒度瓶颈分析与性能优化，最终荣获小组一等奖。在实践过程中，团队成员充分发挥各自在数据库系统、智能优化和工程实现等方面的优势，围绕查询执行、索引设计、数据组织与存储管理等关键环节展开讨论，并通过多轮实验验证优化方案的有效性。此次跨校合作不仅提升了成员分析和解决复杂数据库性能问题的能力，也进一步锻炼了团队协作、沟通表达与成果展示能力。未来，实验室成员将继续加强交流合作，积极探索人工智能与数据库系统深度融合的新技术，并将此次学习成果应用于后续科研与工程实践中。</p>
+      `,
+      content_en: `
+        <p>The China Database Summer Camp, organized under the Database Professional Committee of the China Computer Federation (CCF), aims to provide a platform for teachers, researchers, and graduate students engaged in or interested in database theory and technology research to learn and exchange ideas. Each year, the camp invites internationally renowned scholars in the database and related fields to deliver lectures in China, helping participants gain timely and comprehensive insights into the latest developments in the international database community. Building on these insights, the camp promotes the research and development of innovative data management technologies and systems tailored to practical applications.</p>
+
+        <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2026-08-04-1.jpg" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+
+        <p>The 25th CCF Database Summer Camp was held from July 12 to July 19, 2026, in Guilin, China. The event was hosted by Guilin University of Electronic Technology and co-organized by Beijing OceanBase Technology Co., Ltd. (OceanBase). Professor Ao Ying Zhou served as the director of this year's camp. Bringing together more than 10 experts and scholars from academia and industry, the camp focused on the cutting-edge interdisciplinary topic of "Large Models and Databases" and featured a series of high-quality keynote talks and systematic technical lectures. Experts including OceanBase CTO Chuanhui Yang, Professor Jiannan Wang from Tsinghua University, Professor Gao Cong from Nanyang Technological University, and Professor Yixiang Fang from The Chinese University of Hong Kong shared their latest research achievements and industrial experiences.</p>
+            
+        <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2026-08-04-2.jpg" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+            
+        <p>A total of 102 students from 32 universities across China participated in the camp and completed theoretical courses and technical training on AI databases. As participants of the summer camp, graduate students from the laboratory took part in a carefully designed series of advanced technology courses. The training was organized around the lifecycle of data flow within database systems, connecting five key layers from the bottom up: architecture layer, data layer, retrieval layer, query layer, and application layer, thereby constructing a comprehensive and systematic technology pipeline.</p>
+            
+        <img src="https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2026-08-04-3.jpg" alt="post" style="display: block; margin: 0 auto; max-width: 100%;">
+            
+        <p>During the camp, laboratory graduate students Liu Kehan and Chen Weizhu formed a cross-university team with three students from East China Normal University and Northeastern University. The team successfully completed course assignments, technical practices, and group presentations, including fine-grained bottleneck analysis and performance optimization of Seekdb from query processing to storage layers. They ultimately won First Prize in the team competition. Throughout the project, team members leveraged their respective strengths in database systems, intelligent optimization, and engineering implementation. They conducted in-depth discussions on key aspects such as query execution, index design, data organization, and storage management, and validated their optimization strategies through multiple rounds of experiments. This cross-university collaboration not only enhanced their ability to analyze and solve complex database performance problems but also strengthened their teamwork, communication, and presentation skills. In the future, laboratory members will continue to promote collaboration and actively explore emerging technologies at the intersection of artificial intelligence and database systems, applying the knowledge gained from this experience to future research and engineering practices.</p>
+      `,
+    },
+    {
     id: "2026-04-025",
     image:
       "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/news/2026-04-25.jpg",
