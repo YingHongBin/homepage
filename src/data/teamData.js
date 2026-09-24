@@ -44,22 +44,7 @@ export const facultyData = [
     website: "https://xiezl.github.io/",
     image:
       "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/xiezhongle.jpg",
-  },
-  {
-    name: "蔡少峰",
-    name_en: "Cai Shaofeng",
-    position: "软件学院 百人计划研究员",
-    position_en:
-      "100 Talent Platform Researcher, College of Software Technology",
-    description:
-      "浙江大学计算机学院百人计划研究员，入选优秀青年科学基金项目（海外）。主要研究方向包括自适应人工智能，表格深度学习，以及数据库内分析等。近年来，在SIGMOD、VLDB、ICLR、ICML等CCF A类期刊与会议上发表论文共30余篇，获得多个国际学术奖项，主持/参与多项国家级、省部级课题。",
-    description_en:
-      "Research interest: Adaptive AI, tabular deep learning, and in-database analytics. In recent years, I have published more than 30 papers in top-tier CCF-A journals and conferences such as SIGMOD, VLDB, ICLR and ICML, won multiple international academic awards, and have led or participated in several national and provincial-level research projects.",
-    email: "",
-    website: "",
-    image:
-      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/caishaofeng.jpg",
-  },
+  }
 ];
 
 // Assistant Staff 助理老师
@@ -78,6 +63,17 @@ export const assistantData = [
     image:
       "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/tangyanjun.jpg",
   },
+  {
+    name: "应洪彬",
+    name_en: "Ying Hongbin",
+    position: "工程与基础设施",
+    position_en: "Engineering & Infrastructure",
+    description: "负责实验室工程项目的组织实施与交付管理，统筹实验室基础设施建设与管理。",
+    description_en: "Responsible for the implementation and delivery of laboratory engineering projects, as well as the development and management of laboratory infrastructure.",
+    email: "",
+    website: "",
+    image: "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/yinghongbin.jpg"
+  }
 ];
 
 // Students 学生
@@ -314,6 +310,17 @@ export const studentsData = [
     email: "",
     website: "",
     image: "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/weidedi.jpeg",
+  },
+  {
+    name: "喻俊",
+    name_en: "Yu Jun",
+    position: "硕士研究生",
+    position_en: "Master Student",
+    description: "本科毕业于北京理工大学软件工程专业，浙江大学软件学院硕士研究生在读。主要研究方向是多模态大模型推理加速，KV Cache优化策略研究。",
+    description_en: "I graduated from Beijing Institute of Technology with a bachelor's degree in Software Engineering, and I am currently a master's student at the School of Software Technology, Zhejiang University. My main research interests include inference acceleration for multimodal large models and KV Cache optimization strategies.",
+    email: "",
+    website: "",
+    image: "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/yujun.jpeg",
   }
 ];
 
@@ -346,5 +353,19 @@ export const internData = [
     website: "",
     image:
       "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/jizhe.jpg",
+  },
+  {
+    name: "陈俊屹",
+    name_en: "Chen Junyi",
+    position: "实习生",
+    position_en: "Intern",
+    description:
+      "本科在读于浙江大学数学与应用数学专业。目前主要关注跨模态与OOD查询场景下的高效向量检索问题。",
+    description_en:
+      "I am currently an undergraduate student majoring in Mathematics and Applied Mathematics at Zhejiang University. My current research focuses on efficient vector retrieval for cross-modal and Out-of-Distribution (OOD) queries.",
+    email: "",
+    website: "",
+    image:
+      "https://dataxai.oss-cn-hangzhou.aliyuncs.com/assets/img/people/chenjunyi.jpeg"
   }
 ];
