@@ -1,6 +1,61 @@
 ﻿export const publicationsData = [
   {
     year: 2026,
+    title: "Towards Effective Orchestration of AI x DB Workloads",
+    authors: "N Xing, H Gao, Z Zhao, S Cai, Z Luo, Y Wu, Z Xie, M Zhang, BC Ooi. VLDB 2026."
+  },
+  {
+    year: 2026,
+    title: "Query as Anchor: Scenario-Adaptive User Representation via Large Language Model",
+    authors: "J Yuan, et al.. KDD 2026."
+  },
+  {
+    year: 2026,
+    title: "FOUNDv2: Learning Unified User Quantized Tokenizers for User Representation",
+    authors: "C He, et al.. KDD 2026."
+  },
+  {
+    year: 2026,
+    title: "DIYHealth Suite: Dataset, Model, and Benchmark for Health Management at Home",
+    authors: "C Liu, et al.. ICML 2026."
+  },
+  {
+    year: 2026,
+    title: "TokenTiming: A Dynamic Alignment Method for Universal Speculative Decoding Model Pairs",
+    authors: "S Xiao, J Fu, Z Xie, L Shou. ACL 2026 Main."
+  },
+  {
+    year: 2026,
+    title: "SaCal: An Efficient Saliency-Guided Causal Framework for Interpretable Healthcare Analytics",
+    authors: "F Lin, C You, Z Xie, Z Luo, M Zhang. ICDE 2026."
+  },
+  {
+    year: 2026,
+    title: "DeXOR: Enabling xor in Decimal Space for Streaming Lossless Compression of Floating-point Data",
+    authors: "C Lv, H Li, D Yang, Z Xie, L Chen, CS Jensen. VLDB 2026."
+  },
+  {
+    year: 2026,
+    title: "SVFusion: A CPU-GPU Co-Processing Architecture for Large-Scale Real-Time Vector Search",
+    authors: "Y Peng, D Yang, Z Xie, J Sun, L Shou, K Chen, G Chen. VLDB 2026."
+  },
+  {
+    year: 2026,
+    title: "SafeLoad: Efficient Admission Control Framework for Identifying Memory-Overloading Queries in Cloud Data Warehouses",
+    authors: "Y Wu, et al.. VLDB 2026."
+  },
+  {
+    year: 2026,
+    title: "MorphingDB: A Task-Centric AI-Native DBMS for Model Management and Inference",
+    authors: "S Wu, et al.. SIGMOD 2026."
+  },
+  {
+    year: 2026,
+    title: "PIMSHARE: Scheduling for Multi-DNN Inference on Processing-in-memory Accelerated Edge Server",
+    authors: "X Chen, Z Xie*, H Li, K Chen, L Shou, D Jiang, G Chen. IEEE TCAD 2026."
+  },
+  {
+    year: 2026,
     title: "Entity-centric Data Management for the Ubiquitous Computing Era",
     authors: "Y. Shen, X. S. Wang, X. Du, B. C. Ooi, H. Mei. Science China Information Sciences, Springer, 2026."
   },
@@ -62,6 +117,41 @@
   },
   {
     year: 2025,
+    title: "A Comprehensive Study of Shapley Value in Data Analytics",
+    authors: "H Lin, S Wan, Z Xie, K Chen, M Zhang, L Shou, G Chen. VLDB 2025."
+  },
+  {
+    year: 2025,
+    title: "HAKES: Scalable Vector Database for Embedding Search Service",
+    authors: "G Hu, S Cai, TTA Dinh, Z Xie, C Yue, G Chen, BC Ooi. VLDB 2025."
+  },
+  {
+    year: 2025,
+    title: "Optimized Batch Prompting for Cost-effective LLMs",
+    authors: "Z Ji, X Wang, Z Luo, Z Xie, M Zhang. VLDB 2025."
+  },
+  {
+    year: 2025,
+    title: "FloE: On-the-Fly MoE Inference on Memory-constrained GPU",
+    authors: "Y Zhou, Z Li, J Zhang, J Wang, Y Wang, Z Xie, K Chen, L Shou. ICML 2025."
+  },
+  {
+    year: 2025,
+    title: "Towards Automatic and Efficient Prediction Query Processing in Analytical Database",
+    authors: "Y Peng, Z Xie, K Chen, G Chen, L Shou. ICDE 2025."
+  },
+  {
+    year: 2025,
+    title: "Cohort query processing without misleading aging effects",
+    authors: "P Lu, Z Xie, D Jiang, K Chen, L Shou. VLDB Journal."
+  },
+  {
+    year: 2025,
+    title: "CHASe: Client Heterogeneity-Aware Data Selection for Effective Federated Active Learning",
+    authors: "J Zhang, J Wang, H Li, Z Xie, K Chen, L Shou. TKDE 2025."
+  },
+  {
+    year: 2025,
     title:
       "HealthGPT: A Medical Large Vision-Language Model for Unifying Comprehension and Generation via Heterogeneous Knowledge Adaptation",
     authors:
@@ -119,6 +209,11 @@
       "L. Zeng, N. Xing, S. Cai, G. Chen, B.C. Ooi, J. Pei, Y. Wu. VLDB 2025.",
     pdf_link: "",
     web_link: "",
+  },
+  {
+    year: 2024,
+    title: "LBSC: A Cost-Aware Caching Framework for Cloud Databases",
+    authors: "Z Ji, Z Xie, Y Wu, M Zhang. ICDE 2024.",
   },
   {
     year: 2024,
@@ -405,6 +500,18 @@
       "K. Zheng, Tnguyen, C. Liu, C.E. Goh, B. C. Ooi. ACM CIKM 2022. (demo)",
     pdf_link: "",
     web_link: "",
+  },
+  {
+    year: 2022,
+    title: "Continual Federated Learning Based on Knowledge Distillation",
+    authors: "Y Ma, Z Xie, J Wang, K Chen, L Shou. IJCAI 2022",
+    pdf_link: "",
+    web_link: ""
+  },
+  {
+    year: 2022,
+    title: "A sampling-based learning framework for big databases",
+    authors: "J Zhang, S Wu, J Zhao, Z Xie, F Li, Y Gao, G Chen. WWW 2022"
   },
   {
     year: 2021,
