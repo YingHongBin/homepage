@@ -20,8 +20,8 @@
             <p class="memorial-text">
               {{
                 currentLang === "zh"
-                  ? "我们深切缅怀黄铭钧院士。他是 Data X AI 数据库实验室的最初创始人，以卓越的学术远见和育人精神，为团队奠定了重要基础。他的贡献与精神将持续激励我们前行。"
-                  : "We deeply remember Professor Ooi Beng Chin, the founding figure of the Data X AI Database Lab. His academic vision, dedication to mentorship, and lasting contributions laid an important foundation for our team and will continue to inspire us."
+                  ? "我们深切缅怀黄铭钧院士。他是 Data X AI 数据库实验室的最初创始人，以卓越的学术远见和育人精神，为团队奠定了工作基础。他的贡献与精神将持续激励我们前行。"
+                  : "We deeply remember Professor Ooi Beng Chin, the founding figure of the Data X AI Database Lab. His academic vision, dedication to mentorship, and lasting contributions laid the foundation for the team’s work and will continue to inspire us."
               }}
             </p>
           </div>
